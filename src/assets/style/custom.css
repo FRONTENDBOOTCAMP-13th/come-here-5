@@ -1,0 +1,95 @@
+@theme {
+  --font-sans: "Pretendard Variable", sans-serif;
+
+  /* color */
+  --color-main: #205aff;
+  --color-text: #8e8e8e;
+  --color-white: #fff;
+  --color-gray: #d9d9d9;
+
+  /* text size */
+  /* 공통 */
+  --btn: 1.875rem;
+  --placeholder: 1.25rem;
+  --content: 0.9375rem;
+
+  /* 컴포넌트 */
+  --header-link: 1.875rem;
+  --header-btn: 1.75rem;
+
+  --main-hero-title: 4rem;
+  --main-hero-sub-title: 2rem;
+  --main-sub-title: 2.1875rem;
+  --main-content: 1.5625rem;
+  --main-card-hover: 1.875rem;
+
+  --team-hero-title: 5.625rem;
+  --team-hero-sub-title: 3.75rem;
+  --team-introduce-content: 1.5625rem;
+
+  --plan-hero-title: 5.625rem;
+  --plan-sub-title: 2.1875rem;
+  --plan-content: 1.5625rem;
+  --plan-develop-content: 1.875rem;
+  --plan-toggle-title: 1.5625rem;
+
+  --sign-up-sub-title: 1.5625rem;
+  --sign-up-input-btn: 1.25rem;
+
+  /* box size */
+  /* 공통 */
+  --logo-big-size: 8.125rem;
+  --logo-sm-size: 4.375rem;
+  --input-width: 28.125rem;
+  --input-height: 3.75rem;
+  --form-btn-width: 28.125rem;
+  --form-btn-height: 4.375rem;
+
+  /* 컴포넌트 */
+  --header-max-width: 90rem;
+  --header-height: 7.5rem;
+  --header-btn-width: 8.125rem;
+
+  --main-hero-max-width: 80rem;
+  --main-hero-height: 50rem;
+  --main-lion-logo-width: 12.5rem;
+  --main-btn-width: 25rem;
+  --main-btn-height: 8.125rem;
+  --main-character-width: 15.625rem;
+  --main-bubble-width: 31.25rem;
+  --main-bubble-height: 17.5rem;
+  --main-card-width: 18.75rem;
+  --main-card-height: 21.875rem;
+
+  --team-intro-max-width: 75rem;
+  --team-intro-height: 18.75rem;
+  --team-character-width: 18.75rem;
+  --team-character-width-hover: 15.625rem;
+
+  --plan-hero-height: 18.75rem;
+  --plan-develop-circle-width: 12.5rem;
+  --plan-start-box-width: 37.5rem;
+  --plan-start-box-height: 12.5rem;
+  --plan-start-circle-size: 3.125rem;
+  --plan-feelings-box-width: 37.5rem;
+  --plan-feelings-box-height: 8.75rem;
+  --plan-profile-circle: 6.25rem;
+  --plan-box-width: 75rem;
+  --plan-box-height: 31.25rem;
+
+  --login-btn-width: 28.125rem;
+  --login-btn-height: 1.875rem;
+
+  --sign-up-btn-width: 5rem;
+  --sign-up-btn-height: 3.75rem;
+
+  /* radius */
+  --btn-radius: 1.25rem;
+  --basic-radius: 1.25rem;
+
+  --plan-box-radius: 12.5rem;
+
+  /* spacing */
+  --input-padding: 1.3125rem;
+  --sub-title-margin-bottom: 3.4375rem;
+}
