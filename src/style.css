@@ -1,5 +1,27 @@
 @import "tailwindcss";
 @import "./assets/style/custom.css";
 
-@theme {
+@layer components {
+  :root {
+    @media (max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+
+  body * {
+    img {
+      width: 100%;
+    }
+  }
+
+  .team-introduce {
+    .content {
+      @apply hidden;
+    }
+    &:hover {
+      .content {
+        @apply block;
+      }
+    }
+  }
 }
