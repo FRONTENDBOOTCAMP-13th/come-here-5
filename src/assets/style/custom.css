@@ -14,8 +14,8 @@
   --text-content: 0.9375rem;
 
   /* 컴포넌트 */
-  --text-header-link: 1.875rem;
-  --text-header-btn: 1.75rem;
+  --text-header-link: 1.25rem;
+  --text-header-btn: 1.25rem;
 
   --text-main-hero-title: 4rem;
   --text-main-hero-sub-title: 2rem;
@@ -38,17 +38,24 @@
 
   /* box size */
   /* 공통 */
-  --logo-big-size: 8.125rem;
-  --logo-sm-size: 4.375rem;
+  --logo-width-size: 3.75rem;
+  --logo-height-size: 3.125rem;
   --input-width: 28.125rem;
   --input-height: 3.75rem;
   --form-btn-width: 28.125rem;
   --form-btn-height: 4.375rem;
+  --footer-icon-size: 1.75rem;
+  --footer-icon-large-size: 2.5rem;
+  --footer-logo-width: 3.125rem;
+  --footer-logo-height: 1.25rem;
+  --fooger-logo-lg-width: 4.375rem;
+  --footer-logo-lg-height: 1.875rem;
 
   /* 컴포넌트 */
   --header-max-width: 90rem;
-  --header-height: 7.5rem;
-  --header-btn-width: 8.125rem;
+  --header-height: 4.375rem;
+  --header-btn-width: 5.625rem;
+  --header-btn-height: 2.5rem;
 
   --main-hero-max-width: 80rem;
   --main-hero-height: 50rem;
