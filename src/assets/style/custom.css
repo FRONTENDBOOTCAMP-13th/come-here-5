@@ -9,32 +9,32 @@
 
   /* text size */
   /* 공통 */
-  --btn: 1.875rem;
-  --placeholder: 1.25rem;
-  --content: 0.9375rem;
+  --text-btn: 1.875rem;
+  --text-placeholder: 1.25rem;
+  --text-content: 0.9375rem;
 
   /* 컴포넌트 */
-  --header-link: 1.875rem;
-  --header-btn: 1.75rem;
+  --text-header-link: 1.875rem;
+  --text-header-btn: 1.75rem;
 
-  --main-hero-title: 4rem;
-  --main-hero-sub-title: 2rem;
-  --main-sub-title: 2.1875rem;
-  --main-content: 1.5625rem;
-  --main-card-hover: 1.875rem;
+  --text-main-hero-title: 4rem;
+  --text-main-hero-sub-title: 2rem;
+  --text-main-sub-title: 2.1875rem;
+  --text-main-content: 1.5625rem;
+  --text-main-card-hover: 1.875rem;
 
-  --team-hero-title: 5.625rem;
-  --team-hero-sub-title: 3.75rem;
-  --team-introduce-content: 1.5625rem;
+  --text-team-hero-title: 5.625rem;
+  --text-team-hero-sub-title: 3.75rem;
+  --text-team-introduce-content: 1.5625rem;
 
-  --plan-hero-title: 5.625rem;
-  --plan-sub-title: 2.1875rem;
-  --plan-content: 1.5625rem;
-  --plan-develop-content: 1.875rem;
-  --plan-toggle-title: 1.5625rem;
+  --text-plan-hero-title: 5.625rem;
+  --text-plan-sub-title: 2.1875rem;
+  --text-plan-content: 1.5625rem;
+  --text-plan-develop-content: 1.875rem;
+  --text-plan-toggle-title: 1.5625rem;
 
-  --sign-up-sub-title: 1.5625rem;
-  --sign-up-input-btn: 1.25rem;
+  --text-sign-up-sub-title: 1.5625rem;
+  --text-sign-up-input-btn: 1.25rem;
 
   /* box size */
   /* 공통 */
@@ -92,4 +92,9 @@
   /* spacing */
   --input-padding: 1.3125rem;
   --sub-title-margin-bottom: 3.4375rem;
+
+  /* font-weight */
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-regular: 400;
 }
