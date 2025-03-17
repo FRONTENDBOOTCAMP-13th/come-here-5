@@ -19,14 +19,14 @@
     <!--       헤더 컴포넌트       -->
     <!--==========================-->
     <header
-      class="grid grid-cols-2 items-center max-w-[1024px] h-[70px] mx-auto px-4 bg-white"
+      class="grid grid-cols-2 items-center max-w-[1024px] h-[var(--header-height)] mx-auto px-4 bg-[var(--color-white)]"
     >
       <!-- 로고 -->
       <div class="flex items-center mr-20">
         <img
           src="/src/assets/svg/logo_black.svg"
           alt="Logo"
-          class="w-[60px] h-[50px]"
+          class="w-(--logo-width-size) h-(--logo-height-size)"
         />
       </div>
 
@@ -52,13 +52,13 @@
 
       <!-- 메뉴 -->
       <nav
-        class="hidden lg:flex justify-end items-center space-x-14 text-black text-[20px] ml-20"
+        class="hidden lg:flex justify-end items-center space-x-14 text-gray text-header-link ml-20"
       >
         <a href="#" class="hover:opacity-70">Plan</a>
         <a href="#" class="hover:opacity-70">Team</a>
         <a
           href="#"
-          class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-[20px] w-[90px] h-[40px] flex items-center justify-center text-[20px]"
+          class="font-semibold text-white bg-main hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
         >
           Login
         </a>
@@ -71,13 +71,13 @@
     <!--       푸터 컴포넌트       -->
     <!--==========================-->
 
-    <footer class="bg-gray-100 py-8 lg:py-12 px-10 lg:px-20">
+    <footer class="bg-[var(--color-gray)] py-8 lg:py-12 px-10 lg:px-20">
       <!-- 로고 -->
       <div class="flex justify-start px-4 mb-6 lg:mb-8">
         <img
           src="/src/assets/svg/lion_black.svg"
           alt="Lion Logo"
-          class="w-[50px] h-[20px] lg:w-[70px] lg:h-[30px]"
+          class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
         />
       </div>
 
@@ -123,7 +123,7 @@
             <img
               src="/src/assets/svg/icon_github.svg"
               alt="GitHub"
-              class="w-[28px] h-[28px] lg:w-[40px] lg:h-[40px]"
+              class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
             />
           </div>
           <!-- Instagram -->
@@ -131,30 +131,30 @@
             <img
               src="/src/assets/svg/icon_instagram.svg"
               alt="Instagram"
-              class="w-[28px] h-[28px] lg:w-[40px] lg:h-[40px]"
+              class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
             />
           </div>
           <!-- YouTube -->
           <div>
             <img
-              src="/src/assets/svg/icon_youtube.svg"
+              src="/src/assets/svg/"
               alt="YouTube"
-              class="w-[28px] h-[28px] lg:w-[40px] lg:h-[40px]"
+              class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
             />
           </div>
           <!-- Facebook -->
           <div>
             <img
-              src="/src/assets/svg/icon_facebook.svg"
+              src="/src/assets/svg/icon_facebook_02.svg"
               alt="Facebook"
-              class="w-[28px] h-[28px] lg:w-[40px] lg:h-[40px]"
+              class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
             />
           </div>
         </div>
       </div>
       <!-- Copy Likelion -->
       <div class="mt-8 lg:mt-6 mb-0 text-center">
-        <span class="text-[8px] lg:text-[16px] text-black">
+        <span class="text-[8px] lg:text-[16px] text-(--color-text)">
           Copyright Likelion Bootcamp Frontend 13th All rights reserved.
         </span>
       </div>
