@@ -1,7 +1,7 @@
-<svg width="109" height="94" viewBox="0 0 109 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="54.8625" cy="46.9093" rx="13.9729" ry="44.1846" transform="rotate(17.9638 54.8625 46.9093)" fill="white"/>
-<ellipse cx="87.4275" cy="38.9218" rx="10.8715" ry="34.4425" transform="rotate(17.9638 87.4275 38.9218)" fill="white"/>
-<circle cx="41.9164" cy="50.0407" r="10.9517" fill="#205AFF"/>
-<circle cx="73.6387" cy="80.2524" r="9.44116" fill="#205AFF"/>
-<ellipse cx="27.6719" cy="46.9093" rx="13.9729" ry="44.1846" transform="rotate(17.9638 27.6719 46.9093)" fill="white"/>
+<svg width="150" height="130" viewBox="0 0 150 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="19.4841" cy="61.9383" rx="19.4841" ry="61.9383" transform="matrix(0.950658 0.310241 -0.3066 0.951838 75.8718 0)" fill="white"/>
+<ellipse cx="15.1594" cy="48.2816" rx="15.1594" ry="48.2816" transform="matrix(0.950658 0.310241 -0.3066 0.951838 121.177 3.13687)" fill="white"/>
+<ellipse cx="57.3634" cy="69.3925" rx="15.2618" ry="15.3617" fill="#001960"/>
+<ellipse cx="101.57" cy="111.77" rx="13.1567" ry="13.2428" fill="#001960"/>
+<ellipse cx="19.4841" cy="61.9383" rx="19.4841" ry="61.9383" transform="matrix(0.950658 0.310241 -0.3066 0.951838 37.9805 0)" fill="white"/>
 </svg>

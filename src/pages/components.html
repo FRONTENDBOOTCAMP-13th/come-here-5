@@ -15,9 +15,9 @@
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <!-- ================= -->
-    <!--   Login 컴포넌트   -->
-    <!-- ================= -->
+    <!-- ========================================================================================== -->
+    <!--                                         Login 컴포넌트                                      -->
+    <!-- ========================================================================================== -->
     <div class="w-screen h-screen flex justify-center items-center">
       <div class="w-[30rem] p-7">
         <!-- 로고 -->
@@ -90,132 +90,315 @@
         </div>
       </div>
     </div>
-    <!-- ================ -->
-    <!-- ================ -->
+    <!-- 팀 소개 페이지 컴포넌트 -->
+    <h1 class="font-extrabold text-2xl mt-8">Team Page Hero</h1>
+    <section
+      class="team-hero bg-main px-8 py-[2.8125rem] flex justify-center gap-5"
+    >
+      <div class="logo w-(--logo-big-size) shrink-0">
+        <img src="/src/assets/svg/logo_white.svg" alt="Hi logo" />
+      </div>
+      <div class="title text-white font-bold">
+        <div class="sub-title text-team-hero-sub-title max-lg:text-[2.5rem]">
+          4명의 색다른 매력,
+        </div>
+        <div
+          class="main-title text-team-hero-title pl-[5.75rem] max-lg:text-[3.75rem]"
+        >
+          지금 소개합니다!
+        </div>
+      </div>
+    </section>
 
-    <!-- ================= -->
-    <!--  Sign-up 컴포넌트  -->
-    <!-- ================= -->
-    <div class="w-screen h-full flex justify-center items-center">
-      <div class="p-7">
-        <!-- 로고 -->
-        <a href="/">
-          <img
-            src="../assets/svg/logo_black.svg"
-            alt="로고"
-            class="w-[3.125rem] h-[3.125rem] lg:w-(--logo-sm-size) lg:h-(--logo-sm-size) m-auto mb-10 hover:cursor-pointer"
+    <h1 class="font-extrabold text-2xl mt-8">Team Page Introduce</h1>
+    <section
+      class="team-introduce flex justify-center gap-[3.5625rem] px-8 py-6 max-w-(--team-intro-max-width) h-(--team-intro-height) bg-[#AAC0FF] hover:bg-white rounded-(--basic-radius) shadow-(--basic-shadow) duration-300 ease-in-out"
+    >
+      <div
+        class="character w-(--team-character-width) hover:w-(--team-character-width-hover) shrink-0"
+      >
+        <img src="/src/assets/svg/lion_black.svg" alt="캐릭터" />
+      </div>
+      <div class="content text-team-introduce-content font-bold">
+        5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조
+        팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다.
+      </div>
+    </section>
+
+    <!--==============================================================================-->
+    <!--                                 헤더 컴포넌트                                  -->
+    <!--==============================================================================-->
+    <header
+      class="grid grid-cols-2 items-center max-w-[1024px] h-[70px] mx-auto px-4 bg-white"
+    >
+      <!-- 로고 -->
+      <div class="flex items-center mr-20">
+        <img
+          src="/src/assets/svg/logo_black.svg"
+          alt="Logo"
+          class="w-[60px] h-[50px]"
+        />
+      </div>
+
+      <!-- 햄버거 버튼 (모바일 전용) -->
+      <button
+        class="absolute top-2 right-4 lg:hidden flex items-center justify-center w-[40px] h-[70px]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
           />
+        </svg>
+      </button>
+
+      <!-- 메뉴 -->
+      <nav
+        class="hidden lg:flex justify-end items-center space-x-14 text-black text-[20px] ml-20"
+      >
+        <a href="#" class="hover:opacity-70">Plan</a>
+        <a href="#" class="hover:opacity-70">Team</a>
+        <a
+          href="#"
+          class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-[20px] w-[90px] h-[40px] flex items-center justify-center text-[20px]"
+        >
+          Login
         </a>
-        <!-- 회원가입 폼 -->
-        <form action="#" class="lg:w-[34.375rem]">
-          <!-- 이메일 Input -->
-          <label
-            for="email"
-            class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
-            >이메일</label
+      </nav>
+    </header>
+    <!-- =============================================================================================== -->
+    <!-- =============================================================================================== -->
+
+    <!--===============================================================================================-->
+    <!--                                          푸터 컴포넌트                                         -->
+    <!--===============================================================================================-->
+
+    <footer class="bg-gray-100 py-8 lg:py-12 px-10 lg:px-20">
+      <!-- 로고 -->
+      <div class="flex justify-start px-4 mb-6 lg:mb-8">
+        <img
+          src="/src/assets/svg/lion_black.svg"
+          alt="Lion Logo"
+          class="w-[50px] h-[20px] lg:w-[70px] lg:h-[30px]"
+        />
+      </div>
+
+      <!-- Bootcamp 제목 -->
+      <div
+        class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
+      >
+        Likelion Bootcamp Frontend 13th
+      </div>
+
+      <!-- 이름 목록 -->
+      <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+        <div class="flex flex-col items-start">
+          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+            >배희정</span
           >
-          <div class="">
-            <input
-              type="email"
-              placeholder="이메일"
-              name="email"
-              id="email"
-              required
-              class="w-full max-w-(--input-width) min-w-[6rem] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+        </div>
+        <div class="flex flex-col items-start">
+          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+            >배동초</span
+          >
+        </div>
+        <div class="flex flex-col items-start">
+          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+            >이훈진</span
+          >
+        </div>
+        <div class="flex flex-col items-start">
+          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+            >강석현</span
+          >
+        </div>
+      </div>
+
+      <!-- 소셜 아이콘 및 Copy~ -->
+      <div
+        class="flex items-center justify-between lg:justify-between px-4 mt-10"
+      >
+        <!-- 소셜 아이콘 -->
+        <div class="flex justify-start space-x-4 lg:space-x-6">
+          <!-- GitHub -->
+          <div>
+            <img
+              src="/src/assets/svg/icon_github.svg"
+              alt="GitHub"
+              class="w-[28px] h-[28px] lg:w-[40px] lg:h-[40px]"
             />
-            <!-- 이메일 인증 Button -->
-            <button
-              type="button"
-              class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
-            >
-              인증
-            </button>
           </div>
-          <!-- 인증번호 Input -->
-          <div class="">
-            <input
-              type="text"
-              placeholder="인증번호"
-              required
-              class="w-full max-w-(--input-width) min-w-[100px] h-[3.125rem] lg:h-[3.75rem] border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+          <!-- Instagram -->
+          <div>
+            <img
+              src="/src/assets/svg/icon_instagram.svg"
+              alt="Instagram"
+              class="w-[28px] h-[28px] lg:w-[40px] lg:h-[40px]"
             />
-            <!-- 인증번호 확인 Button -->
-            <button
-              type="button"
-              class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray-400 text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
-            >
-              확인
-            </button>
           </div>
-          <!-- 비밀번호 Input -->
-          <div class="mt-15">
+          <!-- YouTube -->
+          <div>
+            <img
+              src="/src/assets/svg/icon_youtube.svg"
+              alt="YouTube"
+              class="w-[28px] h-[28px] lg:w-[40px] lg:h-[40px]"
+            />
+          </div>
+          <!-- Facebook -->
+          <div>
+            <img
+              src="/src/assets/svg/icon_facebook.svg"
+              alt="Facebook"
+              class="w-[28px] h-[28px] lg:w-[40px] lg:h-[40px]"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- =============================================================================================== -->
+      <!-- =============================================================================================== -->
+
+      <!-- ===================================================================================== -->
+      <!--                                    Sign-up 컴포넌트                                    -->
+      <!-- ===================================================================================== -->
+      <div class="w-screen h-full flex justify-center items-center">
+        <div class="p-7">
+          <!-- 로고 -->
+          <a href="/">
+            <img
+              src="../assets/svg/logo_black.svg"
+              alt="로고"
+              class="w-[3.125rem] h-[3.125rem] lg:w-(--logo-sm-size) lg:h-(--logo-sm-size) m-auto mb-10 hover:cursor-pointer"
+            />
+          </a>
+          <!-- 회원가입 폼 -->
+          <form action="#" class="lg:w-[34.375rem]">
+            <!-- 이메일 Input -->
             <label
-              for="password"
+              for="email"
               class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
-              >비밀번호</label
+              >이메일</label
             >
-            <input
-              type="password"
-              placeholder="비밀번호"
-              name="password"
-              id="password"
-              required
-              class="w-full max-w-[var(--input-width)] min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none flex"
-            />
-            <!-- 비밀번호 확인 Input -->
-            <input
-              type="password"
-              placeholder="비밀번호 확인"
-              required
-              class="w-full max-w-[var(--input-width)] min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
-            />
-          </div>
-          <!-- 닉네임 Input -->
-          <div class="mt-15">
-            <label
-              for="name"
-              class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
-              >닉네임</label
-            >
-            <div>
+            <div class="">
+              <input
+                type="email"
+                placeholder="이메일"
+                name="email"
+                id="email"
+                required
+                class="w-full max-w-(--input-width) min-w-[6rem] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+              />
+              <!-- 이메일 인증 Button -->
+              <button
+                type="button"
+                class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
+              >
+                인증
+              </button>
+            </div>
+            <!-- 인증번호 Input -->
+            <div class="">
               <input
                 type="text"
-                placeholder="닉네임(2~10)자"
-                name="name"
-                id="name"
-                minlength="2"
-                maxlength="10"
+                placeholder="인증번호"
                 required
-                class="w-full max-w-(--input-width) min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+                class="w-full max-w-(--input-width) min-w-[100px] h-[3.125rem] lg:h-[3.75rem] border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+              />
+              <!-- 인증번호 확인 Button -->
+              <button
+                type="button"
+                class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray-400 text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
+              >
+                확인
+              </button>
+            </div>
+            <!-- 비밀번호 Input -->
+            <div class="mt-15">
+              <label
+                for="password"
+                class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
+                >비밀번호</label
+              >
+              <input
+                type="password"
+                placeholder="비밀번호"
+                name="password"
+                id="password"
+                required
+                class="w-full max-w-[var(--input-width)] min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none flex"
+              />
+              <!-- 비밀번호 확인 Input -->
+              <input
+                type="password"
+                placeholder="비밀번호 확인"
+                required
+                class="w-full max-w-[var(--input-width)] min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
               />
             </div>
-          </div>
-          <!-- 개인정보 동의 요소, Checkbox -->
-          <div class="my-5 flex">
-            <label for="private"></label>
-            <input
-              type="checkbox"
-              name="private"
-              id="private"
-              required
-              class="mr-1.5 w-5"
-            />
-            <span>
-              <strong class="hover:cursor-pointer">개인정보 수집</strong> 및
-              <strong class="hover:cursor-pointer">이용</strong>에 동의하십니까?
-            </span>
-          </div>
-          <!-- 회원가입 Button -->
-          <button
-            type="submit"
-            class="w-full max-w-(--form-btn-width) min-w-[6.25rem] h-[3.75rem] lg:h-(--form-btn-height) bg-main text-white rounded-(--basic-radius) text-[1.25rem] lg:text-[1.875rem] font-bold hover:cursor-pointer"
-          >
-            회원가입
-          </button>
-        </form>
+            <!-- 닉네임 Input -->
+            <div class="mt-15">
+              <label
+                for="name"
+                class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
+                >닉네임</label
+              >
+              <div>
+                <input
+                  type="text"
+                  placeholder="닉네임(2~10)자"
+                  name="name"
+                  id="name"
+                  minlength="2"
+                  maxlength="10"
+                  required
+                  class="w-full max-w-(--input-width) min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+                />
+              </div>
+            </div>
+            <!-- 개인정보 동의 요소, Checkbox -->
+            <div class="my-5 flex">
+              <label for="private"></label>
+              <input
+                type="checkbox"
+                name="private"
+                id="private"
+                required
+                class="mr-1.5 w-5"
+              />
+              <span>
+                <strong class="hover:cursor-pointer">개인정보 수집</strong> 및
+                <strong class="hover:cursor-pointer">이용</strong>에
+                동의하십니까?
+              </span>
+            </div>
+            <!-- 회원가입 Button -->
+            <button
+              type="submit"
+              class="w-full max-w-(--form-btn-width) min-w-[6.25rem] h-[3.75rem] lg:h-(--form-btn-height) bg-main text-white rounded-(--basic-radius) text-[1.25rem] lg:text-[1.875rem] font-bold hover:cursor-pointer"
+            >
+              회원가입
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
-    <!-- ===================== -->
-    <!-- ===================== -->
+      <!-- =============================================================================================== -->
+      <!-- =============================================================================================== -->
+      <!-- Copy Likelion -->
+      <div class="mt-8 lg:mt-6 mb-0 text-center">
+        <span class="text-[8px] lg:text-[16px] text-black">
+          Copyright Likelion Bootcamp Frontend 13th All rights reserved.
+        </span>
+      </div>
+    </footer>
+
+    <!-- =============================================================================================== -->
+    <!-- =============================================================================================== -->
   </body>
 </html>
