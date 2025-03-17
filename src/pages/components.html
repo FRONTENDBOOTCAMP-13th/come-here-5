@@ -53,7 +53,7 @@
             class="flex justify-between mt-2 mb-2 text-[#928989] font-light text-[.875rem] lg:text-[1rem]"
           >
             <a href="#">비밀번호 재설정</a>
-            <a href="#">회원가입</a>
+            <a href="./sign-up.html">회원가입</a>
           </div>
           <!-- 로그인 버튼 -->
           <button
@@ -133,11 +133,12 @@
     >
       <!-- 로고 -->
       <div class="flex items-center mr-20">
-        <img
-          src="/src/assets/svg/logo_black.svg"
-          alt="Logo"
-          class="w-(--logo-width-size) h-(--logo-height-size)"
-        />
+        <a href="/">
+          <img
+            src="/src/assets/svg/logo_black.svg"
+            alt="Logo"
+            class="w-(--logo-width-size) h-(--logo-height-size)"
+        /></a>
       </div>
 
       <!-- 햄버거 버튼 (모바일 전용) -->
@@ -169,6 +170,7 @@
         <a
           href="#"
           class="font-semibold text-white bg-main hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+          href="./login.html"
         >
           Login
         </a>
@@ -230,11 +232,12 @@
         <div class="flex justify-start space-x-4 lg:space-x-6">
           <!-- GitHub -->
           <div>
-            <img
+            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+              <img
               src="/src/assets/svg/icon_github.svg"
               alt="GitHub"
               class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            />
+            /></a>
           </div>
           <!-- Instagram -->
           <div>
@@ -269,86 +272,104 @@
         </span>
       </div>
    </footer>
-      
-      
-      <!-- =============================================================================================== -->
-      <!-- =============================================================================================== -->
 
-      <!-- ===================================================================================== -->
-      <!--                                    Sign-up 컴포넌트                                    -->
-      <!-- ===================================================================================== -->
-      <div class="w-screen h-full flex justify-center items-center">
-        <div class="p-7">
-          <!-- 로고 -->
-          <a href="/">
-            <img
-              src="../assets/svg/logo_black.svg"
-              alt="로고"
-              class="w-[3.125rem] h-[3.125rem] lg:w-(--logo-sm-size) lg:h-(--logo-sm-size) m-auto mb-10 hover:cursor-pointer"
+    <!-- =============================================================================================== -->
+    <!-- =============================================================================================== -->
+
+    <!-- ===================================================================================== -->
+    <!--                                    Sign-up 컴포넌트                                    -->
+    <!-- ===================================================================================== -->
+    <div class="w-screen h-full flex justify-center items-center">
+      <div class="p-7">
+        <!-- 로고 -->
+        <a href="/">
+          <img
+            src="../assets/svg/logo_black.svg"
+            alt="로고"
+            class="w-[3.125rem] h-[3.125rem] lg:w-(--logo-sm-size) lg:h-(--logo-sm-size) m-auto mb-10 hover:cursor-pointer"
+          />
+        </a>
+        <!-- 회원가입 폼 -->
+        <form action="#" class="lg:w-[34.375rem]">
+          <!-- 이메일 Input -->
+          <label
+            for="email"
+            class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
+            >이메일</label
+          >
+          <div class="">
+            <input
+              type="email"
+              placeholder="이메일"
+              name="email"
+              id="email"
+              required
+              class="w-full max-w-(--input-width) min-w-[6rem] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
             />
-          </a>
-          <!-- 회원가입 폼 -->
-          <form action="#" class="lg:w-[34.375rem]">
-            <!-- 이메일 Input -->
-            <label
-              for="email"
-              class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
-              >이메일</label
+            <!-- 이메일 인증 Button -->
+            <button
+              type="button"
+              class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
             >
-            <div class="">
-              <input
-                type="email"
-                placeholder="이메일"
-                name="email"
-                id="email"
-                required
-                class="w-full max-w-(--input-width) min-w-[6rem] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
-              />
-              <!-- 이메일 인증 Button -->
-              <button
-                type="button"
-                class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
-              >
-                인증
-              </button>
-            </div>
-            <!-- 인증번호 Input -->
-            <div class="">
+              인증
+            </button>
+          </div>
+          <!-- 인증번호 Input -->
+          <div class="">
+            <input
+              type="text"
+              placeholder="인증번호"
+              required
+              class="w-full max-w-(--input-width) min-w-[100px] h-[3.125rem] lg:h-[3.75rem] border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+            />
+            <!-- 인증번호 확인 Button -->
+            <button
+              type="button"
+              class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray-400 text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
+            >
+              확인
+            </button>
+          </div>
+          <!-- 비밀번호 Input -->
+          <div class="mt-15">
+            <label
+              for="password"
+              class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
+              >비밀번호</label
+            >
+            <input
+              type="password"
+              placeholder="비밀번호"
+              name="password"
+              id="password"
+              required
+              class="w-full max-w-[var(--input-width)] min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none flex"
+            />
+            <!-- 비밀번호 확인 Input -->
+            <input
+              type="password"
+              placeholder="비밀번호 확인"
+              required
+              class="w-full max-w-[var(--input-width)] min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+            />
+          </div>
+          <!-- 닉네임 Input -->
+          <div class="mt-15">
+            <label
+              for="name"
+              class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
+              >닉네임</label
+            >
+            <div>
               <input
                 type="text"
-                placeholder="인증번호"
+                placeholder="닉네임(2~10)자"
+                name="name"
+                id="name"
+                minlength="2"
+                maxlength="10"
                 required
-                class="w-full max-w-(--input-width) min-w-[100px] h-[3.125rem] lg:h-[3.75rem] border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
-              />
-              <!-- 인증번호 확인 Button -->
-              <button
-                type="button"
-                class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray-400 text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
-              >
-                확인
-              </button>
-            </div>
-            <!-- 비밀번호 Input -->
-            <div class="mt-15">
-              <label
-                for="password"
-                class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
-                >비밀번호</label
-              >
-              <input
-                type="password"
-                placeholder="비밀번호"
-                name="password"
-                id="password"
-                required
-                class="w-full max-w-[var(--input-width)] min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none flex"
-              />
-              <!-- 비밀번호 확인 Input -->
-              <input
-                type="password"
-                placeholder="비밀번호 확인"
-                required
-                class="w-full max-w-[var(--input-width)] min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+                class="w-full max-w-(--input-width) min-w-[100px] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
               />
             </div>
             <!-- 닉네임 Input -->
@@ -405,8 +426,7 @@
           Copyright Likelion Bootcamp Frontend 13th All rights reserved.
         </span>
       </div>
-    </footer>
-
+    </div>
     <!-- =============================================================================================== -->
     <!-- =============================================================================================== -->
   </body>
