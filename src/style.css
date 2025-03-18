@@ -1,7 +1,38 @@
 @import "tailwindcss";
+@import "./assets/style/custom.css";
 
 @theme {
   --font-sans: "Pretendard Variable", sans-serif;
+}
+
+@layer components {
+  :root {
+    @apply text-[12px] md:text-[14px] lg:text-[16px];
+  }
+
+  body * {
+    img {
+      width: 100%;
+    }
+  }
+
+  /* 팀 소개 페이지 */
+  .team-introduce {
+    .content {
+      @apply hidden;
+    }
+    .character {
+      @apply w-[16.375rem] content-end md:w-(--team-character-width);
+    }
+    &:hover {
+      .character {
+        @apply content-center w-[12rem] md:w-(--team-character-width-hover);
+      }
+      .content {
+        @apply block;
+      }
+    }
+  }
 }
 
 @layer utilities {
