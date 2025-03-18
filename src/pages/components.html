@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
@@ -511,11 +511,13 @@
     <div
       class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) h-full lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
     >
+      <!-- 이미지 -->
       <img
         src="../assets/svg/icon_kakao.svg"
         alt="이미지"
         class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7"
       />
+      <!-- 텍스트 요소 -->
       <div class="p-7 w-full">
         <p class="text-main font-bold text-plan-content">
           안녕하세요 OOO입니다
@@ -532,6 +534,104 @@
     <!-- ===================================================================== -->
     <!-- ===================================================================== -->
 
+    <!-- ===================================================================== -->
+    <!--                       🚀 플랜 페이지 기획 컴포넌트                      -->
+    <!-- ===================================================================== -->
+
+    <div class="rounded-(--basic-radius) shadow-(--basic-shadow) max-w-[80rem]">
+      <!-- 라디오 버튼 그룹 -->
+      <input
+        type="radio"
+        name="tabs"
+        id="option1"
+        class="radio-tab hidden"
+        checked
+      />
+      <input type="radio" name="tabs" id="option2" class="hidden" />
+      <input type="radio" name="tabs" id="option3" class="hidden" />
+
+      <div class="tab-content flex">
+        <!-- 메뉴 영역 -->
+        <div class="w-1/3 border-r border-gray">
+          <div class="menu-item border-b border-gray">
+            <label
+              for="option1"
+              class="block p-4 text-main font-bold hover:cursor-pointer"
+              >주제 선정 이유</label
+            >
+          </div>
+          <div class="menu-item border-b text-main font-bold border-gray">
+            <label for="option2" class="block p-4 hover:cursor-pointer"
+              >디자인 의도</label
+            >
+          </div>
+          <div class="menu-item border-b text-main font-bold border-gray">
+            <label for="option3" class="block p-4 hover:cursor-pointer"
+              >개발 방식</label
+            >
+          </div>
+        </div>
+
+        <!-- 콘텐츠 영역 -->
+        <div class="content-area w-2/3 p-5 relative">
+          <!-- 이미지 패널 -->
+          <div
+            id="image1"
+            class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+          >
+            <img
+              src="../assets/img/main_page/hero_section.png"
+              alt="주제 선정 이유 이미지"
+            />
+          </div>
+          <div
+            id="image2"
+            class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+          >
+            <img
+              src="../assets/img/main_page/intro_char_left.png"
+              alt="디자인 의도 이미지"
+            />
+          </div>
+          <div
+            id="image3"
+            class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+          >
+            <img
+              src="../assets/img/main_page//intro_char_right.png"
+              alt="개발 방식 이미지"
+            />
+          </div>
+
+          <!-- 텍스트 패널 -->
+          <div
+            id="text1"
+            class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+          >
+            주제 선정 이유에 대한 설명입니다. 이 내용은 옵션 1을 선택했을 때만
+            표시됩니다.
+          </div>
+          <div
+            id="text2"
+            class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+          >
+            디자인 의도에 대한 설명입니다. 이 내용은 옵션 2를 선택했을 때만
+            표시됩니다.
+          </div>
+          <div
+            id="text3"
+            class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+          >
+            개발 방식에 대한 설명입니다. 이 내용은 옵션 3을 선택했을 때만
+            표시됩니다.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- 서브 타이틀 컴포넌트 -->
+    <!-- ===================================================================== -->
     <!-- sub title -->
     <h1 class="font-extrabold text-2xl mt-8">Plan Page Sub Title</h1>
     <h2
@@ -539,11 +639,11 @@
     >
       서브 타이틀
     </h2>
-    
+
     <!-- ===================================================================== -->
+    <!-- 프로젝트 시작 이유 컴포넌트 -->
     <!-- ===================================================================== -->
 
-    <!-- 프로젝트 시작 이유 컴포넌트 -->
     <h1 class="font-extrabold text-2xl mt-8">Plan Page Start</h1>
     <div
       class="flex flex-col gap-3 justify-between plan-start px-7 py-4 max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"

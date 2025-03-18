@@ -41,3 +41,34 @@
     backface-visibility: hidden;
   }
 }
+
+/* ================================================== */
+/*                    플랜 페이지                      */
+/* ================================================== */
+
+/* 각 옵션에 대한 표시 규칙 */
+#option1:checked ~ .tab-content .content-area #image1,
+#option1:checked ~ .tab-content .content-area #text1 {
+  display: block;
+}
+
+#option2:checked ~ .tab-content .content-area #image2,
+#option2:checked ~ .tab-content .content-area #text2 {
+  display: block;
+}
+
+#option3:checked ~ .tab-content .content-area #image3,
+#option3:checked ~ .tab-content .content-area #text3 {
+  display: block;
+}
+
+@media (max-width: 64rem) {
+  #option1:checked ~ .tab-content .content-area #image1,
+  #option2:checked ~ .tab-content .content-area #image2,
+  #option3:checked ~ .tab-content .content-area #image3 {
+    display: none; /* 모바일에서는 이미지 숨기기 */
+  }
+}
+
+/* ====================================================== */
+/* ====================================================== */
