@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "./assets/style/custom.css";
 
+@theme {
+  --font-sans: "Pretendard Variable", sans-serif;
+}
+
 @layer components {
   :root {
     @apply text-[12px] md:text-[14px] lg:text-[16px];
@@ -28,5 +32,15 @@
         @apply block;
       }
     }
+  }
+}
+
+@layer utilities {
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
   }
 }
