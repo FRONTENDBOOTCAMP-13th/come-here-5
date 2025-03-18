@@ -45,7 +45,7 @@
   --logo-sm-mobile-width-size: 3.125rem;
   --logo-sm-mobile-height-size: 3.125rem;
   --input-width: 28.125rem;
-  --input-height: 3.75rem;
+  --input-height: 3rem;
   --form-btn-width: 28.125rem;
   --form-btn-height: 4.375rem;
   --footer-icon-size: 1.75rem;
@@ -64,7 +64,7 @@
   --main-hero-max-width: 80rem;
   --main-hero-height: 50rem;
   --main-lion-logo-width: 12.5rem;
-  --main-btn-width: 25rem;
+  --main-btn-width: 20rem;
   --main-btn-height: 8.125rem;
   --main-character-width: 15.625rem;
   --main-bubble-width: 31.25rem;
@@ -94,6 +94,14 @@
   --sign-up-btn-width: 5rem;
   --sign-up-btn-height: 3.75rem;
 
+  --thoughts-bar-width: 50rem;
+  --thoughts-bar-height: 10rem;
+  --thoughts-bar-sm-width: 30rem;
+  --thoughts-bar-sm-height: 10rem;
+
+  --thoughts-bar-img-width: 6.25rem;
+  --thoughts-bar-img-sm-width: 4.375rem;
+
   /* radius */
   --btn-radius: 1.25rem;
   --basic-radius: 1.25rem;
@@ -111,8 +119,4 @@
 
   /* box shadow */
   --basic-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-
-  /* breakpoint */
-  --breakpoint-md: 600px;
-  --breakpoint-lg: 1024px;
 }
