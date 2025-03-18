@@ -215,7 +215,7 @@
       >
         <img src="/src/assets/svg/logo_white.svg" alt="Hi logo" />
       </div>
-      <div class="title text-white font-bold content-center lg:content-start">
+      <div class="title font-bold content-center lg:content-start">
         <div
           class="sub-title text-3xl md:text-[2.5rem] lg:text-team-hero-sub-title leading-[1.5]"
         >
@@ -431,7 +431,7 @@
     <!-- 🚀 카드 컴포넌트 -->
     <!-- ===================================================================== -->
     <section class="bg-blue-500 p-5">
-      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-5">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md-[] gap-5">
         <!-- 카드 1 -->
         <div
           class="relative h-[12.5rem] max-sm:h-[9.375rem] cursor-pointer border border-gray-300 shadow-lg rounded-xl transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
@@ -500,5 +500,42 @@
 
     <!-- ===================================================================== -->
     <!-- ===================================================================== -->
+
+    <!-- 프로젝트 플랜 페이지 -->
+    <!-- sub title -->
+    <h1 class="font-extrabold text-2xl mt-8">Plan Page Sub Title</h1>
+    <h2
+      class="sub-title text-plan-sub-title text-main mb-(--sub-title-margin-bottom)"
+    >
+      서브 타이틀
+    </h2>
+
+    <!-- 프로젝트 시작 이유 컴포넌트 -->
+    <h1 class="font-extrabold text-2xl mt-8">Plan Page Start</h1>
+    <div
+      class="flex flex-col gap-3 justify-between plan-start px-7 py-4 max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
+    >
+      <p class="plan-start-content text-gray-600">
+        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+      </p>
+      <div class="flex items-center gap-3">
+        <div
+          class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
+        >
+          <img
+            class="h-full object-cover"
+            src="/src/assets/img/md_img/ui_project.png"
+            alt=""
+          />
+        </div>
+        <div class="plan-start-info">
+          <p class="plan-start-name">이훈진</p>
+          <span class="plan-start-number">멋쟁이사자처럼 프론트엔드 13기</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
