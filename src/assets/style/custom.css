@@ -40,6 +40,10 @@
   /* 공통 */
   --logo-width-size: 3.75rem;
   --logo-height-size: 3.125rem;
+  --logo-sm-width-size: 4.375rem;
+  --logo-sm-height-size: 4.375rem;
+  --logo-sm-mobile-width-size: 3.125rem;
+  --logo-sm-mobile-height-size: 3.125rem;
   --input-width: 28.125rem;
   --input-height: 3.75rem;
   --form-btn-width: 28.125rem;
