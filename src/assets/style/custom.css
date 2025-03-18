@@ -45,7 +45,7 @@
   --logo-sm-mobile-width-size: 3.125rem;
   --logo-sm-mobile-height-size: 3.125rem;
   --input-width: 28.125rem;
-  --input-height: 3.75rem;
+  --input-height: 3rem;
   --form-btn-width: 28.125rem;
   --form-btn-height: 4.375rem;
   --footer-icon-size: 1.75rem;
@@ -93,6 +93,14 @@
 
   --sign-up-btn-width: 5rem;
   --sign-up-btn-height: 3.75rem;
+
+  --thoughts-bar-width: 50rem;
+  --thoughts-bar-height: 10rem;
+  --thoughts-bar-sm-width: 30rem;
+  --thoughts-bar-sm-height: 10rem;
+
+  --thoughts-bar-img-width: 6.25rem;
+  --thoughts-bar-img-sm-width: 4.375rem;
 
   /* radius */
   --btn-radius: 1.25rem;
