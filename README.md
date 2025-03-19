@@ -1,4 +1,4 @@
-<img src="" alt="배너" width="100%"/>
+<img src="./src/assets/img/md_img/ui_project.png" alt="배너" width="100%"/>
 </a>
 
 <br/>
@@ -11,18 +11,18 @@
 
 <br/>
 <br/>
-
+****
 # 2. Team Members (팀원 및 팀 소개)
 
-|                 이훈진                  |                배동초                |               배희정               |                  강석현                  |
-| :-------------------------------------: | :----------------------------------: | :--------------------------------: | :--------------------------------------: |
-|                   FE                    |                  FE                  |                 FE                 |                    FE                    |
-| [GitHub](https://github.com/huniversal) | [GitHub](https://github.com/hjb0304) | [GitHub](https://github.com/sua17) | [GitHub](https://github.com/Kanghyeon00) |
+|                 이훈진                  |               배동초               |                배희정                |                  강석현                  |
+| :-------------------------------------: | :--------------------------------: | :----------------------------------: | :--------------------------------------: |
+|                   FE                    |                 FE                 |                  FE                  |                    FE                    |
+| [GitHub](https://github.com/huniversal) | [GitHub](https://github.com/sua17) | [GitHub](https://github.com/hjb0304) | [GitHub](https://github.com/Kanghyeon00) |
 
 <br/>
 <br/>
 
-# 3. Key Features (주요 페이지
+# 3. Key Features (주요 페이지)
 
 - **메인 페이지**:
 - **팀 소개 페이지**:
@@ -49,21 +49,21 @@
 
 ## 5.1 Language
 
-|              |                                      |
-| ------------ | ------------------------------------ |
-| HTML5        | <img src="" alt="HTML5" width="100"> |
-| Tailwind CSS | <img src="" alt="CSS3" width="100">  |
+|                                                                           |                                                                                     |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| HTML5                                                                     | Tailwind CSS                                                                        |
+| <img src="./src/assets/img/md_img/Html_logo.png" alt="HTML5" width="100"> | <img src="./src/assets/img/md_img/Tailwind_logo.png" alt="TailwindCss" width="100"> |
 
 <br/>
 
 ## 5.4 Cooperation
 
-|         |                                        |
-| ------- | -------------------------------------- |
-| Git     | <img src="" alt="git" width="100">     |
-| GitHub  | <img src="" alt="github" width="100">  |
-| Notion  | <img src="" alt="Notion" width="100">  |
-| Discord | <img src="" alt="Discord" width="100"> |
+|         |                                                                                |
+| ------- | ------------------------------------------------------------------------------ |
+| Git     | <img src="./src/assets/img/md_img/Git_logo.png" alt="git" width="100">         |
+| GitHub  | <img src="./src/assets/img/md_img/GitHub_logo.png" alt="github" width="100">   |
+| Notion  | <img src="./src/assets/img/md_img/Notion_logo.png" alt="Notion" width="100">   |
+| Discord | <img src="./src/assets/img/md_img/Discord_logo.png" alt="Discord" width="100"> |
 
 <br/>
 
@@ -148,15 +148,9 @@ body
 git commit -m "✨ feat: 사용자 로그인 기능 추가"
 git commit -m "🐛 fix: 로그인 시 비밀번호 검증 오류 수정"
 git commit -m "📝 docs: README.md 수정"
-
-
-<br/>
+****
 
 ## 커밋 예시
-```
-
 ✨Feat: "회원 가입 페이지 구현"
-
-```
 
 ```
