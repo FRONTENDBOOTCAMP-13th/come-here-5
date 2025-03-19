@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
   </head>
   <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
     <!--==============================================================================-->
-    <!--                                 공통 헤더 컴포넌트                                  -->
+    <!--                                 공통 헤더 컴포넌트                               -->
     <!--==============================================================================-->
     <header
       class="grid grid-cols-2 items-center max-w-[1024px] h-[var(--header-height)] mx-auto px-4 bg-white"
@@ -304,13 +304,13 @@
     <!-- ===================================================================== -->
     <!-- 🚀 hero section -->
     <!-- ===================================================================== -->
-    <section
+    <!-- <section
       class="relative bg-[url('../assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1280px] aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12"
     >
       <article
         class="grid grid-cols-[3fr_1fr] max-[520px]:grid-cols-[1fr] p-4 h-full gap-6"
       >
-        <!-- 텍스트 섹션 -->
+
         <div class="flex flex-col justify-center px-6">
           <p
             class="text-gray-400 text-[0.8rem] sm:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem]"
@@ -318,7 +318,7 @@
             Likelion Ui Project
           </p>
           <h1
-            class="text-white text-[1.65rem] sm:text-[1.8rem] lg:text-[4rem] xl:text-[5rem] font-bold"
+            class="text-white text-[3rem] sm:text-[1.8rem] lg:text-[4rem] xl:text-[5rem] font-bold"
           >
             우리를 소개합니다!!
           </h1>
@@ -329,6 +329,49 @@
           </p>
           <button
             class="mt-6 px-4 py-2 bg-white text-black rounded-full shadow-md hover:shadow-lg w-[80px] sm:w-[120px] lg:w-[150px] xl:w-[180px] text-[.625rem] max-[520px]:hidden sm:text-sm lg:text-base xl:text-lg"
+          >
+            팀 소개 →
+          </button>
+        </div>
+
+
+        <div
+          class="relative flex justify-end items-start pr-8 pt-6 max-[520px]:hidden"
+        >
+          <img
+            src="../assets/svg/lion_white.svg"
+            alt="Lion Logo"
+            class="w-[80px] sm:w-[100px] lg:w-[150px] xl:w-[180px] h-auto"
+          />
+        </div>
+      </article>
+    </section> -->
+
+    <section
+      class="relative bg-[url('../assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[80rem] aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12"
+    >
+      <article
+        class="grid grid-cols-[3fr_1fr] max-[32.5rem]:grid-cols-[1fr] p-4 h-full gap-6"
+      >
+        <!-- 텍스트 섹션 -->
+        <div class="flex flex-col justify-center px-6">
+          <p
+            class="text-gray-400 text-[0.8rem] sm:text-[1.5rem] lg:text-main-sub-title xl:text-[2.5rem]"
+          >
+            Likelion Ui Project
+          </p>
+          <h1
+            class="text-white text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-main-hero-title xl:text-[5rem] font-bold"
+          >
+            우리를 소개합니다!!
+          </h1>
+          <p
+            class="text-white text-[0.8rem] sm:text-[1rem] lg:text-xl xl:text-2xl"
+          >
+            Please check Our project!
+          </p>
+          <button
+            class="mt-6 px-4 py-2 bg-white text-black rounded-full shadow-md hover:shadow-(--basic-shadow) w-[80px] sm:w-[120px] lg:w-[150px] xl:w-[180px] text-[.625rem] max-[520px]:hidden sm:text-sm lg:text-base xl:text-lg"
           >
             팀 소개 →
           </button>
@@ -431,7 +474,7 @@
     <!-- 🚀 카드 컴포넌트 -->
     <!-- ===================================================================== -->
     <section class="bg-blue-500 p-5">
-      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-5">
+      <div class="grid grid-cols-2 md:grid-cols-4 max-w-full gap-5">
         <!-- 카드 1 -->
         <div
           class="relative h-[12.5rem] max-sm:h-[9.375rem] cursor-pointer border border-gray-300 shadow-lg rounded-xl transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
