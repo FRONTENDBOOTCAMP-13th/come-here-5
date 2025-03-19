@@ -19,51 +19,48 @@
     <!--                                 공통 헤더 컴포넌트                               -->
     <!--==============================================================================-->
     <header
-      class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
+      class="grid grid-cols-2 items-center max-w-[1024px] h-[var(--header-height)] mx-auto px-4 bg-white"
     >
-      <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
-      <div class="flex items-center w-full lg:w-auto">
-        <!-- 로고 -->
-        <div class="lg:w-[200px]">
-          <a href="/">
-            <img
-              src="/src/assets/svg/logo_black.svg"
-              alt="Logo"
-              class="w-(--logo-width-size) h-(--logo-height-size)"
-            />
-          </a>
-        </div>
-
-        <!-- 햄버거 버튼 -->
-        <button
-          class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+      <!-- 로고 -->
+      <div class="flex items-center mr-20">
+        <a href="/">
+          <img
+            src="/src/assets/svg/logo_black.svg"
+            alt="Logo"
+            class="w-(--logo-width-size) h-(--logo-height-size)"
+        /></a>
       </div>
 
-      <!-- 메뉴 영역 (데스크톱) -->
+      <!-- 햄버거 버튼 (모바일 전용) -->
+      <button
+        class="absolute top-2 right-4 lg:hidden flex items-center justify-center w-[40px] h-[70px]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+
+      <!-- 메뉴 -->
       <nav
-        class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+        class="hidden lg:flex justify-end items-center space-x-14 text-[#312F2F] text-header-link ml-20"
       >
         <a href="#" class="hover:opacity-70">Plan</a>
         <a href="#" class="hover:opacity-70">Team</a>
         <a
-          href="./login.html"
+          href="#"
           class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+          href="./login.html"
         >
           Login
         </a>
@@ -210,6 +207,34 @@
     >
       로그인
     </button>
+    <div>
+      <p class="font-medium text-gray-500">
+        SNS 계정으로 간편 로그인 및 회원가입
+      </p>
+      <div class="flex">
+        <a href="https://github.com/FRONTENDBOOTCAMP-13th/come-here-5">
+          <img
+            src="../assets/svg/icon_facebook.svg"
+            alt="페이스북"
+            class="w-(--login-icon-width)"
+          />
+        </a>
+        <a href="https://github.com/FRONTENDBOOTCAMP-13th/come-here-5">
+          <img
+            src="../assets/svg/icon_kakao.svg"
+            alt="카카오톡"
+            class="w-(--login-icon-width)"
+          />
+        </a>
+        <a href="https://github.com/FRONTENDBOOTCAMP-13th/come-here-5">
+          <img
+            src="../assets/svg/icon_naver.svg"
+            alt="네이버"
+            class="w-(--login-icon-width)"
+          />
+        </a>
+      </div>
+    </div>
     <!--===================================================================================================-->
     <!--                                        팀 소개 페이지 컴포넌트                                      -->
     <!--===================================================================================================-->
@@ -218,18 +243,18 @@
       class="team-hero bg-main px-8 py-[2.8125rem] flex justify-center gap-5 h-[200px] md:h-[350px]"
     >
       <div
-        class="logo w-[6rem] content-center md:w-(--logo-big-size) lg:content-start lg:mt-3 shrink-0"
+        class="logo w-[6rem] content-center md:w-(--logo-big-size) lg:content-start shrink-0"
       >
         <img src="/src/assets/svg/logo_white.svg" alt="Hi logo" />
       </div>
-      <div class="title font-bold content-center">
+      <div class="title font-bold content-center lg:content-start">
         <div
-          class="sub-title text-3xl md:text-[2.5rem] lg:text-team-hero-sub-title leading-[1.5] text-white"
+          class="sub-title text-3xl md:text-[2.5rem] lg:text-team-hero-sub-title leading-[1.5]"
         >
           4명의 색다른 매력,
         </div>
         <div
-          class="main-title text-4xl md:text-[3.4rem] md:pl-[5.75rem] lg:text-team-hero-title leading-[1.5] text-white"
+          class="main-title text-4xl md:text-[3.4rem] md:pl-[5.75rem] lg:text-team-hero-title leading-[1.5]"
         >
           지금 소개합니다!
         </div>
@@ -241,7 +266,7 @@
       class="team-introduce flex justify-center md:gap-[3.5625rem] px-4 md:px-8 max-w-(--team-intro-max-width) h-(--team-intro-height) bg-[#AAC0FF] hover:bg-white rounded-(--basic-radius) shadow-(--basic-shadow) duration-500 ease-in-out"
     >
       <div class="character shrink-0">
-        <img src="/src/assets/img/memo/memo_hj.png" alt="팀원 캐릭터" />
+        <img src="/src/assets/img/memo.png" alt="캐릭터" />
       </div>
       <div
         class="content text-xl md:text-team-introduce-content font-bold py-6"
