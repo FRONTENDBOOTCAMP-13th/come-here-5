@@ -186,20 +186,24 @@
         type="email"
         placeholder="이메일"
         required
-        class="w-full max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+        class="w-full max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
       />
     </label>
     <!-- 비밀번호 재설정, 회원가입 요소 -->
-    <div
-      class="mt-2 mb-2 text-[#928989] font-light text-[.875rem] lg:text-[1rem]"
-    >
-      <a href="#">비밀번호 재설정</a>
-      <a href="./sign-up.html">회원가입</a>
+    <div class="mt-2 mb-2 font-light text-[.875rem] lg:text-[1rem]">
+      <a href="#" class="text-gray-400 font-regular hover:text-gray-500"
+        >비밀번호 재설정</a
+      >
+      <a
+        href="./sign-up.html"
+        class="text-gray-400 font-regular hover:text-gray-500"
+        >회원가입</a
+      >
     </div>
     <!-- 로그인 버튼 -->
     <button
       type="submit"
-      class="w-full max-w-(--login-btn-width) h-(--sign-up-btn-height) lg:h-(--form-btn-height) bg-main text-[#fff] rounded-(--btn-radius) text-[1.25rem] lg:text-[1.875rem] font-bold hover:cursor-pointer"
+      class="w-full max-w-(--login-btn-width) h-(--login-btn-height) lg:h-(--login-btn-height) bg-main rounded-(--btn-radius) text-white text-[1.25rem] font-semibold hover:cursor-pointer"
     >
       로그인
     </button>
@@ -256,23 +260,19 @@
       />
     </a>
     <!-- 회원가입 라벨, 인풋 -->
-    <label
-      for="email"
-      class="text-main font-bold text-[1.25rem] lg:text-[1.5625rem]"
-      >이메일</label
-    >
+    <label for="email" class="text-main font-bold text-[1.2rem]">이메일</label>
     <input
       type="email"
       placeholder="이메일"
       name="email"
       id="email"
       required
-      class="w-full max-w-(--input-width) min-w-[6rem] h-[3.125rem] lg:h-(--input-height) border-2 border-gray rounded-(--basic-radius) indent-4 mt-1.5 focus:border-main focus:outline-none"
+      class="w-full max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
     />
     <!-- 인증, 확인 버튼 -->
     <button
       type="button"
-      class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-bold lg:text-[1.25rem] hover:cursor-pointer"
+      class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer"
     >
       인증
     </button>
@@ -286,7 +286,7 @@
         required
         class="mr-1.5 w-5"
       />
-      <span>
+      <span class="font-medium">
         <strong class="hover:cursor-pointer">개인정보 수집</strong> 및
         <strong class="hover:cursor-pointer">이용</strong>에 동의하십니까?
       </span>
@@ -294,7 +294,7 @@
     <!-- 회원가입 Button -->
     <button
       type="submit"
-      class="w-full max-w-(--form-btn-width) min-w-[6.25rem] h-[3.75rem] lg:h-(--form-btn-height) bg-main text-white rounded-(--basic-radius) text-[1.25rem] lg:text-[1.875rem] font-bold hover:cursor-pointer"
+      class="w-full max-w-(--login-btn-width) h-(--login-btn-height) lg:h-(--login-btn-height) bg-main rounded-(--btn-radius) text-white text-[1.25rem] font-semibold hover:cursor-pointer"
     >
       회원가입
     </button>
@@ -515,7 +515,7 @@
       <img
         src="../assets/svg/icon_kakao.svg"
         alt="이미지"
-        class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7"
+        class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
       />
       <!-- 텍스트 요소 -->
       <div class="p-7 w-full">
@@ -556,17 +556,21 @@
           <div class="menu-item border-b border-gray">
             <label
               for="option1"
-              class="block p-4 text-main font-bold hover:cursor-pointer"
+              class="block p-4 hover:cursor-pointer font-semibold"
               >주제 선정 이유</label
             >
           </div>
-          <div class="menu-item border-b text-main font-bold border-gray">
-            <label for="option2" class="block p-4 hover:cursor-pointer"
+          <div class="menu-item border-b border-gray">
+            <label
+              for="option2"
+              class="block p-4 hover:cursor-pointer font-semibold"
               >디자인 의도</label
             >
           </div>
-          <div class="menu-item border-b text-main font-bold border-gray">
-            <label for="option3" class="block p-4 hover:cursor-pointer"
+          <div class="menu-item border-b border-gray">
+            <label
+              for="option3"
+              class="block p-4 hover:cursor-pointer font-semibold"
               >개발 방식</label
             >
           </div>
