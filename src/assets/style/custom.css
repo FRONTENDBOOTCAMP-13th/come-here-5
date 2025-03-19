@@ -44,10 +44,10 @@
   --logo-sm-height-size: 4.375rem;
   --logo-sm-mobile-width-size: 3.125rem;
   --logo-sm-mobile-height-size: 3.125rem;
-  --input-width: 28.125rem;
-  --input-height: 3rem;
-  --form-btn-width: 28.125rem;
-  --form-btn-height: 4.375rem;
+  --input-width: 25rem;
+  --input-height: 3.125rem;
+  --form-btn-width: 25rem;
+  --form-btn-height: 3.125rem;
   --footer-icon-size: 1.75rem;
   --footer-icon-lg-size: 2.5rem;
   --footer-logo-width: 3.125rem;
@@ -93,12 +93,14 @@
   --plan-profile-circle: 6.25rem;
   --plan-box-width: 75rem;
   --plan-box-height: 31.25rem;
+  --plan-how-width: 80rem;
+  --plan-how-height: 40rem;
 
-  --login-btn-width: 28.125rem;
-  --login-btn-height: 1.875rem;
+  --login-btn-width: 25rem;
+  --login-btn-height: 3.125rem;
 
-  --sign-up-btn-width: 5rem;
-  --sign-up-btn-height: 3.75rem;
+  --sign-up-btn-width: 4.5rem;
+  --sign-up-btn-height: 3.125rem;
 
   --thoughts-bar-width: 50rem;
   --thoughts-bar-height: 10rem;
@@ -115,7 +117,7 @@
   --plan-box-radius: 12.5rem;
 
   /* spacing */
-  --input-padding: 1.3125rem;
+  --input-padding: 1rem;
   --sub-title-margin-bottom: 3.4375rem;
 
   /* font weight */

@@ -62,6 +62,22 @@
   display: block;
 }
 
+/* 각 탭이 선택 될 시 label 색상변경 */
+#option1:checked ~ .tab-content .menu-item label[for="option1"] {
+  color: #205aff;
+  font-weight: bold;
+}
+
+#option2:checked ~ .tab-content .menu-item label[for="option2"] {
+  color: #205aff;
+  font-weight: bold;
+}
+
+#option3:checked ~ .tab-content .menu-item label[for="option3"] {
+  color: #205aff;
+  font-weight: bold;
+}
+
 @media (max-width: 64rem) {
   #option1:checked ~ .tab-content .content-area #image1,
   #option2:checked ~ .tab-content .content-area #image2,
