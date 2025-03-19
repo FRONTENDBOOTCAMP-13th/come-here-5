@@ -14,159 +14,360 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
-  <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
-    <!--==============================================================================-->
-    <!--                                 공통 헤더 컴포넌트                                  -->
-    <!--==============================================================================-->
-    <header
-      class="grid grid-cols-2 items-center max-w-[1024px] h-[var(--header-height)] mx-auto px-4 bg-white"
-    >
-      <!-- 로고 -->
-      <div class="flex items-center mr-20">
-        <a href="/">
+  <body>
+    <div class="wrap">
+      <!--==============================================================================-->
+      <!--                                 공통 헤더 컴포넌트                             -->
+      <!--==============================================================================-->
+      <header
+        class="grid grid-cols-2 items-center max-w-[1024px] h-[var(--header-height)] mx-auto px-4 bg-white"
+      >
+        <!-- 로고 -->
+        <div class="flex items-center mr-20">
+          <a href="/">
+            <img
+              src="/src/assets/svg/logo_black.svg"
+              alt="Logo"
+              class="w-(--logo-width-size) h-(--logo-height-size)"
+          /></a>
+        </div>
+
+        <!-- 햄버거 버튼 (모바일 전용) -->
+        <button
+          class="absolute top-2 right-4 lg:hidden flex items-center justify-center w-[40px] h-[70px]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- 메뉴 -->
+        <nav
+          class="hidden lg:flex justify-end items-center space-x-14 text-[#312F2F] text-header-link ml-20"
+        >
+          <a href="../pages/plan.html" class="hover:opacity-70">Plan</a>
+          <a href="../pages/about.html" class="hover:opacity-70">Team</a>
+          <a
+            href="../pages/login.html"
+            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+          >
+            Login
+          </a>
+        </nav>
+      </header>
+      <!-- ============================================================================================== -->
+      <!-- ============================================================================================== -->
+
+      <!--===============================================================================================-->
+      <!--                                           회원가입 컴포넌트                                     -->
+      <!--===============================================================================================-->
+      <main class="flex flex-col items-center mt-[2rem] mb-20">
+        <div class="p-7">
+          <a href="/">
+            <img
+              src="../assets/svg/logo_black.svg"
+              alt="로고"
+              class="w-(--logo-sm-mobile-width-size) h-(--logo-sm-mobile-height-size) lg:w-(--logo-sm-width-size) lg:h-(--logo-sm-height-size) mb-10 hover:cursor-pointer m-auto"
+            />
+          </a>
+          <form action="#" method="post" class="flex flex-col">
+            <!-- 이메일 입력 -->
+            <label for="email" class="text-main font-bold text-[1.2rem] block"
+              >이메일</label
+            >
+            <div>
+              <input
+                type="email"
+                placeholder="이메일"
+                name="email"
+                id="email"
+                required
+                class="w-full lg:min-w-(--input-width) max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+              />
+
+              <!-- 인증 버튼 -->
+              <button
+                type="button"
+                class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer"
+              >
+                인증
+              </button>
+            </div>
+            <!-- 인증번호 입력 -->
+            <div>
+              <input
+                type="text"
+                placeholder="인증번호 입력"
+                name="authcode"
+                id="authcode"
+                required
+                class="peer w-full lg:min-w-(--input-width) max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+              />
+
+              <!-- 확인 버튼 -->
+              <button
+                type="button"
+                class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer peer-placeholder-shown:opacity-100 peer-focus:bg-main focus:bg-main"
+              >
+                확인
+              </button>
+            </div>
+            <label
+              for="password"
+              class="text-main font-bold text-[1.2rem] mt-15 block"
+              >비밀번호</label
+            >
+            <input
+              type="password"
+              placeholder="비밀번호"
+              name="password"
+              id="password"
+              required
+              class="peer max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+            />
+            <input
+              type="password"
+              placeholder="비밀번호 확인"
+              name="check-password"
+              id="check-password"
+              required
+              class="peer max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+            />
+            <label
+              for="email"
+              class="text-main font-bold text-[1.2rem] mt-15 block"
+              >닉네임</label
+            >
+            <input
+              type="text"
+              placeholder="닉네임 (2~10자)"
+              name="name"
+              id="name"
+              required
+              class="peer max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+            />
+            <!-- Modal 구현영역 -->
+            <div class="my-5 flex">
+              <label for="private"></label>
+              <input
+                type="checkbox"
+                name="private"
+                id="private"
+                required
+                class="mr-1.5 w-5"
+              />
+              <!-- 숨겨진 체크박스 (토글 역할) -->
+              <input type="checkbox" id="modal-toggle" class="hidden peer" />
+
+              <!-- 트리거 버튼 -->
+              <label
+                for="modal-toggle"
+                class="cursor-pointer font-semibold border-b-1 hover:opacity-80"
+              >
+                개인정보 수집
+              </label>
+              <span class="font-medium text-gray-600">&nbsp;및&nbsp;</span>
+              <label
+                for="modal-toggle"
+                class="cursor-pointer font-semibold border-b-1 hover:opacity-80"
+              >
+                약관
+              </label>
+              <span class="font-medium text-gray-600">에 동의 하십니까?</span>
+              <!-- 모달 배경 (체크되었을 때 보여짐) -->
+              <div
+                class="fixed inset-0 bg-black/50 hidden peer-checked:block z-1"
+              ></div>
+
+              <!-- 모달 박스 -->
+              <div
+                class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg max-h-[20rem] p-6 bg-white rounded-lg shadow-lg hidden peer-checked:flex flex-col z-2"
+              >
+                <!-- 이용약관 Text 영역 -->
+                <div class="overflow-y-scroll">
+                  <h2 class="text-xl font-bold mb-4">개인정보 처리방침</h2>
+                  <p class="font-medium">
+                    하이(주) (이하 ‘회사’라고 합니다)는 개인정보보호법 등 관련
+                    법령상 개인정보 보호 규정을 준수하며 귀하의 개인정보를
+                    철저하게 관리하고 있습니다. 회사는 개인정보 보호법에
+                    근거하여 다음과 같은 내용으로 개인정보를 수집 및 이용하고자
+                    합니다.
+                  </p>
+                  <p class="font-medium">
+                    다음의 내용을 자세히 읽어보신 후 모든 내용을 이해하신 후에
+                    동의 여부를 결정해주시기 바랍니다.
+                  </p>
+
+                  <p class="font-medium">
+                    <strong>제1조 (개인정보 수집 및 이용 목적)</strong><br />
+                    이용자가 제공한 모든 정보는 다음의 목적을 위해 활용하며,
+                    목적 이외의 용도로는 사용되지 않습니다.
+                    <br />
+                    - 본인확인, 입사지원관리, 면접관리 및 채용절차의 진행 및
+                    관리
+                    <br />
+                    - 인재풀 구성 및 인사 정보 활용
+                  </p>
+
+                  <p class="font-medium">
+                    <strong>제2조 (개인정보 수집 및 이용 항목)</strong><br />
+                    회사는 개인정보 수집 목적을 위하여 다음과 같은 정보를
+                    수집합니다.
+                    <br />
+                    - 성명, 주소, 전화번호, 이메일, 성별, 나이 및 생년월일
+                  </p>
+
+                  <p class="font-medium">
+                    <strong>제3조 (개인정보 보유 및 이용 기간)</strong><br />
+                    1. 수집한 개인정보는 수집, 이용일로부터 3년간 보관 및
+                    이용합니다.
+                    <br />
+                    2. 개인정보 보유기간 경과, 처리목적 달성 등 개인정보가
+                    불필요하게 되었을 때에는 지체없이 해당 개인정보를
+                    파기합니다.
+                  </p>
+
+                  <p class="font-medium">
+                    <strong>제4조 (동의 거부 권리)</strong><br />
+                    귀하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를
+                    거부하실 수 있으며, 이에 따른 불이익은 없습니다.
+                    <br />
+                    본인은 위의 동의서 내용을 충분히 숙지하였으며, 위와 같이
+                    개인정보를 수집, 이용하는데 동의합니다.
+                  </p>
+                </div>
+
+                <!-- 닫기 버튼 -->
+                <label
+                  for="modal-toggle"
+                  class="cursor-pointer text-center py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition mt-5"
+                >
+                  확인
+                </label>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="max-w-(--login-btn-width) h-(--login-btn-height) lg:h-(--login-btn-height) bg-main rounded-(--btn-radius) text-white text-[1.25rem] font-semibold hover:cursor-pointer mt-3"
+            >
+              회원가입
+            </button>
+          </form>
+        </div>
+      </main>
+
+      <!-- ============================================================================================== -->
+      <!-- ============================================================================================== -->
+      <!--===============================================================================================-->
+      <!--                                          공통 Footer 컴포넌트                                  -->
+      <!--===============================================================================================-->
+
+      <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
+        <!-- 로고 -->
+        <div class="flex justify-start px-4 mb-6 lg:mb-8">
           <img
-            src="/src/assets/svg/logo_black.svg"
-            alt="Logo"
-            class="w-(--logo-width-size) h-(--logo-height-size)"
-        /></a>
-      </div>
-
-      <!-- 햄버거 버튼 (모바일 전용) -->
-      <button
-        class="absolute top-2 right-4 lg:hidden flex items-center justify-center w-[40px] h-[70px]"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          class="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
+            src="/src/assets/svg/lion_black.svg"
+            alt="Lion Logo"
+            class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
           />
-        </svg>
-      </button>
+        </div>
 
-      <!-- 메뉴 -->
-      <nav
-        class="hidden lg:flex justify-end items-center space-x-14 text-[#312F2F] text-header-link ml-20"
-      >
-        <a href="#" class="hover:opacity-70">Plan</a>
-        <a href="#" class="hover:opacity-70">Team</a>
-        <a
-          href="#"
-          class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
-          href="./login.html"
+        <!-- Bootcamp 제목 -->
+        <div
+          class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
         >
-          Login
-        </a>
-      </nav>
-    </header>
-    <!-- ============================================================================================== -->
-    <!-- ============================================================================================== -->
-
-    <!--===============================================================================================-->
-    <!--                                          공통 Footer 컴포넌트                                    -->
-    <!--===============================================================================================-->
-
-    <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
-      <!-- 로고 -->
-      <div class="flex justify-start px-4 mb-6 lg:mb-8">
-        <img
-          src="/src/assets/svg/lion_black.svg"
-          alt="Lion Logo"
-          class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
-        />
-      </div>
-
-      <!-- Bootcamp 제목 -->
-      <div
-        class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
-      >
-        Likelion Bootcamp Frontend 13th
-      </div>
-
-      <!-- 이름 목록 -->
-      <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >배희정</span
-          >
+          Likelion Bootcamp Frontend 13th
         </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >배동초</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >이훈진</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >강석현</span
-          >
-        </div>
-      </div>
 
-      <!-- 소셜 아이콘 및 Copy~ -->
-      <div
-        class="flex items-center justify-between lg:justify-between px-4 mt-10"
-      >
-        <!-- 소셜 아이콘 -->
-        <div class="flex justify-start space-x-4 lg:space-x-6">
-          <!-- GitHub -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_github.svg"
-                alt="GitHub"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+        <!-- 이름 목록 -->
+        <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배희정</span
+            >
           </div>
-          <!-- Instagram -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_instagram.svg"
-                alt="Instagram"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배동초</span
+            >
           </div>
-          <!-- YouTube -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_youtube.svg"
-                alt="YouTube"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >이훈진</span
+            >
           </div>
-          <!-- Facebook -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_facebook_02.svg"
-                alt="Facebook"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >강석현</span
+            >
           </div>
         </div>
-      </div>
-      <!-- Copy Likelion -->
-      <div class="mt-8 lg:mt-6 mb-0 text-center">
-        <span class="text-[8px] lg:text-[16px] text-black">
-          Copyright Likelion Bootcamp Frontend 13th All rights reserved.
-        </span>
-      </div>
-    </footer>
 
-    <!-- =============================================================================================== -->
-    <!-- =============================================================================================== -->
+        <!-- 소셜 아이콘 및 Copy~ -->
+        <div
+          class="flex items-center justify-between lg:justify-between px-4 mt-10"
+        >
+          <!-- 소셜 아이콘 -->
+          <div class="flex justify-start space-x-4 lg:space-x-6">
+            <!-- GitHub -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_github.svg"
+                  alt="GitHub"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Instagram -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_instagram.svg"
+                  alt="Instagram"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- YouTube -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_youtube.svg"
+                  alt="YouTube"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Facebook -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_facebook_02.svg"
+                  alt="Facebook"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copy Likelion -->
+        <div class="mt-8 lg:mt-6 mb-0 text-center">
+          <span class="text-[8px] lg:text-[16px] text-black">
+            Copyright Likelion Bootcamp Frontend 13th All rights reserved.
+          </span>
+        </div>
+      </footer>
+
+      <!-- =============================================================================================== -->
+      <!-- =============================================================================================== -->
+    </div>
   </body>
 </html>
