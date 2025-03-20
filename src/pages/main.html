@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
@@ -16,15 +16,15 @@
   </head>
   <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
     <!--==============================================================================-->
-    <!--                                 공통 헤더 컴포넌트                                  -->
+    <!--                                 공통 헤더 컴포넌트                               -->
     <!--==============================================================================-->
-    <header
+<header
       class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
     >
       <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
       <div class="flex items-center w-full lg:w-auto">
         <!-- 로고 -->
-        <div class="lg:w-[200px]">
+        <div>
           <a href="/">
             <img
               src="/src/assets/svg/logo_black.svg"
@@ -69,107 +69,359 @@
         </a>
       </nav>
     </header>
-    <!-- ============================================================================================== -->
-    <!-- ============================================================================================== -->
-
-    <!--===============================================================================================-->
-    <!--                                          공통 Footer 컴포넌트                                    -->
-    <!--===============================================================================================-->
-
-    <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
-      <!-- 로고 -->
-      <div class="flex justify-start px-4 mb-6 lg:mb-8">
-        <img
-          src="/src/assets/svg/lion_black.svg"
-          alt="Lion Logo"
-          class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
-        />
-      </div>
-
-      <!-- Bootcamp 제목 -->
-      <div
-        class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
-      >
-        Likelion Bootcamp Frontend 13th
-      </div>
-
-      <!-- 이름 목록 -->
-      <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >배희정</span
+      <!-- ================================================================================================ -->
+      <main class="flex flex-col items-center overflow-visible">
+        <section
+          class="relative bg-[url('../assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1280px] mx-auto aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mb-35"
+        >
+          <article
+            class="grid grid-cols-[3fr_1fr] max-[32.5rem]:grid-cols-[1fr] p-4 h-full gap-6"
           >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >배동초</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >이훈진</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >강석현</span
-          >
-        </div>
-      </div>
+            <!-- 텍스트 섹션 -->
+            <div class="flex flex-col justify-center px-6">
+              <p
+                class="text-gray-400 text-[0.8rem] sm:text-[1.5rem] lg:text-main-sub-title xl:text-[2.5rem]"
+              >
+                Likelion Ui Project
+              </p>
+              <h1
+                class="text-white text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-main-hero-title xl:text-[5rem] font-bold"
+              >
+                우리를 소개합니다!!
+              </h1>
+              <p
+                class="text-white text-[0.8rem] sm:text-[1rem] lg:text-xl xl:text-2xl"
+              >
+                Please check Our project!
+              </p>
+              <button
+                class="mt-6 px-4 py-2 bg-white text-black rounded-full shadow-md hover:shadow-(--basic-shadow) w-[80px] sm:w-[120px] lg:w-[150px] xl:w-[180px] text-[.625rem] max-[520px]:hidden sm:text-sm lg:text-base xl:text-lg"
+              >
+                팀 소개 →
+              </button>
+            </div>
 
-      <!-- 소셜 아이콘 및 Copy~ -->
-      <div
-        class="flex items-center justify-between lg:justify-between px-4 mt-10"
-      >
-        <!-- 소셜 아이콘 -->
-        <div class="flex justify-start space-x-4 lg:space-x-6">
-          <!-- GitHub -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+            <!-- 멋사 로고 -->
+            <div
+              class="relative flex justify-end items-start pr-8 pt-6 max-[520px]:hidden"
+            >
               <img
-                src="/src/assets/svg/icon_github.svg"
-                alt="GitHub"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+                src="../assets/svg/lion_white.svg"
+                alt="Lion Logo"
+                class="w-[80px] sm:w-[100px] lg:w-[150px] xl:w-[180px] h-auto"
+              />
+            </div>
+          </article>
+        </section>
+        <!-- ================================================================================== -->
+        <section class="bg-gray-200 w-full">
+          <div
+            class="max-w-[1024px] mx-auto mt-20 py-10 px-6 text-center space-y-4"
+          >
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+              팀원을 소개합니다.
+            </h3>
+
+            <p
+              class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed"
+            >
+              <strong>Hi!</strong> 프로젝트 팀은 멋쟁이 사자처럼
+              <strong>FE Bootcamp</strong>를 통해 이루어진 UI 프로젝트
+              팀입니다.<br />
+              각자 색다른 매력을 가지고 있는 팀원을 만나러 가보실까요?
+            </p>
+
+            <a
+              href="#"
+              class="inline-block bg-blue-600 text-white text-[10px] sm:text-base md:text-lg lg:text-xl font-bold w-[8rem] sm:w-[15rem] md:w-[18rem] lg:w-(--main-btn-width) px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 rounded-(--basic-radius) shadow-md hover:bg-blue-700"
+            >
+              팀원 소개 →
+            </a>
           </div>
-          <!-- Instagram -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+          <!-- ================================================================================== -->
+          <section class="grid grid-cols-[auto_30%] gap-2 p-4 h-full">
+            <!-- 말풍선 영역 -->
+            <div class="relative flex items-center justify-end w-full p-4">
+              <div
+                class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-right-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-r-transparent"
+              >
+                <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
+                  안녕하세요 이훈진입니다!
+                </h3>
+                <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
+                  저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로
+                  저의 활약을 기대해주세요!
+                </p>
+              </div>
+            </div>
+
+            <!-- 사람 이미지 영역 -->
+            <div class="relative w-full flex items-center justify-start">
               <img
-                src="/src/assets/svg/icon_instagram.svg"
-                alt="Instagram"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+                src="../assets/img/main_page/intro_char_right.png"
+                alt="Intro Right"
+                class="w-full max-w-[350px]"
+              />
+            </div>
+          </section>
+          <!-- ================================================================================== -->
+          <section class="grid grid-cols-[30%_auto] gap-2 p-4 h-full">
+            <!-- 사람 이미지 영역 (왼쪽으로 이동) -->
+            <div class="relative w-full flex items-center justify-end">
+              <img
+                src="../assets/img/main_page/intro_bhj.png"
+                alt="Intro Right"
+                class="w-full max-w-[350px]"
+              />
+            </div>
+
+            <!-- 말풍선 영역 (오른쪽으로 이동) -->
+            <div class="relative flex items-center justify-start w-full p-4">
+              <div
+                class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-left-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-l-transparent"
+              >
+                <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
+                  안녕하세요 배희정입니다!
+                </h3>
+                <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
+                  저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로
+                  저의 활약을 기대해주세요!
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- ================================================================================== -->
+          <section class="grid grid-cols-[auto_30%] gap-2 p-4 h-full">
+            <!-- 말풍선 영역 -->
+            <div class="relative flex items-center justify-end w-full p-4">
+              <div
+                class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-right-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-r-transparent"
+              >
+                <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
+                  안녕하세요 배동초입니다!
+                </h3>
+                <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
+                  저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로
+                  저의 활약을 기대해주세요!
+                </p>
+              </div>
+            </div>
+
+            <!-- 사람 이미지 영역 -->
+            <div class="relative w-full flex items-center justify-start">
+              <img
+                src="../assets/img/main_page/intro_bdc_1.png"
+                alt="Intro Right"
+                class="w-full max-w-[350px]"
+              />
+            </div>
+          </section>
+          <!-- ================================================================================== -->
+          <section class="grid grid-cols-[30%_auto] gap-2 p-4 mb-20 h-full">
+            <!-- 사람 이미지 영역 (왼쪽으로 이동) -->
+            <div class="relative w-full flex items-center justify-end">
+              <img
+                src="../assets/img/main_page/intro_ksh.png"
+                alt="Intro Right"
+                class="w-full max-w-[350px]"
+              />
+            </div>
+
+            <!-- 말풍선 영역 (오른쪽으로 이동) -->
+            <div class="relative flex items-center justify-start w-full p-4">
+              <div
+                class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-left-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-l-transparent"
+              >
+                <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
+                  안녕하세요 강석현입니다!
+                </h3>
+                <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
+                  저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로
+                  저의 활약을 기대해주세요!
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- ================================================================================== -->
+        <section class="bg-blue-500 p-5 w-full space-y-0">
+          <!-- 텍스트 제목 -->
+          <h3
+            class="text-white text-2xl sm:text-3xl md:text-4xl font-bold mt-25 mb-10 text-center"
+          >
+            Hi!팀의 프로젝트 과정을 소개합니다.
+          </h3>
+
+          <div
+            class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-5 mb-40 max-w-[64rem] w-full mx-auto"
+          >
+            <!-- 카드 1 -->
+            <div
+              class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
+              >
+                <h2 class="text-[text-btn] font-bold">주제선정</h2>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
+              >
+                <p>이미지!</p>
+              </div>
+            </div>
+
+            <!-- 카드 2 -->
+            <div
+              class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
+              >
+                <h2 class="text-[text-btn] font-bold">기획</h2>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
+              >
+                <p>이미지!</p>
+              </div>
+            </div>
+
+            <!-- 카드 3 -->
+            <div
+              class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
+              >
+                <h2 class="text-[text-btn] font-bold">디자인</h2>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
+              >
+                <p>이미지!</p>
+              </div>
+            </div>
+
+            <!-- 카드 4 -->
+            <div
+              class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
+            >
+              <div
+                class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
+              >
+                <h2 class="text-[text-btn] font-bold">개발</h2>
+              </div>
+              <div
+                class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
+              >
+                <p>이미지!</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="inline-block bg-white text-blue-600 text-[10px] sm:text-base md:text-[1.25rem] lg:text-xl border border-blue-600 font-bold w-[12rem] sm:w-[18rem] md:w-[18rem] lg:w-(--main-btn-width) px-4 sm:px-5 mt-10 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 rounded-(--basic-radius) shadow-md hover:bg-blue-100"
+            >
+              프로젝트 상세 페이지 →
+            </a>
           </div>
-          <!-- YouTube -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_youtube.svg"
-                alt="YouTube"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+        </section>
+      </main>
+
+      <!-- ================================================================================================ -->
+      <!-- footer -->
+      <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20 gap-0">
+        <!-- 로고 -->
+        <div class="flex justify-start px-4 mb-6 lg:mb-8">
+          <img
+            src="/src/assets/svg/lion_black.svg"
+            alt="Lion Logo"
+            class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
+          />
+        </div>
+
+        <!-- Bootcamp 제목 -->
+        <div
+          class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
+        >
+          Likelion Bootcamp Frontend 13th
+        </div>
+
+        <!-- 이름 목록 -->
+        <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배희정</span
+            >
           </div>
-          <!-- Facebook -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_facebook_02.svg"
-                alt="Facebook"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배동초</span
+            >
+          </div>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >이훈진</span
+            >
+          </div>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >강석현</span
+            >
           </div>
         </div>
-      </div>
-      <!-- Copy Likelion -->
-      <div class="mt-8 lg:mt-6 mb-0 text-center">
-        <span class="text-[8px] lg:text-[16px] text-black">
-          Copyright Likelion Bootcamp Frontend 13th All rights reserved.
-        </span>
-      </div>
-    </footer>
 
-    <!-- =============================================================================================== -->
-    <!-- =============================================================================================== -->
+        <!-- 소셜 아이콘 및 Copy~ -->
+        <div
+          class="flex items-center justify-between lg:justify-between px-4 mt-10"
+        >
+          <!-- 소셜 아이콘 -->
+          <div class="flex justify-start space-x-4 lg:space-x-6">
+            <!-- GitHub -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_github.svg"
+                  alt="GitHub"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Instagram -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_instagram.svg"
+                  alt="Instagram"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- YouTube -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_youtube.svg"
+                  alt="YouTube"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Facebook -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_facebook_02.svg"
+                  alt="Facebook"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copy Likelion -->
+        <div class="mt-8 lg:mt-6 mb-0 text-center">
+          <span class="text-[8px] lg:text-[16px] text-black">
+            Copyright Likelion Bootcamp Frontend 13th All rights reserved.
+          </span>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
