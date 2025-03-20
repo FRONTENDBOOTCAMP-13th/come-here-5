@@ -14,25 +14,29 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
-  <body class="bg-[#ffffff] m-0 min-h-screen space-y-5">
-    <div class="wrap">
-      <!-- header -->
-      <header
-        class="grid grid-cols-2 items-center max-w-[1024px] h-[var(--header-height)] mx-auto px-4 bg-white"
-      >
+  <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
+    <!--==============================================================================-->
+    <!--                                 공통 헤더 컴포넌트                               -->
+    <!--==============================================================================-->
+<header
+      class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
+    >
+      <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
+      <div class="flex items-center w-full lg:w-auto">
         <!-- 로고 -->
-        <div class="flex items-center mr-20">
+        <div class="lg:w-[200px]">
           <a href="/">
             <img
               src="/src/assets/svg/logo_black.svg"
               alt="Logo"
               class="w-(--logo-width-size) h-(--logo-height-size)"
-          /></a>
+            />
+          </a>
         </div>
 
-        <!-- 햄버거 버튼 (모바일 전용) -->
+        <!-- 햄버거 버튼 -->
         <button
-          class="absolute top-2 right-4 lg:hidden flex items-center justify-center w-[40px] h-[70px]"
+          class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,22 +53,22 @@
             />
           </svg>
         </button>
+      </div>
 
-        <!-- 메뉴 -->
-        <nav
-          class="hidden lg:flex justify-end items-center space-x-14 text-[#312F2F] text-header-link ml-20"
+      <!-- 메뉴 영역 (데스크톱) -->
+      <nav
+        class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+      >
+        <a href="#" class="hover:opacity-70">Plan</a>
+        <a href="#" class="hover:opacity-70">Team</a>
+        <a
+          href="./login.html"
+          class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
         >
-          <a href="#" class="hover:opacity-70">Plan</a>
-          <a href="#" class="hover:opacity-70">Team</a>
-          <a
-            href="#"
-            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
-            href="./login.html"
-          >
-            Login
-          </a>
-        </nav>
-      </header>
+          Login
+        </a>
+      </nav>
+    </header>
       <!-- ================================================================================================ -->
       <main class="flex flex-col items-center overflow-visible">
         <section
