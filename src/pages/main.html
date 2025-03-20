@@ -14,58 +14,62 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
+
   <body class="bg-[#ffffff] m-0 min-h-screen space-y-5">
     <div class="wrap">
-      <!-- header -->
-      <header
-        class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
-      >
-        <div class="flex items-center w-full lg:w-auto mx-4">
-          <div>
-            <a href="/">
-              <img
-                src="/src/assets/svg/logo_black.svg"
-                alt="Logo"
-                class="w-(--logo-width-size) h-(--logo-height-size)"
-              />
-            </a>
-          </div>
-
-          <button
-            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+  <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
+<header
+      class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
+    >
+      <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
+      <div class="flex items-center w-full lg:w-auto">
+        <!-- 로고 -->
+        <div>
+          <a href="/">
+            <img
+              src="/src/assets/svg/logo_black.svg"
+              alt="Logo"
+              class="w-(--logo-width-size) h-(--logo-height-size)"
+            />
+          </a>
         </div>
 
-        <nav
-          class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+        <!-- 햄버거 버튼 -->
+        <button
+          class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
         >
-          <a href="#" class="hover:opacity-70">Plan</a>
-          <a href="#" class="hover:opacity-70">Team</a>
-          <a
-            href="./login.html"
-            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="w-6 h-6"
           >
-            Login
-          </a>
-        </nav>
-      </header>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
 
-      <!-- ========================================================= -->
+      <!-- 메뉴 영역 (데스크톱) -->
+      <nav
+        class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+      >
+        <a href="#" class="hover:opacity-70">Plan</a>
+        <a href="#" class="hover:opacity-70">Team</a>
+        <a
+          href="./login.html"
+          class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+        >
+          Login
+        </a>
+      </nav>
+    </header>
+      <!-- ================================================================================================ -->
       <main class="flex flex-col items-center overflow-visible">
         <section
           class="relative bg-[url('../assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1380px] mx-auto aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mb-35 mt-5"
