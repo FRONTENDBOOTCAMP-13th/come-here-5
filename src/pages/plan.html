@@ -14,595 +14,638 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
-  <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
-    <!--==============================================================================-->
-    <!--                                 공통 헤더 컴포넌트                               -->
-    <!--==============================================================================-->
-    <header
-      class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
-    >
-      <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
-      <div class="flex items-center w-full lg:w-auto">
-        <!-- 로고 -->
-        <div>
-          <a href="/">
+  <body>
+    <div class="wrap space-y-10">
+      <!--==============================================================================-->
+      <!--                                 공통 헤더 컴포넌트                               -->
+      <!--==============================================================================-->
+      <header
+        class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
+      >
+        <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
+        <div class="flex items-center w-full lg:w-auto">
+          <!-- 로고 -->
+          <div>
+            <a href="/">
+              <img
+                src="/src/assets/svg/logo_black.svg"
+                alt="Logo"
+                class="w-(--logo-width-size) h-(--logo-height-size)"
+              />
+            </a>
+          </div>
+
+          <!-- 햄버거 버튼 -->
+          <button
+            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 메뉴 영역 (데스크톱) -->
+        <nav
+          class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+        >
+          <a href="#" class="hover:opacity-70">Plan</a>
+          <a href="#" class="hover:opacity-70">Team</a>
+          <a
+            href="#"
+            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+            href="./login.html"
+          >
+            Login
+          </a>
+        </nav>
+      </header>
+      <!-- ============================================================================================== -->
+      <!-- ============================================================================================== -->
+
+      <main class="grid mb-10">
+        <!-- ===================================================================== -->
+        <!--                     🚀 프로젝트 플랜 히어로 섹션                         -->
+        <!-- ===================================================================== -->
+        <section
+          class="container mx-auto px-4 flex flex-row items-center justify-center py-(--plan-section-padding)"
+        >
+          <!-- HI 로고 -->
+          <a href="/" class="mr-8">
             <img
               src="/src/assets/svg/logo_black.svg"
-              alt="Logo"
-              class="w-(--logo-width-size) h-(--logo-height-size)"
+              alt="HI Logo"
+              class="w-[6.25rem] h-[5.625rem] lg:w-[9.375rem] lg:h-[8.125rem]"
             />
           </a>
-        </div>
 
-        <!-- 햄버거 버튼 -->
-        <button
-          class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
+          <!-- 제목과 부제목 묶음 -->
+          <div class="flex flex-col items-start">
+            <!-- 제목 -->
+            <h1
+              class="text-plan-sub-title lg:text-team-hero-sub-title text-[#205AFF] font-bold border-b-[5px] border-[#205AFF] pb-2"
+            >
+              UI 프로젝트 과정
+            </h1>
+            <!-- 부제목 -->
+            <div
+              class="flex items-center mt-2 lg:mt-4 text-[#205AFF] font-medium whitespace-nowrap"
+            >
+              <img
+                src="/src/assets/svg/lion_blue.svg"
+                alt="Lion Icon"
+                class="h-3 mr-2"
+              />
+              <p>LikeLion 13th at UI Project</p>
+            </div>
+          </div>
+        </section>
+        <!-- ===================================================================== -->
+        <!-- ===================================================================== -->
 
-      <!-- 메뉴 영역 (데스크톱) -->
-      <nav
-        class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
-      >
-        <a href="#" class="hover:opacity-70">Plan</a>
-        <a href="#" class="hover:opacity-70">Team</a>
-        <a
-          href="./login.html"
-          class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
-        >
-          Login
-        </a>
-      </nav>
-    </header>
-    <!-- ============================================================================================== -->
-    <!-- ============================================================================================== -->
-
-    <!-- ===================================================================== -->
-    <!--                       프로젝트 플랜 히어로 섹션                         -->
-    <!-- ===================================================================== -->
-    <main class="py-12">
-      <section
-        class="container mx-auto px-4 flex flex-row items-center justify-center"
-      >
-        <!-- HI 로고 -->
-        <a href="/" class="mr-8">
-          <img
-            src="/src/assets/svg/logo_black.svg"
-            alt="HI Logo"
-            class="w-[6.25rem] h-[5.625rem] lg:w-[9.375rem] lg:h-[8.125rem]"
-          />
-        </a>
-
-        <!-- 제목과 부제목 묶음 -->
-        <div class="flex flex-col items-start">
+        <!-- ===================================================================== -->
+        <!--                     🚀 프로젝트 개발 과정 섹션                      -->
+        <!-- ===================================================================== -->
+        <section class="bg-main py-(--plan-section-padding)">
           <!-- 제목 -->
-          <h1
-            class="text-plan-sub-title lg:text-team-hero-sub-title text-[#205AFF] font-bold border-b-[5px] border-[#205AFF] pb-2"
+          <h2
+            class="sub-title text-plan-sub-title text-white mb-(--sub-title-margin-bottom) text-center"
           >
-            UI 프로젝트 과정
-          </h1>
-          <!-- 부제목 -->
-          <div
-            class="flex items-center mt-2 lg:mt-4 text-[#205AFF] font-medium whitespace-nowrap"
-          >
-            <img
-              src="/src/assets/svg/lion_blue.svg"
-              alt="Lion Icon"
-              class="h-3 mr-2"
-            />
-            <p>LikeLion 13th at UI Project</p>
+            서브 타이틀
+          </h2>
+          <div class="container mx-auto flex justify-center items-center gap-4">
+            <!-- 첫 번째 동그라미 -->
+            <div class="flex flex-col items-center">
+              <div
+                class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+              >
+                <img
+                  src="/src/assets/svg/icon_arrow_white.svg"
+                  alt="Icon in Circle 1"
+                  class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
+                />
+              </div>
+              <p
+                class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center"
+              >
+                주제 선정 및 기획
+              </p>
+            </div>
+
+            <!-- 첫 번째 화살표 -->
+            <div class="flex items-center mb-6">
+              <img
+                src="/src/assets/svg/icon_arrow_white.svg"
+                alt="Arrow Icon 1"
+                class="w-[1.5625rem] h-[1.5625rem] sm:w-[1.875rem] sm:h-[1.875rem] lg:w-[2.5rem] lg:h-[2.5rem]"
+              />
+            </div>
+
+            <!-- 두 번째 동그라미 -->
+            <div class="flex flex-col items-center">
+              <div
+                class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+              >
+                <img
+                  src="/src/assets/svg/icon_arrow_white.svg"
+                  alt="Icon in Circle 2"
+                  class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
+                />
+              </div>
+              <p
+                class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center"
+              >
+                디자인 (UI&UX)
+              </p>
+            </div>
+
+            <!-- 두 번째 화살표 -->
+            <div class="flex items-center mb-6">
+              <img
+                src="/src/assets/svg/icon_arrow_white.svg"
+                alt="Arrow Icon 2"
+                class="w-[1.5625rem] h-[1.5625rem] sm:w-[1.875rem] sm:h-[1.875rem] lg:w-[2.5rem] lg:h-[2.5rem]"
+              />
+            </div>
+
+            <!-- 세 번째 동그라미 -->
+            <div class="flex flex-col items-center">
+              <div
+                class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+              >
+                <img
+                  src="/src/assets/svg/icon_arrow_white.svg"
+                  alt="Icon in Circle 3"
+                  class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
+                />
+              </div>
+              <p
+                class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center"
+              >
+                코드 개발
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+        <!-- ===================================================================== -->
+        <!-- ===================================================================== -->
 
-    <!-- ===================================================================== -->
-    <!-- ===================================================================== -->
-
-    <!-- ===================================================================== -->
-    <!--                       프로젝트 플랜 개방 과정 섹션                      -->
-    <!-- ===================================================================== -->
-    <main class="py-12 bg-[#205AFF]">
-      <!-- 제목 -->
-      <section class="container mx-auto flex justify-center items-center gap-4">
-        <!-- 첫 번째 동그라미 -->
-        <div class="flex flex-col items-center">
+        <!-- ===================================================================== -->
+        <!--                    🚀 프로젝트 시작 이유 섹션                         -->
+        <!-- ===================================================================== -->
+        <section class="py-(--plan-section-padding) mb-[8rem] px-6">
+          <!-- 제목 -->
+          <h2
+            class="sub-title text-plan-sub-title text-main mb-(--sub-title-margin-bottom) text-center"
+          >
+            왜 프로젝트를 시작하게 되었는가?
+          </h2>
           <div
-            class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+            class="grid md:grid-cols-2 md:auto-rows-[4.1875rem] gap-5 md:gap-x-[4rem] md:gap-y-[4rem] lg:max-w-max m-auto"
           >
-            <img
-              src="/src/assets/svg/icon_arrow_white.svg"
-              alt="Icon in Circle 1"
-              class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
-            />
+            <div
+              class="md:row-start-1 flex flex-col gap-3 justify-between plan-start px-7 py-4 lg:max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
+            >
+              <p class="plan-start-content text-gray-600">
+                어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구
+                저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+                어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구
+                저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+              </p>
+              <div class="flex items-center gap-3">
+                <div
+                  class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
+                >
+                  <img
+                    class="h-full object-cover"
+                    src="/src/assets/img/md_img/ui_project.png"
+                    alt=""
+                  />
+                </div>
+                <div class="plan-start-info">
+                  <p class="plan-start-name">이훈진</p>
+                  <span class="plan-start-number"
+                    >멋쟁이사자처럼 프론트엔드 13기</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="md:row-start-2 md:col-start-2 flex flex-col gap-3 justify-between plan-start px-7 py-4 lg:max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
+            >
+              <p class="plan-start-content text-gray-600">
+                다른 페이지의 디자인을 그대로 구현하는 클론 코딩보다는 좀 더
+                팀원들의 개성을 보여줄 수 있는 주제가 없을까 하면서 다같이
+                의논했습니다. 그 결과 간단하게 우리 팀을 소개하는 페이지를
+                만들면 어떨까 하는 의견이 나와 팀 소개 페이지를 만들게
+                되었습니다. 화려한 페이지는 아니지만 심플한 디자인 컨셉에 충실한
+                페이지가 잘 구현된 것 같아 뿌듯합니다!
+              </p>
+              <div class="flex items-center gap-3">
+                <div
+                  class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
+                >
+                  <img
+                    class="h-full object-cover"
+                    src="/src/assets/img/md_img/ui_project.png"
+                    alt=""
+                  />
+                </div>
+                <div class="plan-start-info">
+                  <p class="plan-start-name">배희정</p>
+                  <span class="plan-start-number"
+                    >멋쟁이사자처럼 프론트엔드 13기</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="md:row-start-3 flex flex-col gap-3 justify-between plan-start px-7 py-4 lg:max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
+            >
+              <p class="plan-start-content text-gray-600">
+                어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구
+                저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+                어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구
+                저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+              </p>
+              <div class="flex items-center gap-3">
+                <div
+                  class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
+                >
+                  <img
+                    class="h-full object-cover"
+                    src="/src/assets/img/md_img/ui_project.png"
+                    alt=""
+                  />
+                </div>
+                <div class="plan-start-info">
+                  <p class="plan-start-name">배동초</p>
+                  <span class="plan-start-number"
+                    >멋쟁이사자처럼 프론트엔드 13기</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="md:row-start-4 md:col-start-2 flex flex-col gap-3 justify-between plan-start px-7 py-4 lg:max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
+            >
+              <p class="plan-start-content text-gray-600">
+                어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구
+                저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+                어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구
+                저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+              </p>
+              <div class="flex items-center gap-3">
+                <div
+                  class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
+                >
+                  <img
+                    class="h-full object-cover"
+                    src="/src/assets/img/md_img/ui_project.png"
+                    alt=""
+                  />
+                </div>
+                <div class="plan-start-info">
+                  <p class="plan-start-name">강석현</p>
+                  <span class="plan-start-number"
+                    >멋쟁이사자처럼 프론트엔드 13기</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-          <p
-            class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center"
+        </section>
+        <!-- ===================================================================== -->
+        <!-- ===================================================================== -->
+
+        <!-- ===================================================================== -->
+        <!--                       🚀 프로젝트 기획 섹션                      -->
+        <!-- ===================================================================== -->
+
+        <section class="px-6 py-(--plan-section-padding) bg-main">
+          <!-- 제목 -->
+          <h2
+            class="sub-title text-plan-sub-title text-white mb-(--sub-title-margin-bottom) text-center"
           >
-            주제 선정 및 기획
-          </p>
-        </div>
-
-        <!-- 첫 번째 화살표 -->
-        <div class="flex items-center mb-6">
-          <img
-            src="/src/assets/svg/icon_arrow_white.svg"
-            alt="Arrow Icon 1"
-            class="w-[1.5625rem] h-[1.5625rem] sm:w-[1.875rem] sm:h-[1.875rem] lg:w-[2.5rem] lg:h-[2.5rem]"
-          />
-        </div>
-
-        <!-- 두 번째 동그라미 -->
-        <div class="flex flex-col items-center">
+            프로젝트 기획은 어떻게 했을까?
+          </h2>
           <div
-            class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+            class="rounded-(--basic-radius) shadow-(--basic-shadow) max-w-[80rem] bg-white mx-auto"
           >
-            <img
-              src="/src/assets/svg/icon_arrow_white.svg"
-              alt="Icon in Circle 2"
-              class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
+            <!-- 라디오 버튼 그룹 -->
+            <input
+              type="radio"
+              name="tabs"
+              id="option1"
+              class="radio-tab hidden"
+              checked
             />
+            <input type="radio" name="tabs" id="option2" class="hidden" />
+            <input type="radio" name="tabs" id="option3" class="hidden" />
+
+            <div class="tab-content flex">
+              <!-- 메뉴 영역 -->
+              <div class="w-1/3 border-r border-gray">
+                <div class="menu-item border-b border-gray">
+                  <label
+                    for="option1"
+                    class="block p-4 hover:cursor-pointer font-semibold"
+                    >주제 선정 이유</label
+                  >
+                </div>
+                <div class="menu-item border-b border-gray">
+                  <label
+                    for="option2"
+                    class="block p-4 hover:cursor-pointer font-semibold"
+                    >디자인 의도</label
+                  >
+                </div>
+                <div class="menu-item border-gray">
+                  <label
+                    for="option3"
+                    class="block p-4 hover:cursor-pointer font-semibold"
+                    >개발 방식</label
+                  >
+                </div>
+              </div>
+
+              <!-- 콘텐츠 영역 -->
+              <div class="content-area w-2/3 p-5 relative">
+                <!-- 이미지 패널 -->
+                <div
+                  id="image1"
+                  class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+                >
+                  <img
+                    src="../assets/img/main_page/hero_section.png"
+                    alt="주제 선정 이유 이미지"
+                  />
+                </div>
+                <div
+                  id="image2"
+                  class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+                >
+                  <img
+                    src="../assets/img/main_page/intro_char_left.png"
+                    alt="디자인 의도 이미지"
+                  />
+                </div>
+                <div
+                  id="image3"
+                  class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+                >
+                  <img
+                    src="../assets/img/main_page//intro_char_right.png"
+                    alt="개발 방식 이미지"
+                  />
+                </div>
+
+                <!-- 텍스트 패널 -->
+                <div
+                  id="text1"
+                  class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+                >
+                  주제 선정 이유에 대한 설명입니다. 이 내용은 옵션 1을 선택했을
+                  때만 표시됩니다.
+                </div>
+                <div
+                  id="text2"
+                  class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+                >
+                  디자인 의도에 대한 설명입니다. 이 내용은 옵션 2를 선택했을
+                  때만 표시됩니다.
+                </div>
+                <div
+                  id="text3"
+                  class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+                >
+                  개발 방식에 대한 설명입니다. 이 내용은 옵션 3을 선택했을 때만
+                  표시됩니다.
+                </div>
+              </div>
+            </div>
           </div>
-          <p
-            class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center"
+        </section>
+        <!-- ===================================================================== -->
+        <!-- ===================================================================== -->
+
+        <!-- ===================================================================== -->
+        <!--                       🚀 프로젝트 마무리 소감 섹션                   -->
+        <!-- ===================================================================== -->
+        <section
+          class="py-(--plan-section-padding) justify-self-center space-y-5"
+        >
+          <!-- 제목 -->
+          <h2
+            class="sub-title text-plan-sub-title text-main mb-(--sub-title-margin-bottom) text-center"
           >
-            디자인 (UI&UX)
-          </p>
-        </div>
-
-        <!-- 두 번째 화살표 -->
-        <div class="flex items-center mb-6">
-          <img
-            src="/src/assets/svg/icon_arrow_white.svg"
-            alt="Arrow Icon 2"
-            class="w-[1.5625rem] h-[1.5625rem] sm:w-[1.875rem] sm:h-[1.875rem] lg:w-[2.5rem] lg:h-[2.5rem]"
-          />
-        </div>
-
-        <!-- 세 번째 동그라미 -->
-        <div class="flex flex-col items-center">
+            프로젝트 마무리 소감
+          </h2>
+          <!-- 소감 컴포넌트1 -->
           <div
-            class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
           >
+            <!-- 이미지 -->
             <img
-              src="/src/assets/svg/icon_arrow_white.svg"
-              alt="Icon in Circle 3"
-              class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
+              src="../assets/svg/icon_kakao.svg"
+              alt="이미지"
+              class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
             />
+            <!-- 텍스트 요소 -->
+            <div class="p-7 w-full">
+              <p class="font-bold text-plan-content">
+                안녕하세요 이훈진입니다.
+              </p>
+              <p class="font-semibold">
+                이번 프로젝트를 통해 단순히 주어지는 시안이 아닌 팀원 모두가
+                참여하여 기획부터 디자인, 개발, 배포까지 모든 과정을 경험하여
+                굉장히 뜻깊은 프로젝트였던 것 같습니다. 이전에 부족했던 협업 툴
+                사용과 기록하는 습관을 기르게 되었습니다. 아직 부족하지만 더욱
+                성장하여 목표를 위해 달려가겠습니다!!
+              </p>
+            </div>
           </div>
-          <p
-            class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center"
+          <!-- 소감 컴포넌트2 -->
+          <div
+            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
           >
-            코드 개발
-          </p>
-        </div>
-      </section>
-    </main>
-    <!-- ===================================================================== -->
-    <!-- ===================================================================== -->
-    <!-- ===================================================================== -->
-    <!-- 프로젝트 시작 이유 컴포넌트 -->
-    <!-- ===================================================================== -->
+            <!-- 이미지 -->
+            <img
+              src="../assets/svg/icon_kakao.svg"
+              alt="이미지"
+              class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
+            />
+            <!-- 텍스트 요소 -->
+            <div class="p-7 w-full">
+              <p class="font-bold text-plan-content">
+                안녕하세요 배희정입니다.
+              </p>
+              <p class="font-semibold">
+                멋사 13기에서 첫 프로젝트를 진행하며 프로젝트를 시작하기 위해
+                필요한 준비, 여러가지 상황에서 git을 사용하는 방법, 프로젝트
+                문서 정리를 위해 github를 활용하는 방식 등 많은 것들을 배우게
+                되었습니다. 이번 경험을 토대로 다음 프로젝트에서는 더 발전된
+                모습을 보여드리고 싶습니다!
+              </p>
+            </div>
+          </div>
+          <!-- 소감 컴포넌트3 -->
+          <div
+            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
+          >
+            <!-- 이미지 -->
+            <img
+              src="../assets/svg/icon_kakao.svg"
+              alt="이미지"
+              class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
+            />
+            <!-- 텍스트 요소 -->
+            <div class="p-7 w-full">
+              <p class="font-bold text-plan-content">
+                안녕하세요 배동초입니다.
+              </p>
+              <p class="font-semibold">
+                이번 프로젝트를 통해 협업과 소통, 그리고 배려의 중요성을 배우며,
+                기획 등 스스로 만들어가는 프로젝트의 의미를 이해했고, 앞으로도
+                기획력과 Git 관련 활용 능력을 더욱 발전시킬 것을 다짐합니다.
+                함께해 준 팀원들에게 진심으로 감사드립니다.
+              </p>
+            </div>
+          </div>
+          <!-- 소감 컴포넌트4 -->
+          <div
+            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
+          >
+            <!-- 이미지 -->
+            <img
+              src="../assets/svg/icon_kakao.svg"
+              alt="이미지"
+              class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
+            />
+            <!-- 텍스트 요소 -->
+            <div class="p-7 w-full">
+              <p class="font-bold text-plan-content">
+                안녕하세요 강석현입니다.
+              </p>
+              <p class="font-semibold">
+                안녕하세요, 강석현입니다. 이번 프로젝트를 통해 Git과 GitHub을
+                활용하며 협업과 소통의 중요성을 깊이 배웠고, Git 충돌 해결
+                과정을 통해 동작 원리를 이해하게 되었습니다. 앞으로도 꾸준히
+                학습하며 이러한 도구를 더 효과적으로 사용할 수 있도록
+                노력하겠습니다.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
 
-    <h1 class="font-extrabold text-2xl mt-8">Plan Page Start</h1>
-    <!-- 첫번째 소개 상자 -->
-    <div
-      class="flex flex-col gap-3 justify-between plan-start px-7 py-4 max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
-    >
-      <p class="plan-start-content text-gray-600">
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-      </p>
-      <div class="flex items-center gap-3">
-        <div
-          class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
-        >
-          <img
-            class="h-full object-cover"
-            src="/src/assets/img/md_img/ui_project.png"
-            alt=""
-          />
-        </div>
-        <div class="plan-start-info">
-          <p class="plan-start-name">이훈진</p>
-          <span class="plan-start-number">멋쟁이사자처럼 프론트엔드 13기</span>
-        </div>
-      </div>
-    </div>
-    <!-- 두번째 소개 상자 -->
-    <div
-      class="flex flex-col gap-3 justify-between plan-start px-7 py-4 max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
-    >
-      <p class="plan-start-content text-gray-600">
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-      </p>
-      <div class="flex items-center gap-3">
-        <div
-          class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
-        >
-          <img
-            class="h-full object-cover"
-            src="/src/assets/img/md_img/ui_project.png"
-            alt=""
-          />
-        </div>
-        <div class="plan-start-info">
-          <p class="plan-start-name">이훈진</p>
-          <span class="plan-start-number">멋쟁이사자처럼 프론트엔드 13기</span>
-        </div>
-      </div>
-    </div>
-    <!-- 세번째 소개 상자 -->
-    <div
-      class="flex flex-col gap-3 justify-between plan-start px-7 py-4 max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
-    >
-      <p class="plan-start-content text-gray-600">
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-      </p>
-      <div class="flex items-center gap-3">
-        <div
-          class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
-        >
-          <img
-            class="h-full object-cover"
-            src="/src/assets/img/md_img/ui_project.png"
-            alt=""
-          />
-        </div>
-        <div class="plan-start-info">
-          <p class="plan-start-name">이훈진</p>
-          <span class="plan-start-number">멋쟁이사자처럼 프론트엔드 13기</span>
-        </div>
-      </div>
-    </div>
-    <!-- 네번째 소개 상자 -->
-    <div
-      class="flex flex-col gap-3 justify-between plan-start px-7 py-4 max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
-    >
-      <p class="plan-start-content text-gray-600">
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-        어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-      </p>
-      <div class="flex items-center gap-3">
-        <div
-          class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
-        >
-          <img
-            class="h-full object-cover"
-            src="/src/assets/img/md_img/ui_project.png"
-            alt=""
-          />
-        </div>
-        <div class="plan-start-info">
-          <p class="plan-start-name">이훈진</p>
-          <span class="plan-start-number">멋쟁이사자처럼 프론트엔드 13기</span>
-        </div>
-      </div>
-    </div>
-    <!-- ===================================================================== -->
-    <!-- ===================================================================== -->
-    <!-- ===================================================================== -->
-    <!--                       🚀 플랜 페이지 기획 컴포넌트                      -->
-    <!-- ===================================================================== -->
+      <!--===============================================================================================-->
+      <!--                                          공통 Footer 섹션                                    -->
+      <!--===============================================================================================-->
 
-    <div class="rounded-(--basic-radius) shadow-(--basic-shadow) max-w-[80rem]">
-      <!-- 라디오 버튼 그룹 -->
-      <input
-        type="radio"
-        name="tabs"
-        id="option1"
-        class="radio-tab hidden"
-        checked
-      />
-      <input type="radio" name="tabs" id="option2" class="hidden" />
-      <input type="radio" name="tabs" id="option3" class="hidden" />
+      <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
+        <!-- 로고 -->
+        <div class="flex justify-start px-4 mb-6 lg:mb-8">
+          <img
+            src="/src/assets/svg/lion_black.svg"
+            alt="Lion Logo"
+            class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
+          />
+        </div>
 
-      <div class="tab-content flex">
-        <!-- 메뉴 영역 -->
-        <div class="w-1/3 border-r border-gray">
-          <div class="menu-item border-b border-gray">
-            <label
-              for="option1"
-              class="block p-4 hover:cursor-pointer font-semibold"
-              >주제 선정 이유</label
+        <!-- Bootcamp 제목 -->
+        <div
+          class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
+        >
+          Likelion Bootcamp Frontend 13th
+        </div>
+
+        <!-- 이름 목록 -->
+        <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배희정</span
             >
           </div>
-          <div class="menu-item border-b border-gray">
-            <label
-              for="option2"
-              class="block p-4 hover:cursor-pointer font-semibold"
-              >디자인 의도</label
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배동초</span
             >
           </div>
-          <div class="menu-item border-b border-gray">
-            <label
-              for="option3"
-              class="block p-4 hover:cursor-pointer font-semibold"
-              >개발 방식</label
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >이훈진</span
+            >
+          </div>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >강석현</span
             >
           </div>
         </div>
 
-        <!-- 콘텐츠 영역 -->
-        <div class="content-area w-2/3 p-5 relative">
-          <!-- 이미지 패널 -->
-          <div
-            id="image1"
-            class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
-          >
-            <img
-              src="../assets/img/main_page/hero_section.png"
-              alt="주제 선정 이유 이미지"
-            />
-          </div>
-          <div
-            id="image2"
-            class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
-          >
-            <img
-              src="../assets/img/main_page/intro_char_left.png"
-              alt="디자인 의도 이미지"
-            />
-          </div>
-          <div
-            id="image3"
-            class="max-w-3/5 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
-          >
-            <img
-              src="../assets/img/main_page//intro_char_right.png"
-              alt="개발 방식 이미지"
-            />
-          </div>
-
-          <!-- 텍스트 패널 -->
-          <div
-            id="text1"
-            class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
-          >
-            주제 선정 이유에 대한 설명입니다. 이 내용은 옵션 1을 선택했을 때만
-            표시됩니다.
-          </div>
-          <div
-            id="text2"
-            class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
-          >
-            디자인 의도에 대한 설명입니다. 이 내용은 옵션 2를 선택했을 때만
-            표시됩니다.
-          </div>
-          <div
-            id="text3"
-            class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
-          >
-            개발 방식에 대한 설명입니다. 이 내용은 옵션 3을 선택했을 때만
-            표시됩니다.
+        <!-- 소셜 아이콘 및 Copy~ -->
+        <div
+          class="flex items-center justify-between lg:justify-between px-4 mt-10"
+        >
+          <!-- 소셜 아이콘 -->
+          <div class="flex justify-start space-x-4 lg:space-x-6">
+            <!-- GitHub -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_github.svg"
+                  alt="GitHub"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Instagram -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_instagram.svg"
+                  alt="Instagram"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- YouTube -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_youtube.svg"
+                  alt="YouTube"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Facebook -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_facebook_02.svg"
+                  alt="Facebook"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
           </div>
         </div>
-      </div>
+        <!-- Copy Likelion -->
+        <div class="mt-8 lg:mt-6 mb-0 text-center">
+          <span class="text-[8px] lg:text-[16px] text-black">
+            Copyright Likelion Bootcamp Frontend 13th All rights reserved.
+          </span>
+        </div>
+      </footer>
     </div>
-    <!-- ===================================================================== -->
-    <!-- ===================================================================== -->
-    <!-- ===================================================================== -->
-    <!--                       🚀 프로젝트 마무리 소감 컴포넌트                   -->
-    <!-- ===================================================================== -->
-    <!-- 소감 컴포넌트1 -->
-    <div
-      class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) h-full lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
-    >
-      <!-- 이미지 -->
-      <img
-        src="../assets/svg/icon_kakao.svg"
-        alt="이미지"
-        class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
-      />
-      <!-- 텍스트 요소 -->
-      <div class="p-7 w-full">
-        <p class="text-main font-bold text-plan-content">
-          안녕하세요 OOO입니다
-        </p>
-        <p class="font-semibold">
-          이번 프로젝트에서 느낀점은...이번 프로젝트에서 느낀점은...이번
-          프로젝트에서 느낀점은...프로젝트에서 느낀점은...프로젝트에서
-          느낀점은...프로젝트에서 느낀점은...프로젝트에서
-          느낀점은...프로젝트에서 느낀점은...느낀점은...프로젝트에서
-          느낀점은...느낀점은...프로젝트에서 느낀점은...
-        </p>
-      </div>
-    </div>
-    <!-- 소감 컴포넌트2 -->
-    <div
-      class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) h-full lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
-    >
-      <!-- 이미지 -->
-      <img
-        src="../assets/svg/icon_kakao.svg"
-        alt="이미지"
-        class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
-      />
-      <!-- 텍스트 요소 -->
-      <div class="p-7 w-full">
-        <p class="text-main font-bold text-plan-content">
-          안녕하세요 OOO입니다
-        </p>
-        <p class="font-semibold">
-          이번 프로젝트에서 느낀점은...이번 프로젝트에서 느낀점은...이번
-          프로젝트에서 느낀점은...프로젝트에서 느낀점은...프로젝트에서
-          느낀점은...프로젝트에서 느낀점은...프로젝트에서
-          느낀점은...프로젝트에서 느낀점은...느낀점은...프로젝트에서
-          느낀점은...느낀점은...프로젝트에서 느낀점은...
-        </p>
-      </div>
-    </div>
-    <!-- 소감 컴포넌트3 -->
-    <div
-      class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) h-full lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
-    >
-      <!-- 이미지 -->
-      <img
-        src="../assets/svg/icon_kakao.svg"
-        alt="이미지"
-        class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
-      />
-      <!-- 텍스트 요소 -->
-      <div class="p-7 w-full">
-        <p class="text-main font-bold text-plan-content">
-          안녕하세요 OOO입니다
-        </p>
-        <p class="font-semibold">
-          이번 프로젝트에서 느낀점은...이번 프로젝트에서 느낀점은...이번
-          프로젝트에서 느낀점은...프로젝트에서 느낀점은...프로젝트에서
-          느낀점은...프로젝트에서 느낀점은...프로젝트에서
-          느낀점은...프로젝트에서 느낀점은...느낀점은...프로젝트에서
-          느낀점은...느낀점은...프로젝트에서 느낀점은...
-        </p>
-      </div>
-    </div>
-    <!-- 소감 컴포넌트4 -->
-    <div
-      class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) h-full lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
-    >
-      <!-- 이미지 -->
-      <img
-        src="../assets/svg/icon_kakao.svg"
-        alt="이미지"
-        class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
-      />
-      <!-- 텍스트 요소 -->
-      <div class="p-7 w-full">
-        <p class="text-main font-bold text-plan-content">
-          안녕하세요 OOO입니다
-        </p>
-        <p class="font-semibold">
-          이번 프로젝트에서 느낀점은...이번 프로젝트에서 느낀점은...이번
-          프로젝트에서 느낀점은...프로젝트에서 느낀점은...프로젝트에서
-          느낀점은...프로젝트에서 느낀점은...프로젝트에서
-          느낀점은...프로젝트에서 느낀점은...느낀점은...프로젝트에서
-          느낀점은...느낀점은...프로젝트에서 느낀점은...
-        </p>
-      </div>
-    </div>
-    <!--===============================================================================================-->
-    <!--                                          공통 Footer 컴포넌트                                    -->
-    <!--===============================================================================================-->
-
-    <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
-      <!-- 로고 -->
-      <div class="flex justify-start px-4 mb-6 lg:mb-8">
-        <img
-          src="/src/assets/svg/lion_black.svg"
-          alt="Lion Logo"
-          class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
-        />
-      </div>
-
-      <!-- Bootcamp 제목 -->
-      <div
-        class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
-      >
-        Likelion Bootcamp Frontend 13th
-      </div>
-
-      <!-- 이름 목록 -->
-      <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >배희정</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >배동초</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >이훈진</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >강석현</span
-          >
-        </div>
-      </div>
-
-      <!-- 소셜 아이콘 및 Copy~ -->
-      <div
-        class="flex items-center justify-between lg:justify-between px-4 mt-10"
-      >
-        <!-- 소셜 아이콘 -->
-        <div class="flex justify-start space-x-4 lg:space-x-6">
-          <!-- GitHub -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_github.svg"
-                alt="GitHub"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
-          </div>
-          <!-- Instagram -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_instagram.svg"
-                alt="Instagram"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
-          </div>
-          <!-- YouTube -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_youtube.svg"
-                alt="YouTube"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
-          </div>
-          <!-- Facebook -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_facebook_02.svg"
-                alt="Facebook"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <!-- Copy Likelion -->
-      <div class="mt-8 lg:mt-6 mb-0 text-center">
-        <span class="text-[8px] lg:text-[16px] text-black">
-          Copyright Likelion Bootcamp Frontend 13th All rights reserved.
-        </span>
-      </div>
-    </footer>
-
-    <!-- =============================================================================================== -->
-    <!-- =============================================================================================== -->
   </body>
 </html>
