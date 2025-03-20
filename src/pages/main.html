@@ -18,63 +18,67 @@
     <div class="wrap">
       <!-- header -->
       <header
-        class="grid grid-cols-2 items-center max-w-[1024px] h-[var(--header-height)] mx-auto px-4 bg-white"
+        class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
       >
-        <!-- 로고 -->
-        <div class="flex items-center mr-20">
-          <a href="/">
-            <img
-              src="/src/assets/svg/logo_black.svg"
-              alt="Logo"
-              class="w-(--logo-width-size) h-(--logo-height-size)"
-          /></a>
+        <div class="flex items-center w-full lg:w-auto mx-4">
+          <div>
+            <a href="/">
+              <img
+                src="/src/assets/svg/logo_black.svg"
+                alt="Logo"
+                class="w-(--logo-width-size) h-(--logo-height-size)"
+              />
+            </a>
+          </div>
+
+          <button
+            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
 
-        <!-- 햄버거 버튼 (모바일 전용) -->
-        <button
-          class="absolute top-2 right-4 lg:hidden flex items-center justify-center w-[40px] h-[70px]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-
-        <!-- 메뉴 -->
         <nav
-          class="hidden lg:flex justify-end items-center space-x-14 text-[#312F2F] text-header-link ml-20"
+          class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
         >
           <a href="#" class="hover:opacity-70">Plan</a>
           <a href="#" class="hover:opacity-70">Team</a>
           <a
-            href="#"
-            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
             href="./login.html"
+            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
           >
             Login
           </a>
         </nav>
       </header>
-      <!-- ================================================================================================ -->
+
+      <!-- ========================================================= -->
       <main class="flex flex-col items-center overflow-visible">
         <section
-          class="relative bg-[url('../assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1280px] mx-auto aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mb-35"
+          class="relative bg-[url('../assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1380px] mx-auto aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mb-35 mt-5"
+          aria-labelledby="hero-title"
         >
           <article
             class="grid grid-cols-[3fr_1fr] max-[32.5rem]:grid-cols-[1fr] p-4 h-full gap-6"
           >
             <!-- 텍스트 섹션 -->
-            <div class="flex flex-col justify-center px-6">
+            <div
+              class="flex flex-col justify-center px-6 ml-10"
+              aria-label="소개 섹션"
+            >
               <p
                 class="text-gray-400 text-[0.8rem] sm:text-[1.5rem] lg:text-main-sub-title xl:text-[2.5rem]"
               >
@@ -91,20 +95,20 @@
                 Please check Our project!
               </p>
               <button
-                class="mt-6 px-4 py-2 bg-white text-black rounded-full shadow-md hover:shadow-(--basic-shadow) w-[80px] sm:w-[120px] lg:w-[150px] xl:w-[180px] text-[.625rem] max-[520px]:hidden sm:text-sm lg:text-base xl:text-lg"
+                class="mt-6 px-4 py-2 bg-white text-blue-600 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300 ease-in-out w-[80px] sm:w-[120px] lg:w-[150px] xl:w-[180px] text-[.625rem] max-[520px]:hidden sm:text-sm lg:text-base xl:text-lg"
+                aria-label="팀 소개 페이지로 이동"
               >
                 팀 소개 →
               </button>
             </div>
-
-            <!-- 멋사 로고 -->
             <div
-              class="relative flex justify-end items-start pr-8 pt-6 max-[520px]:hidden"
+              class="relative flex justify-end items-start pr-20 pt-6 max-[520px]:hidden"
+              aria-label="멋쟁이 사자처럼 로고"
             >
               <img
                 src="../assets/svg/lion_white.svg"
-                alt="Lion Logo"
-                class="w-[80px] sm:w-[100px] lg:w-[150px] xl:w-[180px] h-auto"
+                alt="LikeLion Logo"
+                class="w-[80px] sm:w-[200px] lg:w-[400px] xl:w-[1000px] h-auto animate-floating"
               />
             </div>
           </article>
@@ -113,31 +117,41 @@
         <section class="bg-gray-200 w-full">
           <div
             class="max-w-[1024px] mx-auto mt-20 py-10 px-6 text-center space-y-4"
+            aria-labelledby="team-intro-title"
           >
-            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+            <h3
+              class="text-2xl sm:text-3xl md:text-4xl font-bold"
+              id="team-intro-title"
+            >
               팀원을 소개합니다.
             </h3>
 
             <p
-              class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed"
+              class="text-base sm:text-lg md:text-xl font-medium text-gray-600 leading-relaxed"
             >
-              <strong>Hi!</strong> 프로젝트 팀은 멋쟁이 사자처럼
-              <strong>FE Bootcamp</strong>를 통해 이루어진 UI 프로젝트
-              팀입니다.<br />
+              <strong>Hi!</strong> 프로젝트 팀은 멋쟁이 사자처럼 FE Bootcamp를
+              통해 만난 UI 프로젝트 팀입니다.<br />
               각자 색다른 매력을 가지고 있는 팀원을 만나러 가보실까요?
             </p>
 
             <a
               href="#"
-              class="inline-block bg-blue-600 text-white text-[10px] sm:text-base md:text-lg lg:text-xl font-bold w-[8rem] sm:w-[15rem] md:w-[18rem] lg:w-(--main-btn-width) px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 rounded-(--basic-radius) shadow-md hover:bg-blue-700"
+              class="inline-block bg-blue-600 text-white text-[10px] sm:text-base md:text-lg lg:text-xl font-bold w-[8rem] sm:w-[15rem] md:w-[18rem] lg:w-(--main-btn-width) px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 rounded-(--basic-radius) shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out"
+              aria-label="팀원 소개 페이지로 이동"
             >
               팀원 소개 →
             </a>
           </div>
           <!-- ================================================================================== -->
-          <section class="grid grid-cols-[auto_30%] gap-2 p-4 h-full">
+          <section
+            class="grid grid-cols-[auto_30%] gap-2 p-4 h-full"
+            aria-labelledby="intro-heading"
+          >
             <!-- 말풍선 영역 -->
-            <div class="relative flex items-center justify-end w-full p-4">
+            <div
+              class="relative flex items-center justify-end w-full p-4 hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+              aria-label="이훈진 자기소개"
+            >
               <div
                 class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-right-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-r-transparent"
               >
@@ -152,7 +166,10 @@
             </div>
 
             <!-- 사람 이미지 영역 -->
-            <div class="relative w-full flex items-center justify-start">
+            <div
+              class="relative w-full flex items-center justify-start"
+              aria-label="이훈진 프로필 이미지"
+            >
               <img
                 src="../assets/img/main_page/intro_char_right.png"
                 alt="Intro Right"
@@ -161,9 +178,15 @@
             </div>
           </section>
           <!-- ================================================================================== -->
-          <section class="grid grid-cols-[30%_auto] gap-2 p-4 h-full">
+          <section
+            class="grid grid-cols-[30%_auto] gap-2 p-4 h-full"
+            aria-labelledby="intro-heading"
+          >
             <!-- 사람 이미지 영역 (왼쪽으로 이동) -->
-            <div class="relative w-full flex items-center justify-end">
+            <div
+              class="relative w-full flex items-center justify-end"
+              aria-label="배희정 프로필 이미지"
+            >
               <img
                 src="../assets/img/main_page/intro_bhj.png"
                 alt="Intro Right"
@@ -172,7 +195,10 @@
             </div>
 
             <!-- 말풍선 영역 (오른쪽으로 이동) -->
-            <div class="relative flex items-center justify-start w-full p-4">
+            <div
+              class="relative flex items-center justify-start w-full p-5 hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+              aria-label="배희정 자기소개"
+            >
               <div
                 class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-left-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-l-transparent"
               >
@@ -180,16 +206,22 @@
                   안녕하세요 배희정입니다!
                 </h3>
                 <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
-                  저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로
-                  저의 활약을 기대해주세요!
+                  사용자의 입장에서 생각할 수 있는 개발자가 되기 위해 열심히
+                  노력하고 있습니다. 지치지 않고 꾸준히 나아가겠습니다!
                 </p>
               </div>
             </div>
           </section>
           <!-- ================================================================================== -->
-          <section class="grid grid-cols-[auto_30%] gap-2 p-4 h-full">
+          <section
+            class="grid grid-cols-[auto_30%] gap-2 p-4 h-full"
+            aria-labelledby="intro-heading"
+          >
             <!-- 말풍선 영역 -->
-            <div class="relative flex items-center justify-end w-full p-4">
+            <div
+              class="relative flex items-center justify-end w-full p-5 hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+              aria-label="배동초 자기소개"
+            >
               <div
                 class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-right-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-r-transparent"
               >
@@ -197,14 +229,17 @@
                   안녕하세요 배동초입니다!
                 </h3>
                 <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
-                  저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로
-                  저의 활약을 기대해주세요!
+                  안녕하세요! 코드를 이제 막 시작해 아기 병아리 단계이지만, 더
+                  크게 성장하기 위해 열심히 노력 중인 배동초입니다. 🐣
                 </p>
               </div>
             </div>
 
             <!-- 사람 이미지 영역 -->
-            <div class="relative w-full flex items-center justify-start">
+            <div
+              class="relative w-full flex items-center justify-start"
+              aria-label="배동초 프로필 이미지"
+            >
               <img
                 src="../assets/img/main_page/intro_bdc_1.png"
                 alt="Intro Right"
@@ -213,9 +248,15 @@
             </div>
           </section>
           <!-- ================================================================================== -->
-          <section class="grid grid-cols-[30%_auto] gap-2 p-4 mb-20 h-full">
+          <section
+            class="grid grid-cols-[30%_auto] gap-2 p-4 mb-20 h-full"
+            aria-labelledby="intro-heading"
+          >
             <!-- 사람 이미지 영역 (왼쪽으로 이동) -->
-            <div class="relative w-full flex items-center justify-end">
+            <div
+              class="relative w-full flex items-center justify-end"
+              aria-label="강석현 프로필 이미지"
+            >
               <img
                 src="../assets/img/main_page/intro_ksh.png"
                 alt="Intro Right"
@@ -224,7 +265,10 @@
             </div>
 
             <!-- 말풍선 영역 (오른쪽으로 이동) -->
-            <div class="relative flex items-center justify-start w-full p-4">
+            <div
+              class="relative flex items-center justify-start w-full p-4 hover:scale-[1.02] transition-transform duration-300 ease-in-out"
+              aria-label="강석현 자기소개"
+            >
               <div
                 class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-left-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-l-transparent"
               >
@@ -244,6 +288,7 @@
           <!-- 텍스트 제목 -->
           <h3
             class="text-white text-2xl sm:text-3xl md:text-4xl font-bold mt-25 mb-10 text-center"
+            aria-labelledby="project-intro-title"
           >
             Hi!팀의 프로젝트 과정을 소개합니다.
           </h3>
@@ -254,48 +299,75 @@
             <!-- 카드 1 -->
             <div
               class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
+              aria-label="프로젝트 기획 카드"
             >
+              <!-- 앞면 (이미지 추가) -->
               <div
                 class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
               >
-                <h2 class="text-[text-btn] font-bold">주제선정</h2>
+                <img
+                  src="/src/assets/img/main_page/Topic.png"
+                  alt="프로젝트 기획 아이콘"
+                  role="img"
+                  class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[130px] object-contain"
+                />
               </div>
+
+              <!-- 뒷면 (기존의 텍스트 유지) -->
               <div
                 class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
               >
-                <p>이미지!</p>
+                <p class="text-center text-[1rem] sm:text-[1.25rem]">이미지!</p>
               </div>
             </div>
 
             <!-- 카드 2 -->
             <div
               class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
+              aria-label="디자인 카드"
             >
+              <!-- 앞면 (이미지 추가) -->
               <div
                 class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
               >
-                <h2 class="text-[text-btn] font-bold">기획</h2>
+                <img
+                  src="/src/assets/img/main_page/Design.png"
+                  alt="디자인 아이콘"
+                  role="img"
+                  class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
+                />
               </div>
+
+              <!-- 뒷면 (기존의 텍스트 유지) -->
               <div
                 class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
               >
-                <p>이미지!</p>
+                <p class="text-center text-[1rem] sm:text-[1.25rem]">이미지!</p>
               </div>
             </div>
 
             <!-- 카드 3 -->
             <div
               class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
+              aria-label="개발 카드"
             >
+              <!-- 앞면 (이미지 추가) -->
               <div
                 class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
               >
-                <h2 class="text-[text-btn] font-bold">디자인</h2>
+                <img
+                  src="/src/assets/img/main_page/Develop.png"
+                  alt="개발 아이콘"
+                  role="img"
+                  class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
+                />
               </div>
+
+              <!-- 뒷면 (기존의 텍스트 유지) -->
               <div
                 class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
               >
-                <p>이미지!</p>
+                <p class="text-center text-[1rem] sm:text-[1.25rem]">이미지!</p>
               </div>
             </div>
 
@@ -303,20 +375,29 @@
             <div
               class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
             >
+              <!-- 앞면 (이미지 추가) -->
               <div
                 class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
               >
-                <h2 class="text-[text-btn] font-bold">개발</h2>
+                <img
+                  src="/src/assets/img/main_page/Finish.png"
+                  alt="마무리 아이콘"
+                  role="img"
+                  class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
+                />
               </div>
+
+              <!-- 뒷면 (기존의 텍스트 유지) -->
               <div
                 class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
+                aria-label="마무리 카드"
               >
-                <p>이미지!</p>
+                <p class="text-center text-[1rem] sm:text-[1.25rem]">이미지!</p>
               </div>
             </div>
             <a
               href="#"
-              class="inline-block bg-white text-blue-600 text-[10px] sm:text-base md:text-[1.25rem] lg:text-xl border border-blue-600 font-bold w-[12rem] sm:w-[18rem] md:w-[18rem] lg:w-(--main-btn-width) px-4 sm:px-5 mt-10 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 rounded-(--basic-radius) shadow-md hover:bg-blue-100"
+              class="inline-block bg-white text-blue-600 text-[10px] sm:text-base md:text-[1.25rem] lg:text-xl border border-blue-600 font-bold w-[12rem] sm:w-[18rem] md:w-[18rem] lg:w-(--main-btn-width) px-4 sm:px-5 mt-7 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 rounded-(--basic-radius) shadow-md hover:bg-gray-200 transition-all duration-300 ease-in-out"
             >
               프로젝트 상세 페이지 →
             </a>
