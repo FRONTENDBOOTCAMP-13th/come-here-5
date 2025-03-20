@@ -103,7 +103,7 @@
               <!-- 인증 버튼 -->
               <button
                 type="button"
-                class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer"
+                class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer hover:bg-blue-700 transition-all duration-300 ease-in-out"
               >
                 인증
               </button>
@@ -122,7 +122,7 @@
               <!-- 확인 버튼 -->
               <button
                 type="button"
-                class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer peer-placeholder-shown:opacity-100 peer-focus:bg-main focus:bg-main"
+                class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer peer-placeholder-shown:opacity-100 peer-focus:bg-main focus:bg-main transition-all duration-300 ease-in-out"
               >
                 확인
               </button>
@@ -198,7 +198,7 @@
 
               <!-- 모달 박스 -->
               <div
-                class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg max-h-[20rem] p-6 bg-white rounded-lg shadow-lg hidden peer-checked:flex flex-col z-2"
+                class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg max-h-[20rem] p-6 bg-white rounded shadow-lg hidden peer-checked:flex flex-col z-2"
               >
                 <!-- 이용약관 Text 영역 -->
                 <div class="overflow-y-scroll">
@@ -256,6 +256,7 @@
 
                 <!-- 닫기 버튼 -->
                 <label
+                  tabindex="0"
                   for="modal-toggle"
                   class="cursor-pointer text-center py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition mt-5"
                 >
@@ -265,7 +266,7 @@
             </div>
             <button
               type="submit"
-              class="max-w-(--login-btn-width) h-(--login-btn-height) lg:h-(--login-btn-height) bg-main rounded-(--btn-radius) text-white text-[1.25rem] font-semibold hover:cursor-pointer mt-3"
+              class="max-w-(--login-btn-width) h-(--login-btn-height) lg:h-(--login-btn-height) bg-main rounded-(--btn-radius) text-white text-[1.25rem] font-semibold hover:cursor-pointer mt-3 hover:bg-blue-700 transition-all duration-300 ease-in-out"
             >
               회원가입
             </button>
