@@ -14,7 +14,7 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
-  <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
+  <body>
     <div class="wrap">
       <!--==============================================================================-->
       <!--                                 공통 헤더 컴포넌트                               -->
@@ -158,6 +158,8 @@
               placeholder="닉네임 (2~10자)"
               name="name"
               id="name"
+              minlength="2"
+              maxlength="10"
               required
               class="peer max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
             />
