@@ -6,14 +6,32 @@
     @apply text-[12px] md:text-[14px] lg:text-[16px];
   }
 
-  body * {
-    @apply font-bold text-text;
-    img {
-      width: 100%;
+  body {
+    * {
+      @apply font-bold text-text;
+      img {
+        width: 100%;
+      }
+    }
+    .wrap {
+      @apply bg-white min-h-screen;
     }
   }
 
-  /* 팀 소개 페이지 */
+  @layer utilities {
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+  }
+
+  /* ================================================== */
+  /*                    팀 소개 페이지                  */
+  /* ================================================== */
+
   .team-introduce {
     .content {
       @apply hidden;
@@ -29,16 +47,6 @@
         @apply block;
       }
     }
-  }
-}
-
-@layer utilities {
-  .preserve-3d {
-    transform-style: preserve-3d;
-  }
-
-  .backface-hidden {
-    backface-visibility: hidden;
   }
 }
 

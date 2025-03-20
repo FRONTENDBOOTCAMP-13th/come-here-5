@@ -269,7 +269,7 @@
       class="team-introduce flex justify-center md:gap-[3.5625rem] px-4 md:px-8 max-w-(--team-intro-max-width) h-(--team-intro-height) bg-[#AAC0FF] hover:bg-white rounded-(--basic-radius) shadow-(--basic-shadow) duration-500 ease-in-out"
     >
       <div class="character shrink-0">
-        <img src="/src/assets/img/memo/memo_hj.png" alt="팀원 캐릭터" />
+        <img src="/src/assets/img/memo/memo_bhj.png" alt="팀원 캐릭터" />
       </div>
       <div
         class="content text-xl md:text-team-introduce-content font-bold py-6"
@@ -291,23 +291,49 @@
       />
     </a>
     <!-- 회원가입 라벨, 인풋 -->
-    <label for="email" class="text-main font-bold text-[1.2rem]">이메일</label>
-    <input
-      type="email"
-      placeholder="이메일"
-      name="email"
-      id="email"
-      required
-      class="w-full max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
-    />
-    <!-- 인증, 확인 버튼 -->
-    <button
-      type="button"
-      class="w-full lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer"
+    <!-- 이메일 입력 -->
+    <label for="email" class="text-main font-bold text-[1.2rem] block"
+      >이메일</label
     >
-      인증
-    </button>
+    <div>
+      <input
+        type="email"
+        placeholder="이메일"
+        name="email"
+        id="email"
+        required
+        class="w-full lg:min-w-(--input-width) max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+      />
+
+      <!-- 인증 버튼 -->
+      <button
+        type="button"
+        class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer"
+      >
+        인증
+      </button>
+    </div>
+    <!-- Input focus시 버튼 배경색 변환 -->
+    <div>
+      <input
+        type="text"
+        placeholder="인증번호 입력"
+        name="authcode"
+        id="authcode"
+        required
+        class="peer w-full lg:min-w-(--input-width) max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+      />
+
+      <!-- 확인 버튼 -->
+      <button
+        type="button"
+        class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer peer-placeholder-shown:opacity-100 peer-focus:bg-main focus:bg-main"
+      >
+        확인
+      </button>
+    </div>
     <!-- 개인정보 동의 요소, Checkbox -->
+    <!-- Modal 구현영역 -->
     <div class="my-5 flex">
       <label for="private"></label>
       <input
@@ -317,10 +343,90 @@
         required
         class="mr-1.5 w-5"
       />
-      <span class="font-medium">
-        <strong class="hover:cursor-pointer">개인정보 수집</strong> 및
-        <strong class="hover:cursor-pointer">이용</strong>에 동의하십니까?
-      </span>
+      <!-- 숨겨진 체크박스 (토글 역할) -->
+      <input type="checkbox" id="modal-toggle" class="hidden peer" />
+
+      <!-- 트리거 버튼 -->
+      <label
+        for="modal-toggle"
+        class="cursor-pointer font-semibold border-b-1 hover:opacity-80"
+      >
+        개인정보 수집
+      </label>
+      <span class="font-medium text-gray-600">&nbsp;및&nbsp;</span>
+      <label
+        for="modal-toggle"
+        class="cursor-pointer font-semibold border-b-1 hover:opacity-80"
+      >
+        약관
+      </label>
+      <span class="font-medium text-gray-600">에 동의 하십니까?</span>
+      <!-- 모달 배경 (체크되었을 때 보여짐) -->
+      <div
+        class="fixed inset-0 bg-black/50 hidden peer-checked:block z-1"
+      ></div>
+
+      <!-- 모달 박스 -->
+      <div
+        class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg max-h-[20rem] p-6 bg-white rounded-lg shadow-lg hidden peer-checked:flex flex-col z-2"
+      >
+        <!-- 이용약관 Text 영역 -->
+        <div class="overflow-y-scroll">
+          <h2 class="text-xl font-bold mb-4">개인정보 처리방침</h2>
+          <p class="font-medium">
+            하이(주) (이하 ‘회사’라고 합니다)는 개인정보보호법 등 관련 법령상
+            개인정보 보호 규정을 준수하며 귀하의 개인정보를 철저하게 관리하고
+            있습니다. 회사는 개인정보 보호법에 근거하여 다음과 같은 내용으로
+            개인정보를 수집 및 이용하고자 합니다.
+          </p>
+          <p class="font-medium">
+            다음의 내용을 자세히 읽어보신 후 모든 내용을 이해하신 후에 동의
+            여부를 결정해주시기 바랍니다.
+          </p>
+
+          <p class="font-medium">
+            <strong>제1조 (개인정보 수집 및 이용 목적)</strong><br />
+            이용자가 제공한 모든 정보는 다음의 목적을 위해 활용하며, 목적 이외의
+            용도로는 사용되지 않습니다.
+            <br />
+            - 본인확인, 입사지원관리, 면접관리 및 채용절차의 진행 및 관리
+            <br />
+            - 인재풀 구성 및 인사 정보 활용
+          </p>
+
+          <p class="font-medium">
+            <strong>제2조 (개인정보 수집 및 이용 항목)</strong><br />
+            회사는 개인정보 수집 목적을 위하여 다음과 같은 정보를 수집합니다.
+            <br />
+            - 성명, 주소, 전화번호, 이메일, 성별, 나이 및 생년월일
+          </p>
+
+          <p class="font-medium">
+            <strong>제3조 (개인정보 보유 및 이용 기간)</strong><br />
+            1. 수집한 개인정보는 수집, 이용일로부터 3년간 보관 및 이용합니다.
+            <br />
+            2. 개인정보 보유기간 경과, 처리목적 달성 등 개인정보가 불필요하게
+            되었을 때에는 지체없이 해당 개인정보를 파기합니다.
+          </p>
+
+          <p class="font-medium">
+            <strong>제4조 (동의 거부 권리)</strong><br />
+            귀하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를 거부하실
+            수 있으며, 이에 따른 불이익은 없습니다.
+            <br />
+            본인은 위의 동의서 내용을 충분히 숙지하였으며, 위와 같이 개인정보를
+            수집, 이용하는데 동의합니다.
+          </p>
+        </div>
+
+        <!-- 닫기 버튼 -->
+        <label
+          for="modal-toggle"
+          class="cursor-pointer text-center py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition mt-5"
+        >
+          확인
+        </label>
+      </div>
     </div>
     <!-- 회원가입 Button -->
     <button
