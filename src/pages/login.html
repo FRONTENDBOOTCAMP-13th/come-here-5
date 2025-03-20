@@ -15,158 +15,246 @@
     <script type="module" src="/src/main.js"></script>
   </head>
   <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
-    <!--==============================================================================-->
-    <!--                                 공통 헤더 컴포넌트                                  -->
-    <!--==============================================================================-->
-    <header
-      class="grid grid-cols-2 items-center max-w-[1024px] h-[var(--header-height)] mx-auto px-4 bg-white"
-    >
-      <!-- 로고 -->
-      <div class="flex items-center mr-20">
-        <a href="/">
+    <div class="wrap">
+      <!--==============================================================================-->
+      <!--                                 공통 헤더 컴포넌트                                  -->
+      <!--==============================================================================-->
+      <header
+        class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
+      >
+        <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
+        <div class="flex items-center w-full lg:w-auto">
+          <!-- 로고 -->
+          <div class="lg:w-[200px]">
+            <a href="/">
+              <img
+                src="/src/assets/svg/logo_black.svg"
+                alt="Logo"
+                class="w-(--logo-width-size) h-(--logo-height-size)"
+              />
+            </a>
+          </div>
+
+          <!-- 햄버거 버튼 -->
+          <button
+            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 메뉴 영역 (데스크톱) -->
+        <nav
+          class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+        >
+          <a href="#" class="hover:opacity-70">Plan</a>
+          <a href="#" class="hover:opacity-70">Team</a>
+          <a
+            href="./login.html"
+            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+          >
+            Login
+          </a>
+        </nav>
+      </header>
+      <!-- ============================================================================================== -->
+      <!-- ============================================================================================== -->
+
+      <!--===============================================================================================-->
+      <!--                                            로그인 컴포넌트                                     -->
+      <!--===============================================================================================-->
+      <main
+        class="flex flex-col justify-center items-center max-w-[1024px] mx-auto mt-[9rem] mb-[24rem]"
+      >
+        <div class="w-full max-w-[25rem] p-7">
+          <a href="/">
+            <img
+              src="../assets/svg/logo_black.svg"
+              alt="로고"
+              class="lg:w-(--logo-sm-width-size) lg:h-(--logo-sm-height-size) w-(--logo-sm-mobile-width-size) h-(--logo-sm-mobile-height-size) my-10 cursor-pointer mx-auto"
+            />
+          </a>
+          <form action="#" method="post" class="m-auto">
+            <label for="email">
+              <input
+                type="email"
+                placeholder="이메일"
+                required
+                class="w-full max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+              />
+            </label>
+            <label for="password">
+              <input
+                type="password"
+                placeholder="비밀번호"
+                required
+                class="w-full max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+              />
+            </label>
+            <div
+              class="flex justify-between mt-2 mb-2 font-light text-[.875rem] lg:text-[1rem]"
+            >
+              <a href="#" class="text-gray-400 font-regular hover:text-gray-500"
+                >비밀번호 재설정</a
+              >
+              <a
+                href="./sign-up.html"
+                class="text-gray-400 font-regular hover:text-gray-500"
+                >회원가입</a
+              >
+            </div>
+            <button
+              type="submit"
+              class="w-full max-w-(--login-btn-width) h-(--login-btn-height) lg:h-(--login-btn-height) bg-main rounded-(--btn-radius) text-white text-[1.25rem] font-semibold hover:cursor-pointer"
+            >
+              로그인
+            </button>
+          </form>
+          <div>
+            <p class="font-medium text-gray-500 text-center mt-10">
+              SNS 계정으로 간편 로그인 및 회원가입.
+            </p>
+            <div class="flex justify-around mt-5 mx-10">
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th/come-here-5">
+                <img
+                  src="../assets/svg/icon_facebook.svg"
+                  alt="페이스북"
+                  class="w-(--login-icon-width)"
+                />
+              </a>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th/come-here-5">
+                <img
+                  src="../assets/svg/icon_kakao.svg"
+                  alt="카카오톡"
+                  class="w-(--login-icon-width)"
+                />
+              </a>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th/come-here-5">
+                <img
+                  src="../assets/svg/icon_naver.svg"
+                  alt="네이버"
+                  class="w-(--login-icon-width)"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ============================================================================================== -->
+      <!-- ============================================================================================== -->
+
+      <!--===============================================================================================-->
+      <!--                                          공통 Footer 컴포넌트                                  -->
+      <!--===============================================================================================-->
+
+      <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
+        <!-- 로고 -->
+        <div class="flex justify-start px-4 mb-6 lg:mb-8">
           <img
-            src="/src/assets/svg/logo_black.svg"
-            alt="Logo"
-            class="w-(--logo-width-size) h-(--logo-height-size)"
-        /></a>
-      </div>
-
-      <!-- 햄버거 버튼 (모바일 전용) -->
-      <button
-        class="absolute top-2 right-4 lg:hidden flex items-center justify-center w-[40px] h-[70px]"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          class="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
+            src="/src/assets/svg/lion_black.svg"
+            alt="Lion Logo"
+            class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
           />
-        </svg>
-      </button>
+        </div>
 
-      <!-- 메뉴 -->
-      <nav
-        class="hidden lg:flex justify-end items-center space-x-14 text-[#312F2F] text-header-link ml-20"
-      >
-        <a href="#" class="hover:opacity-70">Plan</a>
-        <a href="#" class="hover:opacity-70">Team</a>
-        <a
-          href="#"
-          class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
-          href="./login.html"
+        <!-- Bootcamp 제목 -->
+        <div
+          class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
         >
-          Login
-        </a>
-      </nav>
-    </header>
-    <!-- ============================================================================================== -->
-    <!-- ============================================================================================== -->
-
-    <!--===============================================================================================-->
-    <!--                                          공통 Footer 컴포넌트                                    -->
-    <!--===============================================================================================-->
-
-    <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
-      <!-- 로고 -->
-      <div class="flex justify-start px-4 mb-6 lg:mb-8">
-        <img
-          src="/src/assets/svg/lion_black.svg"
-          alt="Lion Logo"
-          class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
-        />
-      </div>
-
-      <!-- Bootcamp 제목 -->
-      <div
-        class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
-      >
-        Likelion Bootcamp Frontend 13th
-      </div>
-
-      <!-- 이름 목록 -->
-      <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >배희정</span
-          >
+          Likelion Bootcamp Frontend 13th
         </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >배동초</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >이훈진</span
-          >
-        </div>
-        <div class="flex flex-col items-start">
-          <span class="text-[9px] lg:text-[11px] font-semibold text-black"
-            >강석현</span
-          >
-        </div>
-      </div>
 
-      <!-- 소셜 아이콘 및 Copy~ -->
-      <div
-        class="flex items-center justify-between lg:justify-between px-4 mt-10"
-      >
-        <!-- 소셜 아이콘 -->
-        <div class="flex justify-start space-x-4 lg:space-x-6">
-          <!-- GitHub -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_github.svg"
-                alt="GitHub"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+        <!-- 이름 목록 -->
+        <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배희정</span
+            >
           </div>
-          <!-- Instagram -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_instagram.svg"
-                alt="Instagram"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배동초</span
+            >
           </div>
-          <!-- YouTube -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_youtube.svg"
-                alt="YouTube"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >이훈진</span
+            >
           </div>
-          <!-- Facebook -->
-          <div>
-            <a href="https://github.com/FRONTENDBOOTCAMP-13th">
-              <img
-                src="/src/assets/svg/icon_facebook_02.svg"
-                alt="Facebook"
-                class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
-            /></a>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >강석현</span
+            >
           </div>
         </div>
-      </div>
-      <!-- Copy Likelion -->
-      <div class="mt-8 lg:mt-6 mb-0 text-center">
-        <span class="text-[8px] lg:text-[16px] text-black">
-          Copyright Likelion Bootcamp Frontend 13th All rights reserved.
-        </span>
-      </div>
-    </footer>
 
-    <!-- =============================================================================================== -->
-    <!-- =============================================================================================== -->
+        <!-- 소셜 아이콘 및 Copy~ -->
+        <div
+          class="flex items-center justify-between lg:justify-between px-4 mt-10"
+        >
+          <!-- 소셜 아이콘 -->
+          <div class="flex justify-start space-x-4 lg:space-x-6">
+            <!-- GitHub -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_github.svg"
+                  alt="GitHub"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Instagram -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_instagram.svg"
+                  alt="Instagram"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- YouTube -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_youtube.svg"
+                  alt="YouTube"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Facebook -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_facebook_02.svg"
+                  alt="Facebook"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copy Likelion -->
+        <div class="mt-8 lg:mt-6 mb-0 text-center">
+          <span class="text-[8px] lg:text-[16px] text-black">
+            Copyright Likelion Bootcamp Frontend 13th All rights reserved.
+          </span>
+        </div>
+      </footer>
+
+      <!-- =============================================================================================== -->
+      <!-- =============================================================================================== -->
+    </div>
   </body>
 </html>
