@@ -26,6 +26,25 @@
     .backface-hidden {
       backface-visibility: hidden;
     }
+
+    /* ============================= */
+    /*        Floating 애니메이션       */
+    /* ============================= */
+    .animate-floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
   }
 
   /* ================================================== */
@@ -95,4 +114,5 @@
 }
 
 /* ====================================================== */
+/* =================== 추가된 애니메이션 =================== */
 /* ====================================================== */
