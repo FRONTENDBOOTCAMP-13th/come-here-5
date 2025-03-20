@@ -14,5 +14,267 @@
     <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="wrap">
+      <!--==============================================================================-->
+      <!--                                 공통 헤더 컴포넌트                               -->
+      <!--==============================================================================-->
+      <header
+        class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
+      >
+        <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
+        <div class="flex items-center w-full lg:w-auto">
+          <!-- 로고 -->
+          <div>
+            <a href="/">
+              <img
+                src="/src/assets/svg/logo_black.svg"
+                alt="Logo"
+                class="w-(--logo-width-size) h-(--logo-height-size)"
+              />
+            </a>
+          </div>
+
+          <!-- 햄버거 버튼 -->
+          <button
+            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 메뉴 영역 (데스크톱) -->
+        <nav
+          class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+        >
+          <a href="#" class="hover:opacity-70">Plan</a>
+          <a href="#" class="hover:opacity-70">Team</a>
+          <a
+            href="./login.html"
+            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+          >
+            Login
+          </a>
+        </nav>
+      </header>
+      <!-- ============================================================================================== -->
+      <!-- ============================================================================================== -->
+
+      <main class="grid gap-10 mb-10">
+        <!-- hero section -->
+        <section
+          class="team-hero bg-main px-8 py-[2.8125rem] flex justify-center gap-5 h-[200px] md:h-[350px]"
+        >
+          <div
+            class="logo w-[6rem] content-center md:w-(--logo-big-size) lg:content-start lg:mt-3 shrink-0"
+          >
+            <img src="/src/assets/svg/logo_white.svg" alt="Hi logo" />
+          </div>
+          <div class="title font-bold content-center">
+            <div
+              class="sub-title text-3xl md:text-[2.5rem] lg:text-team-hero-sub-title leading-[1.5] text-white"
+            >
+              4명의 색다른 매력,
+            </div>
+            <div
+              class="main-title text-4xl md:text-[3.4rem] md:pl-[5.75rem] lg:text-team-hero-title leading-[1.5] text-white"
+            >
+              지금 소개합니다!
+            </div>
+          </div>
+        </section>
+
+        <div
+          class="w-full px-4 lg:px-[70px] lg:container grid grid-rows-subgrid row-span-4 justify-self-center"
+        >
+          <!-- introduce section -->
+          <section
+            class="team-introduce flex justify-center md:gap-[3.5625rem] px-4 md:px-8 h-(--team-intro-height) bg-[#AAC0FF] hover:bg-white rounded-(--basic-radius) shadow-(--basic-shadow) duration-500 ease-in-out"
+          >
+            <div class="character shrink-0">
+              <img
+                src="/src/assets/img/memo/memo_ksh.png"
+                alt="강석현 팀원 캐릭터"
+              />
+            </div>
+            <div
+              class="content text-xl md:text-team-introduce-content font-bold py-6"
+            >
+              5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조 팀원
+              ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조
+              팀원 ㅇㅇㅇ입니다.
+            </div>
+          </section>
+
+          <section
+            class="team-introduce flex justify-center md:gap-[3.5625rem] px-4 md:px-8 h-(--team-intro-height) bg-[#AAC0FF] hover:bg-white rounded-(--basic-radius) shadow-(--basic-shadow) duration-500 ease-in-out"
+          >
+            <div class="character shrink-0">
+              <img
+                src="/src/assets/img/memo/memo_bdc.png"
+                alt="배동초 팀원 캐릭터"
+              />
+            </div>
+            <div
+              class="content text-xl md:text-team-introduce-content font-bold py-6"
+            >
+              5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조 팀원
+              ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조
+              팀원 ㅇㅇㅇ입니다.
+            </div>
+          </section>
+
+          <section
+            class="team-introduce flex justify-center md:gap-[3.5625rem] px-4 md:px-8 h-(--team-intro-height) bg-[#AAC0FF] hover:bg-white rounded-(--basic-radius) shadow-(--basic-shadow) duration-500 ease-in-out"
+          >
+            <div class="character shrink-0">
+              <img
+                src="/src/assets/img/memo/memo_bhj.png"
+                alt="배희정 팀원 캐릭터"
+              />
+            </div>
+            <div
+              class="content text-xl md:text-team-introduce-content font-bold py-6 content-center"
+            >
+              안녕하세요! 이리5시조 팀원 배희정입니다. 전시회나 공연 관람을
+              좋아하며, 집에서 음악을 들으며 책 읽는 시간을 즐깁니다. 개발을
+              하면서 문제가 생기면 끝까지 해결 방법을 찾아내려고 노력하는
+              편입니다. 멋사 13기에서 협업의 중요성을 배우고, 실무에 도움이 되는
+              경험을 쌓는 것이 목표입니다. 남은 기간 동안 동기들과 함께
+              성장하며, 사용자 입장에서 생각할 줄 아는 프론트엔드 개발자가 되고
+              싶습니다! 👩‍💻
+            </div>
+          </section>
+
+          <section
+            class="team-introduce flex justify-center md:gap-[3.5625rem] px-4 md:px-8 h-(--team-intro-height) bg-[#AAC0FF] hover:bg-white rounded-(--basic-radius) shadow-(--basic-shadow) duration-500 ease-in-out"
+          >
+            <div class="character shrink-0">
+              <img
+                src="/src/assets/img/memo/memo_lhj.png"
+                alt="이훈진 팀원 캐릭터"
+              />
+            </div>
+            <div
+              class="content text-xl md:text-team-introduce-content font-bold py-6"
+            >
+              5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조 팀원
+              ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조 팀원 ㅇㅇㅇ입니다. 5조
+              팀원 ㅇㅇㅇ입니다.
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- footer -->
+      <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
+        <!-- 로고 -->
+        <div class="flex justify-start px-4 mb-6 lg:mb-8">
+          <img
+            src="/src/assets/svg/lion_black.svg"
+            alt="Lion Logo"
+            class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
+          />
+        </div>
+
+        <!-- Bootcamp 제목 -->
+        <div
+          class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
+        >
+          Likelion Bootcamp Frontend 13th
+        </div>
+
+        <!-- 이름 목록 -->
+        <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배희정</span
+            >
+          </div>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >배동초</span
+            >
+          </div>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >이훈진</span
+            >
+          </div>
+          <div class="flex flex-col items-start">
+            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+              >강석현</span
+            >
+          </div>
+        </div>
+
+        <!-- 소셜 아이콘 및 Copy~ -->
+        <div
+          class="flex items-center justify-between lg:justify-between px-4 mt-10"
+        >
+          <!-- 소셜 아이콘 -->
+          <div class="flex justify-start space-x-4 lg:space-x-6">
+            <!-- GitHub -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_github.svg"
+                  alt="GitHub"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Instagram -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_instagram.svg"
+                  alt="Instagram"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- YouTube -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_youtube.svg"
+                  alt="YouTube"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Facebook -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_facebook_02.svg"
+                  alt="Facebook"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copy Likelion -->
+        <div class="mt-8 lg:mt-6 mb-0 text-center">
+          <span class="text-[8px] lg:text-[16px] text-black">
+            Copyright Likelion Bootcamp Frontend 13th All rights reserved.
+          </span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- =============================================================================================== -->
+    <!-- =============================================================================================== -->
+  </body>
 </html>

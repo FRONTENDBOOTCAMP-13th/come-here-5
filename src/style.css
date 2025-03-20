@@ -1,22 +1,37 @@
 @import "tailwindcss";
 @import "./assets/style/custom.css";
 
-@theme {
-  --font-sans: "Pretendard Variable", sans-serif;
-}
-
 @layer components {
   :root {
     @apply text-[12px] md:text-[14px] lg:text-[16px];
   }
 
-  body * {
-    img {
-      width: 100%;
+  body {
+    * {
+      @apply font-bold text-text;
+      img {
+        width: 100%;
+      }
+    }
+    .wrap {
+      @apply bg-white min-h-screen;
     }
   }
 
-  /* 팀 소개 페이지 */
+  @layer utilities {
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+  }
+
+  /* ================================================== */
+  /*                    팀 소개 페이지                  */
+  /* ================================================== */
+
   .team-introduce {
     .content {
       @apply hidden;
@@ -35,12 +50,49 @@
   }
 }
 
-@layer utilities {
-  .preserve-3d {
-    transform-style: preserve-3d;
-  }
+/* ================================================== */
+/*                    플랜 페이지                      */
+/* ================================================== */
 
-  .backface-hidden {
-    backface-visibility: hidden;
+/* 각 옵션에 대한 표시 규칙 */
+#option1:checked ~ .tab-content .content-area #image1,
+#option1:checked ~ .tab-content .content-area #text1 {
+  display: block;
+}
+
+#option2:checked ~ .tab-content .content-area #image2,
+#option2:checked ~ .tab-content .content-area #text2 {
+  display: block;
+}
+
+#option3:checked ~ .tab-content .content-area #image3,
+#option3:checked ~ .tab-content .content-area #text3 {
+  display: block;
+}
+
+/* 각 탭이 선택 될 시 label 색상변경 */
+#option1:checked ~ .tab-content .menu-item label[for="option1"] {
+  color: #205aff;
+  font-weight: bold;
+}
+
+#option2:checked ~ .tab-content .menu-item label[for="option2"] {
+  color: #205aff;
+  font-weight: bold;
+}
+
+#option3:checked ~ .tab-content .menu-item label[for="option3"] {
+  color: #205aff;
+  font-weight: bold;
+}
+
+@media (max-width: 64rem) {
+  #option1:checked ~ .tab-content .content-area #image1,
+  #option2:checked ~ .tab-content .content-area #image2,
+  #option3:checked ~ .tab-content .content-area #image3 {
+    display: none; /* 모바일에서는 이미지 숨기기 */
   }
 }
+
+/* ====================================================== */
+/* ====================================================== */
