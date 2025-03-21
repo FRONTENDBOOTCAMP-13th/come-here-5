@@ -9,6 +9,9 @@
   body {
     * {
       @apply font-bold text-text;
+      &:focus {
+        @apply outline-main outline-offset-3;
+      }
       img {
         width: 100%;
       }
@@ -81,7 +84,7 @@
 
   .team-introduce {
     .content {
-      @apply hidden;
+      @apply sr-only;
     }
     .character {
       @apply w-[16.375rem] content-end md:w-(--team-character-width);
@@ -91,7 +94,7 @@
         @apply content-center w-[12rem] md:w-(--team-character-width-hover);
       }
       .content {
-        @apply block;
+        @apply not-sr-only;
       }
     }
   }
