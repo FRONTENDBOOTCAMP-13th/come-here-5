@@ -14,7 +14,7 @@
       }
     }
     .wrap {
-      @apply bg-white min-h-screen;
+      @apply min-h-screen bg-white;
     }
   }
 
@@ -43,6 +43,34 @@
       }
       100% {
         transform: translateY(0);
+      }
+    }
+
+    /* ============================= */
+    /*        Typing 애니메이션         */
+    /* ============================= */
+    .animate-typing {
+      animation:
+        typing 4s steps(20) infinite alternate,
+        blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      0% {
+        width: 0%;
+        visibility: hidden;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+      100% {
+        border-color: white;
       }
     }
   }

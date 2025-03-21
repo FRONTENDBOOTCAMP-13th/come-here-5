@@ -17,62 +17,61 @@
 
   <body class="bg-[#ffffff] m-0 min-h-screen space-y-5">
     <div class="wrap">
-  <body class="bg-[#ffffff] m-8 min-h-screen space-y-10">
-<header
-      class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
-    >
-      <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
-      <div class="flex items-center w-full lg:w-auto">
-        <!-- 로고 -->
-        <div>
-          <a href="/">
-            <img
-              src="/src/assets/svg/logo_black.svg"
-              alt="Logo"
-              class="w-(--logo-width-size) h-(--logo-height-size)"
-            />
-          </a>
+      <header
+        class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
+      >
+        <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
+        <div class="flex items-center w-full lg:w-auto">
+          <!-- 로고 -->
+          <div>
+            <a href="/">
+              <img
+                src="/src/assets/svg/logo_black.svg"
+                alt="Logo"
+                class="w-(--logo-width-size) h-(--logo-height-size)"
+              />
+            </a>
+          </div>
+
+          <!-- 햄버거 버튼 -->
+          <button
+            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
 
-        <!-- 햄버거 버튼 -->
-        <button
-          class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+        <!-- 메뉴 영역 (데스크톱) -->
+        <nav
+          class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            class="w-6 h-6"
+          <a href="#" class="hover:opacity-70">Plan</a>
+          <a href="#" class="hover:opacity-70">Team</a>
+          <a
+            href="./login.html"
+            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <!-- 메뉴 영역 (데스크톱) -->
-      <nav
-        class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
-      >
-        <a href="#" class="hover:opacity-70">Plan</a>
-        <a href="#" class="hover:opacity-70">Team</a>
-        <a
-          href="./login.html"
-          class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
-        >
-          Login
-        </a>
-      </nav>
-    </header>
+            Login
+          </a>
+        </nav>
+      </header>
       <!-- ================================================================================================ -->
       <main class="flex flex-col items-center overflow-visible">
         <section
-          class="relative bg-[url('../assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1380px] mx-auto aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mb-35 mt-5"
+          class="relative bg-[url('../assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1280px] mx-auto aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mb-35 mt-1"
           aria-labelledby="hero-title"
         >
           <article
@@ -84,26 +83,21 @@
               aria-label="소개 섹션"
             >
               <p
-                class="text-gray-400 text-[0.8rem] sm:text-[1.5rem] lg:text-main-sub-title xl:text-[2.5rem]"
+                class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white text-white text-[3rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-medium"
               >
-                Likelion Ui Project
+                WELCOME
               </p>
+
               <h1
-                class="text-white text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-main-hero-title xl:text-[5rem] font-bold"
+                class="text-white text-[3rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[8rem] font-extrabold ml-50"
               >
-                우리를 소개합니다!!
+                WE ARE
               </h1>
-              <p
-                class="text-white text-[0.8rem] sm:text-[1rem] lg:text-xl xl:text-2xl"
-              >
-                Please check Our project!
-              </p>
-              <button
-                class="mt-6 px-4 py-2 bg-white text-blue-600 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300 ease-in-out w-[80px] sm:w-[120px] lg:w-[150px] xl:w-[180px] text-[.625rem] max-[520px]:hidden sm:text-sm lg:text-base xl:text-lg"
-                aria-label="팀 소개 페이지로 이동"
-              >
-                팀 소개 →
-              </button>
+              <img
+                src="/src/assets/svg/logo_white.svg"
+                alt="Logo"
+                class="w-[6rem] h-[6rem] sm:w-[6rem] sm:h-[6rem] md:w-[8rem] md:h-[8rem] lg:w-[9rem] lg:h-[9rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[12rem] 2xl:h-[12rem]"
+              />
             </div>
             <div
               class="relative flex justify-end items-start pr-20 pt-6 max-[520px]:hidden"
@@ -118,23 +112,23 @@
           </article>
         </section>
         <!-- ================================================================================== -->
-        <section class="bg-gray-200 w-full">
+        <section class="w-full bg-gray-200">
           <div
             class="max-w-[1024px] mx-auto mt-20 py-10 px-6 text-center space-y-4"
             aria-labelledby="team-intro-title"
           >
             <h3
-              class="text-2xl sm:text-3xl md:text-4xl font-bold"
+              class="text-2xl font-bold text-black sm:text-3xl md:text-4xl"
               id="team-intro-title"
             >
               팀원을 소개합니다.
             </h3>
 
             <p
-              class="text-base sm:text-lg md:text-xl font-medium text-gray-600 leading-relaxed"
+              class="text-base font-medium leading-relaxed text-gray-800 sm:text-lg md:text-xl"
             >
-              <strong>Hi!</strong> 프로젝트 팀은 멋쟁이 사자처럼 FE Bootcamp를
-              통해 만난 UI 프로젝트 팀입니다.<br />
+              Hi! 프로젝트 팀은 멋쟁이 사자처럼 FE Bootcamp를 통해 만난 UI
+              프로젝트 팀입니다.<br />
               각자 색다른 매력을 가지고 있는 팀원을 만나러 가보실까요?
             </p>
 
@@ -162,7 +156,9 @@
                 <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
                   안녕하세요 이훈진입니다!
                 </h3>
-                <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
+                <p
+                  class="text-gray-500 font-medium text-[clamp(12px,1.5vw,20px)]"
+                >
                   저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로
                   저의 활약을 기대해주세요!
                 </p>
@@ -171,7 +167,7 @@
 
             <!-- 사람 이미지 영역 -->
             <div
-              class="relative w-full flex items-center justify-start"
+              class="relative flex items-center justify-start w-full"
               aria-label="이훈진 프로필 이미지"
             >
               <img
@@ -188,7 +184,7 @@
           >
             <!-- 사람 이미지 영역 (왼쪽으로 이동) -->
             <div
-              class="relative w-full flex items-center justify-end"
+              class="relative flex items-center justify-end w-full"
               aria-label="배희정 프로필 이미지"
             >
               <img
@@ -209,7 +205,9 @@
                 <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
                   안녕하세요 배희정입니다!
                 </h3>
-                <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
+                <p
+                  class="text-gray-500 font-medium text-[clamp(12px,1.5vw,20px)]"
+                >
                   사용자의 입장에서 생각할 수 있는 개발자가 되기 위해 열심히
                   노력하고 있습니다. 지치지 않고 꾸준히 나아가겠습니다!
                 </p>
@@ -232,7 +230,9 @@
                 <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
                   안녕하세요 배동초입니다!
                 </h3>
-                <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
+                <p
+                  class="text-gray-500 font-medium text-[clamp(12px,1.5vw,20px)]"
+                >
                   안녕하세요! 코드를 이제 막 시작해 아기 병아리 단계이지만, 더
                   크게 성장하기 위해 열심히 노력 중인 배동초입니다. 🐣
                 </p>
@@ -241,7 +241,7 @@
 
             <!-- 사람 이미지 영역 -->
             <div
-              class="relative w-full flex items-center justify-start"
+              class="relative flex items-center justify-start w-full"
               aria-label="배동초 프로필 이미지"
             >
               <img
@@ -258,7 +258,7 @@
           >
             <!-- 사람 이미지 영역 (왼쪽으로 이동) -->
             <div
-              class="relative w-full flex items-center justify-end"
+              class="relative flex items-center justify-end w-full"
               aria-label="강석현 프로필 이미지"
             >
               <img
@@ -279,19 +279,21 @@
                 <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
                   안녕하세요 강석현입니다!
                 </h3>
-                <p class="text-gray-500 text-[clamp(12px,1.5vw,20px)]">
-                  저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로
-                  저의 활약을 기대해주세요!
+                <p
+                  class="text-gray-500 font-medium text-[clamp(12px,1.5vw,20px)]"
+                >
+                  웹 디자이너, 백엔드 개발자와 소통이 잘되는 프론트엔드<br />
+                  개발자를 목표로 공부를 하고 있습니다!
                 </p>
               </div>
             </div>
           </section>
         </section>
         <!-- ================================================================================== -->
-        <section class="bg-blue-500 p-5 w-full space-y-0">
+        <section class="w-full p-5 space-y-0 bg-blue-600">
           <!-- 텍스트 제목 -->
           <h3
-            class="text-white text-2xl sm:text-3xl md:text-4xl font-bold mt-25 mb-10 text-center"
+            class="mb-10 text-2xl font-bold text-center text-white sm:text-3xl md:text-4xl mt-25"
             aria-labelledby="project-intro-title"
           >
             Hi!팀의 프로젝트 과정을 소개합니다.
@@ -302,101 +304,84 @@
           >
             <!-- 카드 1 -->
             <div
-              class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
-              aria-label="프로젝트 기획 카드"
+              class="relative group h-[15rem] max-sm:h-[9.375rem] cursor-pointer"
             >
-              <!-- 앞면 (이미지 추가) -->
+              <!-- 숨겨진 흰색 카드 -->
               <div
-                class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
-              >
-                <img
-                  src="/src/assets/img/main_page/Topic.png"
-                  alt="프로젝트 기획 아이콘"
-                  role="img"
-                  class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[130px] object-contain"
-                />
-              </div>
+                class="absolute top-0 left-0 w-full h-full bg-white rounded-[var(--basic-radius)] scale-100 transition-transform duration-500"
+              ></div>
 
-              <!-- 뒷면 (기존의 텍스트 유지) -->
+              <!-- 파란색 카드 (앞면) -->
               <div
-                class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
+                class="relative w-full h-full bg-blue-800 shadow-lg rounded-[var(--basic-radius)] transition-all duration-500 transform group-hover:translate-x-3 group-hover:-translate-y-3"
               >
-                <p class="text-center text-[1rem] sm:text-[1.25rem]">이미지!</p>
+                <div class="flex items-center justify-center h-full">
+                  <img
+                    src="/src/assets/img/main_page/Topic.png"
+                    alt="프로젝트 기획 아이콘"
+                    class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[130px] object-contain"
+                  />
+                </div>
               </div>
             </div>
 
             <!-- 카드 2 -->
             <div
-              class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
-              aria-label="디자인 카드"
+              class="relative group h-[15rem] max-sm:h-[9.375rem] cursor-pointer"
             >
-              <!-- 앞면 (이미지 추가) -->
               <div
-                class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
-              >
-                <img
-                  src="/src/assets/img/main_page/Design.png"
-                  alt="디자인 아이콘"
-                  role="img"
-                  class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
-                />
-              </div>
-
-              <!-- 뒷면 (기존의 텍스트 유지) -->
+                class="absolute top-0 left-0 w-full h-full bg-white rounded-[var(--basic-radius)] scale-100 transition-transform duration-500"
+              ></div>
               <div
-                class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
+                class="relative w-full h-full bg-blue-800 shadow-lg rounded-[var(--basic-radius)] transition-all duration-500 transform group-hover:translate-x-3 group-hover:-translate-y-3"
               >
-                <p class="text-center text-[1rem] sm:text-[1.25rem]">이미지!</p>
+                <div class="flex items-center justify-center h-full">
+                  <img
+                    src="/src/assets/img/main_page/design.png"
+                    alt="디자인 아이콘"
+                    class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
+                  />
+                </div>
               </div>
             </div>
 
             <!-- 카드 3 -->
             <div
-              class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
-              aria-label="개발 카드"
+              class="relative group h-[15rem] max-sm:h-[9.375rem] cursor-pointer"
             >
-              <!-- 앞면 (이미지 추가) -->
               <div
-                class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
-              >
-                <img
-                  src="/src/assets/img/main_page/Develop.png"
-                  alt="개발 아이콘"
-                  role="img"
-                  class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
-                />
-              </div>
-
-              <!-- 뒷면 (기존의 텍스트 유지) -->
+                class="absolute top-0 left-0 w-full h-full bg-white rounded-[var(--basic-radius)] scale-100 transition-transform duration-500"
+              ></div>
               <div
-                class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
+                class="relative w-full h-full bg-blue-800 shadow-lg rounded-[var(--basic-radius)] transition-all duration-500 transform group-hover:translate-x-3 group-hover:-translate-y-3"
               >
-                <p class="text-center text-[1rem] sm:text-[1.25rem]">이미지!</p>
+                <div class="flex items-center justify-center h-full">
+                  <img
+                    src="/src/assets/img/main_page/develop.png"
+                    alt="개발 아이콘"
+                    class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
+                  />
+                </div>
               </div>
             </div>
 
             <!-- 카드 4 -->
             <div
-              class="relative h-[15rem] max-sm:h-[9.375rem] cursor-pointer border border-blue-500 bg-blue-500 shadow-lg rounded-[var(--basic-radius)] transform transition-transform duration-700 hover:rotate-y-180 preserve-3d"
+              class="relative group h-[15rem] max-sm:h-[9.375rem] cursor-pointer"
             >
-              <!-- 앞면 (이미지 추가) -->
               <div
-                class="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-[var(--basic-radius)]"
-              >
-                <img
-                  src="/src/assets/img/main_page/Finish.png"
-                  alt="마무리 아이콘"
-                  role="img"
-                  class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
-                />
-              </div>
-
-              <!-- 뒷면 (기존의 텍스트 유지) -->
+                class="absolute top-0 left-0 w-full h-full bg-white rounded-[var(--basic-radius)] scale-100 transition-transform duration-500"
+              ></div>
               <div
-                class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-gray-500 text-white rounded-[var(--basic-radius)]"
-                aria-label="마무리 카드"
+                class="relative w-full h-full bg-blue-800 shadow-lg rounded-[var(--basic-radius)] transition-all duration-500 transform group-hover:translate-x-3 group-hover:-translate-y-3"
               >
-                <p class="text-center text-[1rem] sm:text-[1.25rem]">이미지!</p>
+                <div class="flex items-center justify-center h-full">
+                  <img
+                    src="/src/assets/img/main_page/finish.png"
+                    alt="마무리 아이콘"
+                    class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[150px] object-contain"
+                  />
+                </div>
               </div>
             </div>
             <a
@@ -411,7 +396,7 @@
 
       <!-- ================================================================================================ -->
       <!-- footer -->
-      <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20 gap-0">
+      <footer class="gap-0 px-10 py-8 bg-gray lg:py-12 lg:px-20">
         <!-- 로고 -->
         <div class="flex justify-start px-4 mb-6 lg:mb-8">
           <img
@@ -429,7 +414,7 @@
         </div>
 
         <!-- 이름 목록 -->
-        <div class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+        <div class="flex justify-start px-4 mb-6 space-x-2 lg:space-x-4">
           <div class="flex flex-col items-start">
             <span class="text-[9px] lg:text-[11px] font-semibold text-black"
               >배희정</span
@@ -454,7 +439,7 @@
 
         <!-- 소셜 아이콘 및 Copy~ -->
         <div
-          class="flex items-center justify-between lg:justify-between px-4 mt-10"
+          class="flex items-center justify-between px-4 mt-10 lg:justify-between"
         >
           <!-- 소셜 아이콘 -->
           <div class="flex justify-start space-x-4 lg:space-x-6">
@@ -497,7 +482,7 @@
           </div>
         </div>
         <!-- Copy Likelion -->
-        <div class="mt-8 lg:mt-6 mb-0 text-center">
+        <div class="mt-8 mb-0 text-center lg:mt-6">
           <span class="text-[8px] lg:text-[16px] text-black">
             Copyright Likelion Bootcamp Frontend 13th All rights reserved.
           </span>
