@@ -29,7 +29,7 @@
             <a href="/">
               <img
                 src="/src/assets/svg/logo_black.svg"
-                alt="Logo"
+                alt="HI Logo"
                 class="w-(--logo-width-size) h-(--logo-height-size)"
               />
             </a>
@@ -38,6 +38,7 @@
           <!-- 햄버거 버튼 -->
           <button
             class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+            aria-label="메뉴 열기/닫기"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,9 +60,19 @@
         <!-- 메뉴 영역 (데스크톱) -->
         <nav
           class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+          aria-label="주 메뉴"
         >
-          <a href="#" class="hover:opacity-70">Plan</a>
-          <a href="#" class="hover:opacity-70">Team</a>
+          <a
+            href="#"
+            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            >Plan</a
+          >
+          <a
+            href="#"
+            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            >Team</a
+          >
+
           <a
             href="#"
             class="font-semibold text-white bg-[#312F2F] hover:bg-main rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
@@ -82,7 +93,7 @@
           class="container mx-auto px-4 flex flex-row items-center justify-center py-(--plan-section-padding)"
         >
           <!-- HI 로고 -->
-          <a href="/" class="mr-8">
+          <a href="/" class="mr-8" title="홈페이지로 이동">
             <img
               src="/src/assets/svg/logo_black.svg"
               alt="HI Logo"
@@ -124,16 +135,17 @@
           >
             프로젝트 개발 과정
           </h2>
+
           <div class="container mx-auto flex justify-center items-center gap-4">
             <!-- 첫 번째 동그라미 -->
             <div class="flex flex-col items-center">
               <div
-                class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+                class="bg-white w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) rounded-full flex justify-center items-center hover:scale-105 hover:shadow-lg transition-transform duration-300"
               >
                 <img
-                  src="/src/assets/svg/icon_arrow_white.svg"
-                  alt="Icon in Circle 1"
-                  class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
+                  src="/src/assets/img/plan/project.gif"
+                  alt="첫 번째 동그라미: 주제 선정 및 기획"
+                  class="w-[50%] sm:w-[60%] lg:w-[70%]"
                 />
               </div>
               <p
@@ -155,12 +167,12 @@
             <!-- 두 번째 동그라미 -->
             <div class="flex flex-col items-center">
               <div
-                class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+                class="bg-white w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) rounded-full flex justify-center items-center hover:scale-105 hover:shadow-lg transition-transform duration-300"
               >
                 <img
-                  src="/src/assets/svg/icon_arrow_white.svg"
-                  alt="Icon in Circle 2"
-                  class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
+                  src="/src/assets/img/plan/design.gif"
+                  alt="두 번째 동그라미: 디자인 (UI & UX)"
+                  class="w-[50%] sm:w-[60%] lg:w-[70%]"
                 />
               </div>
               <p
@@ -182,12 +194,12 @@
             <!-- 세 번째 동그라미 -->
             <div class="flex flex-col items-center">
               <div
-                class="w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) bg-[#d9d9d9] rounded-full flex justify-center items-center"
+                class="bg-white w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) rounded-full flex justify-center items-center hover:scale-105 hover:shadow-lg transition-transform duration-300"
               >
                 <img
-                  src="/src/assets/svg/icon_arrow_white.svg"
-                  alt="Icon in Circle 3"
-                  class="w-[1.25rem] lg:w-[3.125rem] sm:w-[1.875rem]"
+                  src="/src/assets/img/plan/coding.gif"
+                  alt="세 번째 동그라미: 코드 개발"
+                  class="w-[50%] sm:w-[60%] lg:w-[70%]"
                 />
               </div>
               <p
@@ -275,10 +287,10 @@
               class="md:row-start-3 flex flex-col gap-3 justify-between plan-start px-7 py-4 lg:max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
             >
               <p class="plan-start-content text-gray-600">
-                어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구
-                저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
-                어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구
-                저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구
+                이번 프로젝트는 기획부터 설계까지의 과정을 직접 경험하며
+                이론에서 벗어나 실질적인 문제 해결 능력을 키우기 위해
+                시작했습니다. 이를 통해 자신의 역량을 확인하고, 아이디어로 직접
+                페이지를 구현하는 재미를 느낄 수 있었습니다.
               </p>
               <div class="flex items-center gap-3">
                 <div
@@ -454,7 +466,7 @@
           </h2>
           <!-- 소감 컴포넌트1 -->
           <div
-            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
+            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-5"
           >
             <!-- 이미지 -->
             <img
@@ -478,7 +490,7 @@
           </div>
           <!-- 소감 컴포넌트2 -->
           <div
-            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
+            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-5"
           >
             <!-- 이미지 -->
             <img
@@ -502,7 +514,7 @@
           </div>
           <!-- 소감 컴포넌트3 -->
           <div
-            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
+            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-5"
           >
             <!-- 이미지 -->
             <img
@@ -525,7 +537,7 @@
           </div>
           <!-- 소감 컴포넌트4 -->
           <div
-            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-25"
+            class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-5"
           >
             <!-- 이미지 -->
             <img
