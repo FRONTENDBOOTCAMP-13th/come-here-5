@@ -159,24 +159,28 @@
               required
               class="peer max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
             />
+
             <label
               for="email"
               class="text-main font-bold text-[1.2rem] mt-15 block"
               >닉네임</label
             >
-            <input
-              type="text"
-              placeholder="닉네임 (2~10자)"
-              name="name"
-              id="name"
-              minlength="2"
-              maxlength="10"
-              required
-              class="peer max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
-            />
-            <p class="error text-red-500 font-medium mt-1.5">
-              닉네임은 2자 이상 10자 이하 이어야 합니다.
-            </p>
+            <div>
+              <input
+                type="text"
+                placeholder="닉네임 (2~10자)"
+                name="name"
+                id="name"
+                minlength="2"
+                maxlength="10"
+                required
+                class="peer w-full lg:max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+              />
+
+              <p class="error text-red-500 font-medium mt-1.5">
+                닉네임은 2자 이상 10자 이하 이어야 합니다.
+              </p>
+            </div>
             <!-- Modal 구현영역 -->
             <div class="my-5 flex">
               <label for="private"></label>
@@ -214,7 +218,7 @@
 
               <!-- 모달 박스 -->
               <div
-                class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg max-h-[20rem] p-6 bg-white rounded shadow-lg hidden peer-checked:flex flex-col z-2"
+                class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg max-h-[20rem] p-6 bg-white rounded-(--basic-radius) shadow-lg hidden peer-checked:flex flex-col z-2"
               >
                 <!-- 이용약관 Text 영역 -->
                 <div class="overflow-y-scroll">
@@ -274,7 +278,7 @@
                 <label
                   tabindex="0"
                   for="modal-toggle"
-                  class="cursor-pointer text-center py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition mt-5"
+                  class="cursor-pointer text-center py-3 bg-blue-600 text-white rounded-(--btn-radius) hover:bg-blue-700 transition mt-5"
                 >
                   확인
                 </label>
