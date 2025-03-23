@@ -12,6 +12,8 @@ export default defineConfig({
         login: "src/pages/login.html",
         plan: "src/pages/plan.html",
         signup: "src/pages/sign-up.html",
+        main: "src/pages/main.html",
+        passwordreset: "src/pages/password-reset.html",
       },
     },
   },
