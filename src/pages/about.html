@@ -20,7 +20,7 @@
       <!--                                 공통 헤더 컴포넌트                               -->
       <!--==============================================================================-->
       <header
-        class="flex justify-between items-center w-full h-[var(--header-height)] mx-auto px-4 lg:px-[70px] bg-white lg:container lg:mx-auto"
+        class="sticky top-0 z-50 flex justify-between items-center w-full h-[var(--header-height)] px-4 lg:px-[70px] bg-[rgba(255,255,255,0.8)] transition-all duration-300"
       >
         <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
         <div class="flex items-center w-full lg:w-auto">
@@ -29,7 +29,7 @@
             <a href="/">
               <img
                 src="/src/assets/svg/logo_black.svg"
-                alt="Logo"
+                alt="HI Logo"
                 class="w-(--logo-width-size) h-(--logo-height-size)"
               />
             </a>
@@ -60,20 +60,21 @@
         <!-- 메뉴 영역 (데스크톱) -->
         <nav
           class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+          aria-label="주 메뉴"
         >
           <a
-            href="#"
-            class="transition-all duration-300 ease-in-out hover:opacity-70"
+            href="./plan.html"
+            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
             >Plan</a
           >
           <a
-            href="#"
-            class="transition-all duration-300 ease-in-out hover:opacity-70"
+            href="./about.html"
+            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
             >Team</a
           >
           <a
+            class="font-semibold text-white bg-[#312F2F] hover:bg-main rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
             href="./login.html"
-            class="font-semibold text-white bg-[#312F2F] hover:bg-[#205AFF] rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
           >
             Login
           </a>
@@ -198,94 +199,100 @@
       </main>
 
       <!-- footer -->
-      <footer class="px-10 py-8 bg-gray lg:py-12 lg:px-20">
+      <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20">
         <!-- 로고 -->
         <div class="flex justify-start px-4 mb-6 lg:mb-8">
           <img
             src="/src/assets/svg/lion_black.svg"
-            alt="Lion Logo"
+            alt="LikeLion 부트 캠프 로고 Lion Logo"
             class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
           />
         </div>
 
         <!-- Bootcamp 제목 -->
         <div
-          class="text-left text-xl text-black mb-4 text-[13px] lg:text-[19px] px-4"
+          class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
         >
           Likelion Bootcamp Frontend 13th
         </div>
 
         <!-- 이름 목록 -->
-        <div class="justify-start flex px-4 mb-6 space-x-2 lg:space-x-4">
-          <div class="flex flex-col items-start">
-            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+        <ul class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
               >배희정</span
             >
-          </div>
-          <div class="flex flex-col items-start">
-            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
               >배동초</span
             >
-          </div>
-          <div class="flex flex-col items-start">
-            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
               >이훈진</span
             >
-          </div>
-          <div class="flex flex-col items-start">
-            <span class="text-[9px] lg:text-[11px] font-semibold text-black"
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
               >강석현</span
             >
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <!-- 소셜 아이콘 및 Copy~ -->
         <div
-          class="flex items-center justify-between px-4 mt-10 lg:justify-between"
+          class="flex items-center justify-between lg:justify-between px-4 mt-10"
         >
           <!-- 소셜 아이콘 -->
-          <div class="flex justify-start space-x-4 lg:space-x-6">
+          <div class="flex justify-start space-x-3 lg:space-x-4">
             <!-- GitHub -->
             <div>
               <a href="https://github.com/FRONTENDBOOTCAMP-13th">
                 <img
                   src="/src/assets/svg/icon_github.svg"
-                  alt="GitHub"
+                  alt="GitHub 바로가기"
                   class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
               /></a>
             </div>
             <!-- Instagram -->
             <div>
-              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+              <a href="https://www.instagram.com/">
                 <img
                   src="/src/assets/svg/icon_instagram.svg"
-                  alt="Instagram"
+                  alt="Instagram 바로가기"
                   class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
               /></a>
             </div>
             <!-- YouTube -->
             <div>
-              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+              <a href="https://www.youtube.com/">
                 <img
                   src="/src/assets/svg/icon_youtube.svg"
-                  alt="YouTube"
+                  alt="YouTube 바로가기"
                   class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
               /></a>
             </div>
             <!-- Facebook -->
             <div>
-              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+              <a href="https://www.facebook.com/">
                 <img
                   src="/src/assets/svg/icon_facebook_02.svg"
-                  alt="Facebook"
+                  alt="Facebook 바로가기"
                   class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
               /></a>
             </div>
           </div>
         </div>
         <!-- Copy Likelion -->
-        <div class="mt-8 mb-0 text-center lg:mt-6">
-          <span class="text-[8px] lg:text-[16px] text-black">
+        <div class="mt-8 lg:mt-6 mb-0 text-center">
+          <span
+            class="text-[.833rem] font-regular lg:text-[0.75rem] text-black"
+          >
             Copyright Likelion Bootcamp Frontend 13th All rights reserved.
           </span>
         </div>
