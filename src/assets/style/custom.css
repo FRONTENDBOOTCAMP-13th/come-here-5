@@ -6,6 +6,7 @@
   --color-text: #312f2f;
   --color-white: #fff;
   --color-gray: #d9d9d9;
+  --color-text-contents: var(--color-gray-600);
 
   /* text size */
   /* 공통 */
