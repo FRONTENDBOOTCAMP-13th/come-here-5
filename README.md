@@ -1,4 +1,4 @@
-<img src="./src/assets/img/md_img/ui_project.png" alt="배너" width="100%"/>
+<img src="./src/assets/img/md_img/banner.png" alt="배너" width="100%"/>
 </a>
 
 <br/>
@@ -11,7 +11,7 @@
 
 <br/>
 <br/>
-****
+
 # 2. Team Members (팀원 및 팀 소개)
 
 |                 이훈진                  |               배동초               |                배희정                |                  강석현                  |
@@ -24,11 +24,11 @@
 
 # 3. Key Features (주요 페이지)
 
-- **메인 페이지**:
-- **팀 소개 페이지**:
-- **프로젝트 플랜 페이지**:
-- **로그인 페이지**:
-- **회원가입 페이지**:
+- **메인 페이지**
+- **팀 소개 페이지**
+- **프로젝트 플랜 페이지**
+- **로그인 페이지**
+- **회원가입 페이지**
 
 <br/>
 <br/>
@@ -148,7 +148,6 @@ body
 git commit -m "✨ feat: 사용자 로그인 기능 추가"
 git commit -m "🐛 fix: 로그인 시 비밀번호 검증 오류 수정"
 git commit -m "📝 docs: README.md 수정"
-****
 
 ## 커밋 예시
 ✨Feat: "회원 가입 페이지 구현"
