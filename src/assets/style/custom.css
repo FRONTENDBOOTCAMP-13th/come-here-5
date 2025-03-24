@@ -6,10 +6,21 @@
   --color-text: #312f2f;
   --color-white: #fff;
   --color-gray: #d9d9d9;
+  --color-sub-title: #312f2f;
   --color-text-contents: var(--color-gray-600);
+  --color-header: rgba(255, 255, 255, 0.8);
+  --color-bubble: #fff;
+  --color-card: var(--color-blue-800);
 
-  /* text size */
-  /* 공통 */
+  /* 다크 모드 색상 변수 추가 */
+  @media (prefers-color-scheme: dark) {
+    --color-main: #1e3a8a; /* 어두운 파란색 */
+    --color-text: #e5e7eb; /* 밝은 회색 (다크 모드용 글씨) */
+    --color-white: #000; /* 배경용 블랙 */
+    --color-gray: #6b7280; /* 어두운 회색 */
+    --color-text-contents: #9ca3af; /* 콘텐츠 글씨용 중간 회색 */
+  }
+  /* text size */ /* 공통 */
   --text-btn: 1.875rem;
   --text-placeholder: 1.25rem;
   --text-content: 0.9375rem;
