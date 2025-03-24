@@ -13,7 +13,7 @@ export default defineConfig({
         signup: "src/pages/sign-up.html",
         main: "src/pages/main.html",
         password_reset: "src/pages/password-reset.html",
-        components: "src/pages/components.html",
+        components: "src/pages/components/components.html",
         components_login: "src/pages/components/login-page-component",
         components_main: "src/pages/components/main-page-component",
         components_plan: "src/pages/components/plan-page-component",
