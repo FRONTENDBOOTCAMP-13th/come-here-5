@@ -18,7 +18,7 @@
   <body class="bg-[#ffffff] m-0 min-h-screen space-y-5">
     <div class="wrap">
       <header
-        class="sticky top-0 z-50 flex justify-between items-center w-full h-[var(--header-height)] px-4 lg:px-[70px] bg-[rgba(255,255,255,0.8)] transition-all duration-300"
+        class="sticky top-0 z-50 flex justify-between items-center w-full h-[var(--header-height)] px-4 lg:px-[70px] bg-[rgba(255,255,255,0.8)] transition-all duration-300 peer"
       >
         <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
         <div class="flex items-center w-full lg:w-auto">
@@ -34,25 +34,63 @@
           </div>
 
           <!-- 햄버거 버튼 -->
-          <button
-            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
-            aria-label="메뉴 열기/닫기"
+          <div
+            class="lg:hidden ml-auto relative flex items-center justify-center w-[40px] h-[70px] overflow-visible"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              class="w-6 h-6"
+            <input
+              type="checkbox"
+              id="menuToggle"
+              class="hidden peer"
+              aria-hidden="true"
+            />
+            <label
+              for="menuToggle"
+              class="block p-2 cursor-pointer"
+              aria-label="모바일 메뉴 토글"
+              role="button"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+              <span
+                class="block w-6 h-[2px] bg-black mb-1.5 transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-[5px]"
+              ></span>
+              <span
+                class="block w-6 h-[2px] bg-black mb-1.5 transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-[5px]"
+              ></span>
+              <span
+                class="block w-6 h-[2px] bg-black mb-1.5 transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-[5px]"
+              ></span>
+            </label>
+
+            <!-- 모바일 토글 메뉴 -->
+
+            <nav
+              class="absolute top-[4.375rem] right-5 w-[200px] bg-white opacity-0 peer-checked:opacity-100 p-6 transform translate-y-0 transition-all duration-300 z-[60]"
+              aria-label="모바일 메뉴"
+            >
+              <label
+                for="menuToggle"
+                class="text-black mb-4 w-6 h-6 flex items-center justify-center border rounded-full cursor-pointer hover:bg-gray-200"
+                aria-label="닫기 버튼"
+              >
+                X
+              </label>
+
+              <div class="space-y-5">
+                <a href="./plan.html" class="block text-lg hover:text-[#205AFF]"
+                  >Plan</a
+                >
+                <a
+                  href="./about.html"
+                  class="block text-lg hover:text-[#205AFF]"
+                  >Team</a
+                >
+                <a
+                  href="./login.html"
+                  class="block text-lg hover:text-[#205AFF]"
+                  >Login</a
+                >
+              </div>
+            </nav>
+          </div>
         </div>
 
         <!-- 메뉴 영역 (데스크톱) -->
@@ -62,16 +100,16 @@
         >
           <a
             href="./plan.html"
-            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            class="hover:text-[#205AFF] opacity-80 transition-all duration-300 ease-in-out"
             >Plan</a
           >
           <a
             href="./about.html"
-            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            class="hover:text-[#205AFF] opacity-80 transition-all duration-300 ease-in-out"
             >Team</a
           >
           <a
-            class="font-semibold text-white bg-[#312F2F] hover:bg-main rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+            class="font-semibold text-white bg-[#312F2F] hover:bg-main rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn transition-all duration-300 ease-in-out"
             href="./login.html"
           >
             Login
@@ -81,7 +119,7 @@
       <!-- ================================================================================================ -->
       <main class="flex flex-col items-center overflow-visible">
         <section
-          class="relative bg-[url('/src/assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1280px] mx-auto aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mb-35 mt-1"
+          class="relative bg-[url('/src/assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1280px] mx-auto aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mb-35 mt-3"
           aria-labelledby="hero-title"
         >
           <article
@@ -89,17 +127,17 @@
           >
             <!-- 텍스트 섹션 -->
             <div
-              class="flex flex-col justify-center px-6 ml-10"
+              class="flex flex-col justify-center px-5 ml-10"
               aria-label="소개 섹션"
             >
               <p
-                class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white text-white text-[3rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-medium"
+                class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-main-title text-white text-[3rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-medium"
               >
                 WELCOME
               </p>
 
               <h1
-                class="text-white text-[2.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[8rem] font-extrabold ml-20 sm:ml-[200px]"
+                class="text-[var(--color-white)] text-[2.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[8rem] font-extrabold ml-20 sm:ml-[200px]"
               >
                 WE ARE
               </h1>
@@ -128,7 +166,7 @@
             aria-labelledby="team-intro-title"
           >
             <h3
-              class="text-2xl font-bold text-black sm:text-3xl md:text-4xl"
+              class="text-2xl font-bold text-[var(--color-text)] sm:text-3xl md:text-4xl"
               id="team-intro-title"
             >
               팀원을 소개합니다.
