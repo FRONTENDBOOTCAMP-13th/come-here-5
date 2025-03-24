@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Components | Hi</title>
+    <link rel="icon" href="/public/favicon.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="wrap flex p-10">
+      <!--===============================================================================================-->
+      <!--                                            로그인 컴포넌트                                     -->
+      <!--===============================================================================================-->
+      <section class="w-1/2 pr-10">
+        <h1 class="text-2xl mb-10">로그인, 회원가입 로고 컴포넌트</h1>
+        <a href="/" class="inline-block">
+          <img
+            src="../../assets/svg/logo_black.svg"
+            alt="하이 서비스 메인 로고"
+            class="lg:w-(--logo-sm-width-size) lg:h-(--logo-sm-height-size) w-(--logo-sm-mobile-width-size) h-(--logo-sm-mobile-height-size)"
+          />
+        </a>
+        <h1 class="text-2xl mb-9 mt-10">Input 컴포넌트 (Focusable)</h1>
+        <div class="mt-5">
+          <label for="email" class="sr-only">이메일</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="이메일"
+            aria-label="이메일 입력"
+            required
+            class="w-full max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+          />
+        </div>
+        <h1 class="text-2xl mb-9 mt-10">비밀번호 재설정, 회원가입 컴포넌트</h1>
+        <div class="mt-5 mb-2 font-light text-[.875rem] lg:text-[1rem]">
+          <a
+            href="./password-reset.html"
+            class="text-gray-400 font-regular hover:text-gray-500"
+            >비밀번호 재설정</a
+          >
+          <a
+            href="./sign-up.html"
+            class="text-gray-400 font-regular hover:text-gray-500 ml-10"
+            >회원가입</a
+          >
+        </div>
+        <h1 class="text-2xl mb-9 mt-10">로그인, 회원가입 버튼 컴포넌트</h1>
+        <button
+          type="submit"
+          class="w-full max-w-(--login-btn-width) h-(--login-btn-height) lg:h-(--login-btn-height) mt-5 bg-main rounded-(--btn-radius) text-white text-[1.25rem] font-semibold hover:cursor-pointer hover:bg-blue-700 transition-all duration-300 ease-in-out"
+        >
+          로그인
+        </button>
+        <h1 class="text-2xl mb-9 mt-10">SNS 로그인 컴포넌트</h1>
+        <div>
+          <p class="font-medium text-gray-500 mt-5">
+            SNS 계정으로 간편 로그인 및 회원가입
+          </p>
+          <div class="flex mt-5">
+            <a href="https://www.facebook.com/?locale=ko_KR">
+              <img
+                src="../../assets/svg/icon_facebook.svg"
+                alt="페이스북 로그인"
+                class="w-(--login-icon-width)"
+              />
+            </a>
+            <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk">
+              <img
+                src="../../assets/svg/icon_kakao.svg"
+                alt="카카오톡 로그인"
+                class="w-(--login-icon-width)"
+              />
+            </a>
+            <a href="https://nid.naver.com/nidlogin.login">
+              <img
+                src="../../assets/svg/icon_naver.svg"
+                alt="네이버 로그인"
+                class="w-(--login-icon-width)"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="w-1/2">
+        <div>
+          <h1 class="text-2xl mb-9">회원가입 이메일 Input 컴포넌트</h1>
+          <label
+            for="email"
+            class="text-main font-bold text-[1.2rem] block mt-5"
+            >이메일</label
+          >
+          <input
+            type="email"
+            placeholder="이메일"
+            name="email"
+            id="email"
+            aria-label="이메일 입력"
+            required
+            class="w-full lg:min-w-(--input-width) max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+          />
+          <!-- 인증 버튼 -->
+          <button
+            type="button"
+            class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-main text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer hover:bg-blue-700 transition-all duration-300 ease-in-out"
+          >
+            인증
+          </button>
+          <p class="error text-red-500 font-medium mt-1.5">
+            올바른 이메일 형식을 입력 해주세요.
+          </p>
+        </div>
+        <h1 class="text-2xl mb-9 mt-10">회원가입 이메일 Input 컴포넌트</h1>
+        <div>
+          <label for="authcode" class="sr-only">인증번호</label>
+          <input
+            type="text"
+            placeholder="인증번호 입력"
+            name="authcode"
+            id="authcode"
+            minlength="6"
+            maxlength="6"
+            aria-label="인증번호 입력"
+            required
+            class="peer w-full lg:min-w-(--input-width) max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-5 focus:border-main focus:outline-none"
+          />
+
+          <!-- 확인 버튼 -->
+          <button
+            type="button"
+            class="block lg:inline w-full max-w-(--input-width) lg:w-(--sign-up-btn-width) h-[2.5rem] lg:h-(--sign-up-btn-height) bg-gray text-white rounded-[.9375rem] lg:rounded-(--basic-radius) lg:ml-3 mt-1.5 font-semibold hover:cursor-pointer peer-placeholder-shown:opacity-100 peer-focus:bg-main focus:bg-main transition-all duration-300 ease-in-out"
+          >
+            확인
+          </button>
+          <p class="error text-red-500 font-medium mt-1.5">
+            인증번호가 일치하지 않습니다.(6글자)
+          </p>
+        </div>
+        <h1 class="text-2xl mb-9 mt-10">Label + input 컴포넌트</h1>
+        <div>
+          <label
+            for="password"
+            class="text-main font-bold text-[1.2rem] mt-5 block"
+            >비밀번호</label
+          >
+          <input
+            type="password"
+            placeholder="비밀번호 (8자 이상, 특수문자 포함)"
+            name="password"
+            id="password"
+            pattern="(?=.*[!@#$%^&*])(?=.*[A-Za-z])(?=.*\d).{8,}"
+            aria-label="비밀번호 입력"
+            required
+            class="peer w-full lg:max-w-(--input-width) h-[3.125rem] lg:h-(--input-height) border-2 border-gray-300 rounded-(--basic-radius) indent-(--input-padding) mt-1.5 focus:border-main focus:outline-none"
+          />
+          <p class="error text-red-500 font-medium mt-1.5">
+            비밀번호는 8자 이상, 특수문자를 포함하여야 합니다.
+          </p>
+        </div>
+        <h1 class="text-2xl mb-9 mt-10">개인정보 수집 Modal 컴포넌트</h1>
+        <div class="my-5 flex">
+          <label for="private"></label>
+          <input
+            type="checkbox"
+            name="private"
+            id="private"
+            required
+            class="mr-1.5 w-5"
+          />
+          <!-- 숨겨진 체크박스 (토글 역할) -->
+          <input type="checkbox" id="modal-toggle" class="hidden peer" />
+
+          <!-- 트리거 버튼 -->
+          <label
+            for="modal-toggle"
+            class="cursor-pointer font-semibold border-b-1 hover:opacity-80"
+            tabindex="0"
+          >
+            개인정보 수집
+          </label>
+          <span class="font-medium text-gray-600">&nbsp;및&nbsp;</span>
+          <label
+            for="modal-toggle"
+            class="cursor-pointer font-semibold border-b-1 hover:opacity-80"
+            tabindex="0"
+          >
+            약관
+          </label>
+          <span class="font-medium text-gray-600">에 동의 하십니까?</span>
+          <!-- 모달 배경 (체크되었을 때 보여짐) -->
+          <div
+            class="fixed inset-0 bg-black/50 hidden peer-checked:block z-1"
+          ></div>
+
+          <!-- 모달 박스 -->
+          <div
+            class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-lg max-h-[20rem] p-6 bg-white rounded-(--basic-radius) shadow-lg hidden peer-checked:flex flex-col z-2"
+          >
+            <!-- 이용약관 Text 영역 -->
+            <div class="overflow-y-scroll">
+              <h2 class="text-xl font-bold mb-4">개인정보 처리방침</h2>
+              <p class="font-medium">
+                하이(주) (이하 ‘회사’라고 합니다)는 개인정보보호법 등 관련
+                법령상 개인정보 보호 규정을 준수하며 귀하의 개인정보를 철저하게
+                관리하고 있습니다. 회사는 개인정보 보호법에 근거하여 다음과 같은
+                내용으로 개인정보를 수집 및 이용하고자 합니다.
+              </p>
+              <p class="font-medium">
+                다음의 내용을 자세히 읽어보신 후 모든 내용을 이해하신 후에 동의
+                여부를 결정해주시기 바랍니다.
+              </p>
+
+              <p class="font-medium">
+                <strong>제1조 (개인정보 수집 및 이용 목적)</strong><br />
+                이용자가 제공한 모든 정보는 다음의 목적을 위해 활용하며, 목적
+                이외의 용도로는 사용되지 않습니다.
+                <br />
+                - 본인확인, 입사지원관리, 면접관리 및 채용절차의 진행 및 관리
+                <br />
+                - 인재풀 구성 및 인사 정보 활용
+              </p>
+
+              <p class="font-medium">
+                <strong>제2조 (개인정보 수집 및 이용 항목)</strong><br />
+                회사는 개인정보 수집 목적을 위하여 다음과 같은 정보를
+                수집합니다.
+                <br />
+                - 성명, 주소, 전화번호, 이메일, 성별, 나이 및 생년월일
+              </p>
+
+              <p class="font-medium">
+                <strong>제3조 (개인정보 보유 및 이용 기간)</strong><br />
+                1. 수집한 개인정보는 수집, 이용일로부터 3년간 보관 및
+                이용합니다.
+                <br />
+                2. 개인정보 보유기간 경과, 처리목적 달성 등 개인정보가
+                불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.
+              </p>
+
+              <p class="font-medium">
+                <strong>제4조 (동의 거부 권리)</strong><br />
+                귀하는 본 안내에 따른 개인정보 수집, 이용에 대하여 동의를
+                거부하실 수 있으며, 이에 따른 불이익은 없습니다.
+                <br />
+                본인은 위의 동의서 내용을 충분히 숙지하였으며, 위와 같이
+                개인정보를 수집, 이용하는데 동의합니다.
+              </p>
+            </div>
+
+            <!-- 닫기 버튼 -->
+            <label
+              tabindex="0"
+              for="modal-toggle"
+              class="cursor-pointer text-center py-3 bg-blue-600 text-white rounded-(--btn-radius) hover:bg-blue-700 transition mt-5"
+            >
+              확인
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
