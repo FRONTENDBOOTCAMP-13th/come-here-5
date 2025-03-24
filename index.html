@@ -15,7 +15,7 @@
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <div>
+    <!-- <div>
       <ul class="m-8 text-2xl">
         <li><a href="/src/pages/about.html">about</a></li>
         <li><a href="/src/pages/components.html">components</a></li>
@@ -25,6 +25,355 @@
         <li><a href="/src/pages/sign-up.html">sign-up</a></li>
         <li><a href="/src/pages/password-reset.html">password-reset</a></li>
       </ul>
+    </div> -->
+    <div class="space-y-12 wrap">
+      <!--==============================================================================-->
+      <!--                                 공통 헤더 컴포넌트                               -->
+      <!--==============================================================================-->
+      <header
+        class="sticky top-0 z-50 flex justify-between items-center w-full h-[var(--header-height)] px-4 lg:px-[70px] bg-[rgba(255,255,255,0.8)] transition-all duration-300"
+      >
+        <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
+        <div class="flex items-center w-full lg:w-auto">
+          <!-- 로고 -->
+          <div>
+            <a href="/">
+              <img
+                src="/src/assets/svg/logo_black.svg"
+                alt="HI Logo"
+                class="w-(--logo-width-size) h-(--logo-height-size)"
+              />
+            </a>
+          </div>
+
+          <!-- 햄버거 버튼 -->
+          <button
+            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+            aria-label="메뉴 열기/닫기"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 메뉴 영역 (데스크톱) -->
+        <nav
+          class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+          aria-label="주 메뉴"
+        >
+          <a
+            href="./plan.html"
+            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            >Plan</a
+          >
+          <a
+            href="./about.html"
+            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            >Team</a
+          >
+          <a
+            class="font-semibold text-white bg-[#312F2F] hover:bg-main rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+            href="./login.html"
+          >
+            Login
+          </a>
+        </nav>
+      </header>
+      <!-- ============================================================================================== -->
+      <!-- ============================================================================================== -->
+      <main class="gap-[25rem] grid px-[4.375rem]">
+        <section class="grid gap-12 justify-items-center">
+          <div class="w-3/5">
+            <img src="/src/assets/img/project.svg" alt="프로젝트 메인 이미지" />
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-[3.75rem] lg:w-[5.625rem]">
+              <img src="/src/assets/svg/logo_black.svg" alt="Hi 로고" />
+            </div>
+            <p class="text-4xl lg:text-6xl">
+              저희를 <span class="text-main">소개</span>합니다.
+            </p>
+          </div>
+          <p class="text-2xl font-medium text-center">
+            안녕하세요! 멋쟁이사자처럼 UI 프로젝트 5팀 이리5시조입니다🚀<br />
+            저희 팀은 개발자들의 포트폴리오 사이트에서 영감을 받아,<br />
+            우리 팀을 소개하는 웹 페이지를 제작했습니다!<br />
+            나은 모습을 위해 열심히 고민하며 만들었으니 많은 관심 부탁드립니다.
+            😊
+          </p>
+        </section>
+        <section>
+          <h2 class="mb-12 text-4xl text-center">팀원 소개</h2>
+          <ul class="grid gap-6 sm:grid-cols-2 lg:gap-4 lg:grid-cols-4">
+            <li
+              class="aspect-square bg-gray-100 rounded-(--basic-radius) relative"
+            >
+              <a
+                href="https://github.com/Kanghyeon00"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="강석현 팀원 깃허브로 이동"
+                class="block w-[3.75rem] aspect-square bg-[url(/src/assets/svg/logo_github.svg)] bg-no-repeat bg-center bg-contain absolute top-4 left-4"
+              ></a>
+              <img
+                src="/src/assets/img/memo/memo_ksh.png"
+                alt="강석현 팀원 캐릭터"
+              />
+            </li>
+            <li
+              class="aspect-square bg-gray-100 rounded-(--basic-radius) relative"
+            >
+              <a
+                href="https://github.com/sua17"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="배동초 팀원 깃허브로 이동"
+                class="block w-[3.75rem] aspect-square bg-[url(/src/assets/svg/logo_github.svg)] bg-no-repeat bg-center bg-contain absolute top-4 left-4"
+              ></a>
+              <img
+                src="/src/assets/img/memo/memo_bdc.png"
+                alt="배동초 팀원 캐릭터"
+              />
+            </li>
+            <li
+              class="aspect-square bg-gray-100 rounded-(--basic-radius) relative"
+            >
+              <a
+                href="https://github.com/hjb0304"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="배희정 팀원 깃허브로 이동"
+                class="block w-[3.75rem] aspect-square bg-[url(/src/assets/svg/logo_github.svg)] bg-no-repeat bg-center bg-contain absolute top-4 left-4"
+              ></a>
+              <img
+                src="/src/assets/img/memo/memo_bhj.png"
+                alt="배희정 팀원 캐릭터"
+              />
+            </li>
+            <li
+              class="aspect-square bg-gray-100 rounded-(--basic-radius) relative"
+            >
+              <a
+                href="https://github.com/huniversal"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="이훈진 팀원 깃허브로 이동"
+                class="block w-[3.75rem] aspect-square bg-[url(/src/assets/svg/logo_github.svg)] bg-no-repeat bg-center bg-contain absolute top-4 left-4"
+              ></a>
+              <img
+                src="/src/assets/img/memo/memo_lhj.png"
+                alt="이훈진 팀원 캐릭터"
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="mb-12 text-4xl text-center">프로젝트 구조</h2>
+        </section>
+        <section>
+          <h2 class="mb-12 text-4xl text-center">프로젝트 컴포넌트</h2>
+          <ul
+            class="grid sm:grid-cols-2 gap-6 font-semibold lg:gap-4 lg:grid-cols-4 text-[16px]"
+          >
+            <li class="bg-gray-100 rounded-(--basic-radius) p-6 grid gap-2">
+              <div class="rounded-(--basic-radius) overflow-hidden">
+                <img
+                  class="object-cover h-full duration-300 ease-in-out hover:scale-110"
+                  src="/src/assets/img/index/component_main.PNG"
+                  alt="메인 컴포넌트 이미지"
+                />
+              </div>
+              <h3 class="mb-auto">메인 컴포넌트</h3>
+              <a
+                href="/src/pages/components/main-page-component.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-main h-[40px] rounded-(--basic-radius) w-full text-white text-center self-end content-center"
+              >
+                바로가기
+              </a>
+            </li>
+            <li class="bg-gray-100 rounded-(--basic-radius) p-6 grid gap-2">
+              <div class="rounded-(--basic-radius) overflow-hidden">
+                <img
+                  class="object-cover h-full duration-300 ease-in-out hover:scale-110"
+                  src="/src/assets/img/index/component_team.PNG"
+                  alt="팀 소개 컴포넌트 이미지"
+                />
+              </div>
+              <h3 class="mb-auto">팀 소개 컴포넌트</h3>
+              <a
+                href="/src/pages/components/team-page-component.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-main h-[40px] rounded-(--basic-radius) w-full text-white text-center self-end content-center"
+              >
+                바로가기
+              </a>
+            </li>
+            <li class="bg-gray-100 rounded-(--basic-radius) p-6 grid gap-2">
+              <div class="rounded-(--basic-radius) overflow-hidden">
+                <img
+                  class="object-cover h-full duration-300 ease-in-out hover:scale-110"
+                  src="/src/assets/img/index/component_plan.PNG"
+                  alt="프로젝트 플랜 컴포넌트 이미지"
+                />
+              </div>
+              <h3 class="mb-auto">프로젝트 플랜 컴포넌트</h3>
+              <a
+                href="/src/pages/components/plan-page-component.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-main h-[40px] rounded-(--basic-radius) w-full text-white text-center self-end content-center"
+              >
+                바로가기
+              </a>
+            </li>
+            <li class="bg-gray-100 rounded-(--basic-radius) p-6 grid gap-2">
+              <div class="rounded-(--basic-radius) overflow-hidden">
+                <img
+                  class="object-cover h-full duration-300 ease-in-out hover:scale-110"
+                  src="/src/assets/img/index/component_login.PNG"
+                  alt="로그인/회원가입 컴포넌트 이미지"
+                />
+              </div>
+              <h3 class="mb-auto">로그인/회원가입 컴포넌트</h3>
+              <a
+                href="/src/pages/components/login-page-component.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-main h-[40px] rounded-(--basic-radius) w-full text-white text-center self-end content-center"
+              >
+                바로가기
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="mb-[25rem] text-center">
+          <h2 class="mb-12 text-4xl text-center">프로젝트 주소</h2>
+          <a
+            href="https://hi-myproject.netlify.app/src/pages/main"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block text-[16px] bg-main h-[45px] rounded-(--basic-radius) px-12 text-white text-center self-end content-center"
+          >
+            프로젝트 페이지로 이동 →
+          </a>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer class="px-10 py-8 bg-gray lg:py-12 lg:px-20">
+        <!-- 로고 -->
+        <div class="flex justify-start px-4 mb-6 lg:mb-8">
+          <img
+            src="/src/assets/svg/lion_black.svg"
+            alt="LikeLion 부트 캠프 로고 Lion Logo"
+            class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
+          />
+        </div>
+
+        <!-- Bootcamp 제목 -->
+        <div
+          class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
+        >
+          Likelion Bootcamp Frontend 13th
+        </div>
+
+        <!-- 이름 목록 -->
+        <ul class="flex justify-start px-4 mb-6 space-x-2 lg:space-x-4">
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
+              >배희정</span
+            >
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
+              >배동초</span
+            >
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
+              >이훈진</span
+            >
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
+              >강석현</span
+            >
+          </li>
+        </ul>
+
+        <!-- 소셜 아이콘 및 Copy~ -->
+        <div
+          class="flex items-center justify-between px-4 mt-10 lg:justify-between"
+        >
+          <!-- 소셜 아이콘 -->
+          <div class="flex justify-start space-x-3 lg:space-x-4">
+            <!-- GitHub -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_github.svg"
+                  alt="GitHub 바로가기"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Instagram -->
+            <div>
+              <a href="https://www.instagram.com/">
+                <img
+                  src="/src/assets/svg/icon_instagram.svg"
+                  alt="Instagram 바로가기"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- YouTube -->
+            <div>
+              <a href="https://www.youtube.com/">
+                <img
+                  src="/src/assets/svg/icon_youtube.svg"
+                  alt="YouTube 바로가기"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Facebook -->
+            <div>
+              <a href="https://www.facebook.com/">
+                <img
+                  src="/src/assets/svg/icon_facebook_02.svg"
+                  alt="Facebook 바로가기"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copy Likelion -->
+        <div class="mt-8 mb-0 text-center lg:mt-6">
+          <span
+            class="text-[.833rem] font-regular lg:text-[0.75rem] text-black"
+          >
+            Copyright Likelion Bootcamp Frontend 13th All rights reserved.
+          </span>
+        </div>
+      </footer>
+      <!-- =============================================================================================== -->
+      <!-- =============================================================================================== -->
     </div>
   </body>
 </html>
