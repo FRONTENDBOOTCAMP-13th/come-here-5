@@ -1,4 +1,4 @@
-<img src="./src/assets/img/md_img/ui_project.png" alt="배너" width="100%"/>
+<img src="./src/assets/img/md_img/banner.png" alt="배너" width="100%"/>
 </a>
 
 <br/>
