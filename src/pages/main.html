@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
@@ -35,7 +35,7 @@
 
           <!-- 햄버거 버튼 -->
           <div
-            class="lg:hidden ml-auto relative flex items-center justify-center w-[40px] h-[70px] overflow-visible"
+            class="lg:hidden ml-auto relative flex items-center justify-center w-[40px] h-[70px]"
           >
             <input
               type="checkbox"
@@ -61,19 +61,10 @@
             </label>
 
             <!-- 모바일 토글 메뉴 -->
-
             <nav
-              class="absolute top-[4.375rem] right-5 w-[200px] bg-white opacity-0 peer-checked:opacity-100 p-6 transform translate-y-0 transition-all duration-300 z-[60]"
+              class="fixed top-[3rem] right-0 w-[150px] h-auto bg-transparent peer-checked:bg-white shadow-lg p-6 transform translate-x-full transition-all duration-300 peer-checked:translate-x-0 lg:hidden z-[60]"
               aria-label="모바일 메뉴"
             >
-              <label
-                for="menuToggle"
-                class="text-black mb-4 w-6 h-6 flex items-center justify-center border rounded-full cursor-pointer hover:bg-gray-200"
-                aria-label="닫기 버튼"
-              >
-                X
-              </label>
-
               <div class="space-y-5">
                 <a href="./plan.html" class="block text-lg hover:text-[#205AFF]"
                   >Plan</a

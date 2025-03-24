@@ -31,7 +31,7 @@
       <!--                                 공통 헤더 컴포넌트                               -->
       <!--==============================================================================-->
       <header
-        class="sticky top-0 z-50 flex justify-between items-center w-full h-[var(--header-height)] px-4 lg:px-[70px] bg-[rgba(255,255,255,0.8)] transition-all duration-300"
+        class="sticky top-0 z-50 flex justify-between items-center w-full h-[var(--header-height)] px-4 lg:px-[70px] bg-[rgba(255,255,255,0.8)] transition-all duration-300 peer"
       >
         <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
         <div class="flex items-center w-full lg:w-auto">
@@ -47,25 +47,56 @@
           </div>
 
           <!-- 햄버거 버튼 -->
-          <button
-            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
-            aria-label="메뉴 열기/닫기"
+          <div
+            class="lg:hidden ml-auto relative flex items-center justify-center w-[40px] h-[70px]"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              class="w-6 h-6"
+            <input
+              type="checkbox"
+              id="menuToggle"
+              class="hidden peer"
+              aria-hidden="true"
+            />
+            <label
+              for="menuToggle"
+              class="block p-2 cursor-pointer"
+              aria-label="모바일 메뉴 토글"
+              role="button"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+              <span
+                class="block w-6 h-[2px] bg-black mb-1.5 transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-[5px]"
+              ></span>
+              <span
+                class="block w-6 h-[2px] bg-black mb-1.5 transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-[5px]"
+              ></span>
+              <span
+                class="block w-6 h-[2px] bg-black mb-1.5 transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-[5px]"
+              ></span>
+            </label>
+
+            <!-- 모바일 토글 메뉴 -->
+            <nav
+              class="fixed top-[3rem] right-0 w-[150px] h-auto bg-transparent peer-checked:bg-white shadow-lg p-6 transform translate-x-full transition-all duration-300 peer-checked:translate-x-0 lg:hidden z-[60]"
+              aria-label="모바일 메뉴"
+            >
+              <div class="space-y-5">
+                <a
+                  href="./src/pages/plan.html"
+                  class="block text-lg hover:text-[#205AFF]"
+                  >Plan</a
+                >
+                <a
+                  href="./src/pages/about.html"
+                  class="block text-lg hover:text-[#205AFF]"
+                  >Team</a
+                >
+                <a
+                  href="./src/pages/login.html"
+                  class="block text-lg hover:text-[#205AFF]"
+                  >Login</a
+                >
+              </div>
+            </nav>
+          </div>
         </div>
 
         <!-- 메뉴 영역 (데스크톱) -->
@@ -74,18 +105,18 @@
           aria-label="주 메뉴"
         >
           <a
-            href="./plan.html"
-            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            href="./src/pages/plan.html"
+            class="hover:text-[#205AFF] opacity-80 transition-all duration-300 ease-in-out"
             >Plan</a
           >
           <a
-            href="./about.html"
-            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            href="./src/pages/about.html"
+            class="hover:text-[#205AFF] opacity-80 transition-all duration-300 ease-in-out"
             >Team</a
           >
           <a
-            class="font-semibold text-white bg-[#312F2F] hover:bg-main rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
-            href="./login.html"
+            class="font-semibold text-white bg-[#312F2F] hover:bg-main rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn transition-all duration-300 ease-in-out"
+            href="./src/pages/login.html"
           >
             Login
           </a>
