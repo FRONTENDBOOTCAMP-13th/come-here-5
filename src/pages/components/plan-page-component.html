@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plan Components | Hi</title>
+    <link rel="icon" href="/public/favicon.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="wrap p-10">
+      <h1 class="text-2xl mb-10">Plan Hero-Section 컴포넌트</h1>
+      <section class="container px-4 flex items-center">
+        <!-- HI 로고 -->
+        <a href="/" class="mr-8" title="홈페이지로 이동">
+          <img
+            src="/src/assets/svg/logo_black.svg"
+            alt="HI Logo"
+            class="w-[6.25rem] h-[5.625rem] lg:w-[9.375rem] lg:h-[8.125rem]"
+          />
+        </a>
+
+        <!-- 제목과 부제목 묶음 -->
+        <div class="flex flex-col items-start">
+          <!-- 제목 -->
+          <h1
+            class="text-plan-sub-title lg:text-team-hero-sub-title text-main border-b-[5px] border-main pb-2"
+          >
+            UI 프로젝트 과정
+          </h1>
+          <!-- 부제목 -->
+          <div
+            class="flex items-center mt-2 lg:mt-4 text-main font-medium whitespace-nowrap"
+          >
+            <img
+              src="/src/assets/svg/lion_blue.svg"
+              alt="Lion Icon"
+              class="h-3 mr-2"
+            />
+            <p class="text-main">LikeLion 13th at UI Project</p>
+          </div>
+        </div>
+      </section>
+      <h1 class="text-2xl my-10">프로젝트 과정 컴포넌트</h1>
+      <section class="bg-main py-(--plan-section-padding)">
+        <!-- 제목 -->
+        <h2
+          class="sub-title text-plan-sub-title text-white mb-(--sub-title-margin-bottom) text-center"
+        >
+          프로젝트 개발 과정
+        </h2>
+
+        <div class="container mx-auto flex justify-center items-center gap-4">
+          <!-- 첫 번째 동그라미 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="bg-white w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) rounded-full flex justify-center items-center hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            >
+              <img
+                src="/src/assets/img/plan/project.gif"
+                alt="첫 번째 동그라미: 주제 선정 및 기획"
+                class="w-[50%] sm:w-[60%] lg:w-[70%]"
+              />
+            </div>
+            <p
+              class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center font-semibold"
+            >
+              주제 선정 및 기획
+            </p>
+          </div>
+
+          <!-- 첫 번째 화살표 -->
+          <div class="flex items-center mb-6">
+            <img
+              src="/src/assets/svg/icon_arrow_white.svg"
+              alt="Arrow Icon 1"
+              class="w-[1.5625rem] h-[1.5625rem] sm:w-[1.875rem] sm:h-[1.875rem] lg:w-[2.5rem] lg:h-[2.5rem]"
+            />
+          </div>
+
+          <!-- 두 번째 동그라미 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="bg-white w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) rounded-full flex justify-center items-center hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            >
+              <img
+                src="/src/assets/img/plan/design.gif"
+                alt="두 번째 동그라미: 디자인 (UI & UX)"
+                class="w-[50%] sm:w-[60%] lg:w-[70%]"
+              />
+            </div>
+            <p
+              class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center font-semibold"
+            >
+              디자인 (UI&UX)
+            </p>
+          </div>
+
+          <!-- 두 번째 화살표 -->
+          <div class="flex items-center mb-6">
+            <img
+              src="/src/assets/svg/icon_arrow_white.svg"
+              alt="Arrow Icon 2"
+              class="w-[1.5625rem] h-[1.5625rem] sm:w-[1.875rem] sm:h-[1.875rem] lg:w-[2.5rem] lg:h-[2.5rem]"
+            />
+          </div>
+
+          <!-- 세 번째 동그라미 -->
+          <div class="flex flex-col items-center">
+            <div
+              class="bg-white w-(--plan-circle-width) h-(--plan-circle-height) lg:w-(--plan-circle-lg-width) lg:h-(--plan-circle-lg-height) sm:w-(--plan-circle-sm-width) sm:h-(--plan-circle-sm-height) rounded-full flex justify-center items-center hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            >
+              <img
+                src="/src/assets/img/plan/coding.gif"
+                alt="세 번째 동그라미: 코드 개발"
+                class="w-[50%] sm:w-[60%] lg:w-[70%]"
+              />
+            </div>
+            <p
+              class="text-[#fff] text-[0.625rem] lg:text-[1.25rem] sm:text-[.9375rem] mt-2 text-center font-semibold"
+            >
+              코드 개발
+            </p>
+          </div>
+        </div>
+      </section>
+      <h1 class="text-2xl my-10">프로젝트 과정 컴포넌트</h1>
+      <div
+        class="md:auto-rows-[4.1875rem] gap-5 md:gap-x-[4rem] md:gap-y-[4rem] lg:max-w-max"
+      >
+        <div
+          class="md:row-start-1 flex flex-col gap-3 justify-between plan-start px-7 py-4 lg:max-w-(--plan-start-box-width) min-h-(--plan-start-box-height) md:text-content shadow-(--basic-shadow) rounded-(--basic-radius) h-max bg-white"
+        >
+          <p class="plan-start-content text-text-contents font-medium">
+            우리 팀의 프로젝트는 웹 개발 실무 능력을 키우기 위해 기획되었습니다.
+            단순한 디자인 복제에서 벗어나 팀원들의 아이디어를 담은 개성 있는
+            페이지를 만들고자 했습니다. 사용자 경험을 고려한 UI/UX 설계와 팀
+            협업을 통해 실제 서비스처럼 완성도를 높이는 것을 목표로 했습니다.
+          </p>
+          <div class="flex items-center gap-3">
+            <div
+              class="plan-start-img w-(--plan-start-circle-size) aspect-square rounded-full overflow-hidden"
+            >
+              <img
+                class="h-full object-cover"
+                src="/src/assets/img/md_img/ui_project.png"
+                alt=""
+              />
+            </div>
+            <div class="plan-start-info">
+              <p class="plan-start-name font-semibold">이훈진</p>
+              <span class="plan-start-number font-semibold"
+                >멋쟁이사자처럼 프론트엔드 13기</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-2xl my-10">프로젝트 기획 컴포넌트</h1>
+      <div
+        class="rounded-(--basic-radius) shadow-(--basic-shadow) max-w-[80rem] lg:h-[38.5rem]"
+      >
+        <!-- 라디오 버튼 그룹 -->
+        <input
+          type="radio"
+          name="tabs"
+          id="option1"
+          class="radio-tab hidden"
+          checked
+        />
+        <input type="radio" name="tabs" id="option2" class="hidden" />
+        <input type="radio" name="tabs" id="option3" class="hidden" />
+
+        <div class="tab-content">
+          <!-- 메뉴 영역 -->
+          <div class="border-gray flex justify-around border-b">
+            <div class="menu-item border-gray">
+              <label
+                for="option1"
+                class="block p-4 hover:cursor-pointer font-semibold"
+                >주제 선정 이유</label
+              >
+            </div>
+            <div class="menu-item border-gray">
+              <label
+                for="option2"
+                class="block p-4 hover:cursor-pointer font-semibold"
+                >디자인 의도</label
+              >
+            </div>
+            <div class="menu-item border-gray">
+              <label
+                for="option3"
+                class="block p-4 hover:cursor-pointer font-semibold"
+                >개발 방식</label
+              >
+            </div>
+          </div>
+
+          <!-- 콘텐츠 영역 -->
+          <div class="content-area p-5 relative flex flex-col items-center">
+            <!-- 이미지 패널 -->
+            <div
+              id="image1"
+              class="max-w-1/2 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+            >
+              <img
+                src="../../assets/img/main_page/hero_section.png"
+                alt="주제 선정 이유 이미지"
+              />
+            </div>
+            <div
+              id="image2"
+              class="max-w-1/2 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+            >
+              <img
+                src="../../assets/img/main_page/hero_section.png"
+                alt="디자인 의도 이미지"
+              />
+            </div>
+            <div
+              id="image3"
+              class="max-w-1/2 m-auto rounded-(--basic-radius) shadow-(--basic-shadow) hidden text-center"
+            >
+              <img
+                src="../../assets/img/main_page/hero_section.png"
+                alt="개발 방식 이미지"
+              />
+            </div>
+
+            <!-- 텍스트 패널 -->
+            <div
+              id="text1"
+              class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+            >
+              주제 선정 이유에 대한 설명입니다. 이 내용은 옵션 1을 선택했을 때만
+              표시됩니다.
+            </div>
+            <div
+              id="text2"
+              class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+            >
+              디자인 의도에 대한 설명입니다. 이 내용은 옵션 2를 선택했을 때만
+              표시됩니다.
+            </div>
+            <div
+              id="text3"
+              class="hidden p-4 mt-0 lg:mt-5 rounded-(--basic-radius) bg-gray-100"
+            >
+              개발 방식에 대한 설명입니다. 이 내용은 옵션 3을 선택했을 때만
+              표시됩니다.
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-2xl my-10">마무리 소감 컴포넌트</h1>
+      <div
+        class="w-full min-w-[12.5rem] max-w-(--thoughts-bar-width) h-full lg:min-h-(--thoughts-bar-height) bg-white rounded-(--basic-radius) lg:rounded-full flex items-center shadow-(--basic-shadow) transform transition-all duration-300 lg:hover:translate-x-5"
+      >
+        <!-- 이미지 -->
+        <img
+          src="../../assets/svg/icon_kakao.svg"
+          alt="이미지"
+          class="w-(--thoughts-bar-img-sm-width) lg:w-(--thoughts-bar-img-width) ml-7 rounded-full"
+        />
+        <!-- 텍스트 요소 -->
+        <div class="p-7 w-full">
+          <p class="text-main font-bold text-plan-content">
+            안녕하세요 OOO입니다
+          </p>
+          <p class="font-semibold">
+            이번 프로젝트에서 느낀점은...이번 프로젝트에서 느낀점은...이번
+            프로젝트에서 느낀점은...프로젝트에서 느낀점은...프로젝트에서
+            느낀점은...프로젝트에서 느낀점은...프로젝트에서
+            느낀점은...프로젝트에서 느낀점은...느낀점은...프로젝트에서
+            느낀점은...느낀점은...프로젝트에서 느낀점은...
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

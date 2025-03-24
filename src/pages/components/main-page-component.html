@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Main Components | Hi</title>
+    <link rel="icon" href="/public/favicon.svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/font/woff2/PretendardVariable.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="wrap p-10">
+      <h1 class="text-2xl mt-10 mb-9">Header 컴포넌트</h1>
+      <header
+        class="sticky mt-5 top-0 z-50 flex justify-between items-center w-full h-[var(--header-height)] px-4 lg:px-[70px] bg-[rgba(255,255,255,0.8)] transition-all duration-300"
+      >
+        <!-- 로고 & 햄버거 버튼 컨테이너 (모바일) -->
+        <div class="flex items-center w-full lg:w-auto">
+          <!-- 로고 -->
+          <div>
+            <a href="/">
+              <img
+                src="/src/assets/svg/logo_black.svg"
+                alt="HI Logo"
+                class="w-(--logo-width-size) h-(--logo-height-size)"
+              />
+            </a>
+          </div>
+
+          <!-- 햄버거 버튼 -->
+          <button
+            class="lg:hidden ml-auto flex items-center justify-center w-[40px] h-[70px]"
+            aria-label="메뉴 열기/닫기"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 메뉴 영역 (데스크톱) -->
+        <nav
+          class="hidden lg:flex lg:w-[calc(100%-200px)] justify-end items-center space-x-14 text-[#312F2F] text-header-link"
+          aria-label="주 메뉴"
+        >
+          <a
+            href="./plan.html"
+            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            >Plan</a
+          >
+          <a
+            href="./about.html"
+            class="hover:text-[#205AFF] opacity-70 transition-all duration-300 ease-in-out"
+            >Team</a
+          >
+          <a
+            class="font-semibold text-white bg-[#312F2F] hover:bg-main rounded-(--btn-radius) w-(--header-btn-width) h-(--header-btn-height) flex items-center justify-center text-header-btn"
+            href="./login.html"
+          >
+            Login
+          </a>
+        </nav>
+      </header>
+      <h1 class="text-2xl mt-10 mb-9">Hero-Section 컴포넌트</h1>
+      <section
+        class="relative bg-[url('/src/assets/img/main_page/hero_section.png')] bg-no-repeat bg-center bg-contain w-[100%] max-w-[1280px] aspect-[16/9] border border-transparent p-6 md:p-10 lg:p-12 mt-5"
+        aria-labelledby="hero-title"
+      >
+        <article
+          class="grid grid-cols-[3fr_1fr] max-[32.5rem]:grid-cols-[1fr] p-4 h-full gap-6"
+        >
+          <!-- 텍스트 섹션 -->
+          <div
+            class="flex flex-col justify-center px-6 ml-10"
+            aria-label="소개 섹션"
+          >
+            <p
+              class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white text-white text-[3rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-medium"
+            >
+              WELCOME
+            </p>
+
+            <h1
+              class="text-white text-[2.5rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[8rem] font-extrabold ml-50"
+            >
+              WE ARE
+            </h1>
+            <img
+              src="/src/assets/svg/logo_white.svg"
+              alt="Logo"
+              class="w-[6rem] h-[6rem] sm:w-[6rem] sm:h-[6rem] md:w-[8rem] md:h-[8rem] lg:w-[9rem] lg:h-[9rem] xl:w-[10rem] xl:h-[10rem] 2xl:w-[12rem] 2xl:h-[12rem]"
+            />
+          </div>
+          <div
+            class="relative flex justify-end items-start pr-20 pt-6 max-[520px]:hidden"
+            aria-label="멋쟁이 사자처럼 로고"
+          >
+            <img
+              src="../../assets/svg/lion_white.svg"
+              alt="LikeLion Logo"
+              class="w-[80px] sm:w-[200px] lg:w-[400px] xl:w-[1000px] h-auto animate-floating"
+            />
+          </div>
+        </article>
+      </section>
+      <h1 class="text-2xl mb-9 mt-10">Sub-Title 컴포넌트</h1>
+      <div
+        class="max-w-[1024px] py-10 text-center space-y-4"
+        aria-labelledby="team-intro-title"
+      >
+        <h3
+          class="text-2xl font-bold text-black sm:text-3xl md:text-4xl"
+          id="team-intro-title"
+        >
+          팀원을 소개합니다.
+        </h3>
+
+        <p
+          class="font-medium leading-relaxed text-gray-800 text-[10px] sm:text-[15px] md:text-xl lg:text-2xl"
+        >
+          Hi! 프로젝트 팀은 멋쟁이 사자처럼 FE Bootcamp를 통해 만난 UI 프로젝트
+          팀입니다.<br />
+          각자 색다른 매력을 가지고 있는 팀원을 만나러 가보실까요?
+        </p>
+      </div>
+      <h1 class="text-2xl mb-9 mt-10">Sub-Title Button 컴포넌트</h1>
+      <a
+        href="#"
+        class="inline-block bg-blue-600 text-white text-[10px] sm:text-base md:text-lg lg:text-xl font-bold w-[8rem] sm:w-[15rem] md:w-[18rem] lg:w-(--main-btn-width) px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 rounded-(--basic-radius) shadow-md hover:bg-blue-800 transition-all duration-300 ease-in-out mt-5"
+        aria-label="팀원 소개 페이지로 이동"
+      >
+        팀원 소개 →
+      </a>
+      <h1 class="text-2xl mb-9 mt-10">말풍선 컴포넌트</h1>
+      <div
+        class="relative w-full hover:scale-[1.02] transition-transform duration-300 ease-in-out mt-5"
+        aria-label="이훈진 자기소개"
+      >
+        <div
+          class="bg-white shadow-md rounded-(--basic-radius) p-4 w-full min-w-[200px] max-w-[500px] before:content-[''] before:absolute before:top-1/2 before:-right-0 before:border-10 before:border-white before:border-t-transparent before:border-b-transparent before:border-r-transparent"
+        >
+          <h3 class="text-blue-500 font-bold text-[clamp(14px,2vw,24px)]">
+            안녕하세요 이훈진입니다!
+          </h3>
+          <p class="text-gray-500 font-medium text-[clamp(12px,1.5vw,20px)]">
+            저는 프론트엔드 개발자를 목표로 공부하고 있습니다.<br />앞으로 저의
+            활약을 기대해주세요!
+          </p>
+        </div>
+      </div>
+
+      <!-- 사람 이미지 영역 -->
+      <h1 class="text-2xl mb-9 mt-10">팀원 이미지 컴포넌트</h1>
+      <div
+        class="relative justify-start w-full"
+        aria-label="이훈진 프로필 이미지"
+      >
+        <img
+          src="../../assets/img/memo/memo_lhj.png"
+          alt="Intro Right"
+          class="w-full max-w-[350px]"
+        />
+      </div>
+      <h1 class="text-2xl mb-9 mt-10">카드 컴포넌트</h1>
+      <div
+        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-5 mb-40 max-w-[64rem] w-full mt-5"
+      >
+        <!-- 카드 1 -->
+        <div
+          class="relative group h-[15rem] max-sm:h-[9.375rem] cursor-pointer"
+        >
+          <!-- 숨겨진 흰색 카드 -->
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-white rounded-[var(--basic-radius)] scale-100 transition-transform duration-500"
+          ></div>
+
+          <!-- 파란색 카드 (앞면) -->
+          <div
+            class="relative w-full h-full bg-blue-800 shadow-lg rounded-[var(--basic-radius)] transition-all duration-500 transform group-hover:translate-x-3 group-hover:-translate-y-3"
+          >
+            <div class="flex items-center justify-center h-full">
+              <img
+                src="/src/assets/img/main_page/icon_topic.png"
+                alt="프로젝트 기획 아이콘"
+                class="w-[60px] h-[60px] sm:w-[60px] sm:h-[90px] md:w-[90px] md:h-[100px] lg:w-[120px] lg:h-[130px] object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-2xl mb-9 mt-10">Footer 컴포넌트</h1>
+      <footer class="bg-gray py-8 lg:py-12 px-10 lg:px-20 mt-10">
+        <!-- 로고 -->
+        <div class="flex justify-start px-4 mb-6 lg:mb-8">
+          <img
+            src="/src/assets/svg/lion_black.svg"
+            alt="LikeLion 부트 캠프 로고 Lion Logo"
+            class="w-(--footer-logo-width) h-(--footer-logo-height) lg:w-(--fooger-logo-lg-width) lg:h-(--footer-logo-lg-height)"
+          />
+        </div>
+
+        <!-- Bootcamp 제목 -->
+        <div
+          class="text-left text-xl font-bold text-black mb-4 text-[13px] lg:text-[19px] px-4"
+        >
+          Likelion Bootcamp Frontend 13th
+        </div>
+
+        <!-- 이름 목록 -->
+        <ul class="flex justify-start space-x-2 lg:space-x-4 px-4 mb-6">
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
+              >배희정</span
+            >
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
+              >배동초</span
+            >
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
+              >이훈진</span
+            >
+          </li>
+          <li class="flex flex-col items-start">
+            <span
+              class="text-[.833rem] lg:text-[.75rem] font-semibold text-black"
+              >강석현</span
+            >
+          </li>
+        </ul>
+
+        <!-- 소셜 아이콘 및 Copy~ -->
+        <div
+          class="flex items-center justify-between lg:justify-between px-4 mt-10"
+        >
+          <!-- 소셜 아이콘 -->
+          <div class="flex justify-start space-x-3 lg:space-x-4">
+            <!-- GitHub -->
+            <div>
+              <a href="https://github.com/FRONTENDBOOTCAMP-13th">
+                <img
+                  src="/src/assets/svg/icon_github.svg"
+                  alt="GitHub 바로가기"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Instagram -->
+            <div>
+              <a href="https://www.instagram.com/">
+                <img
+                  src="/src/assets/svg/icon_instagram.svg"
+                  alt="Instagram 바로가기"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- YouTube -->
+            <div>
+              <a href="https://www.youtube.com/">
+                <img
+                  src="/src/assets/svg/icon_youtube.svg"
+                  alt="YouTube 바로가기"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+            <!-- Facebook -->
+            <div>
+              <a href="https://www.facebook.com/">
+                <img
+                  src="/src/assets/svg/icon_facebook_02.svg"
+                  alt="Facebook 바로가기"
+                  class="w-(--footer-icon-size) h-(--footer-icon-size) lg:w-(--footer-icon-large-size) lg:h-(--footer-icon-large-size)"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- Copy Likelion -->
+        <div class="mt-8 lg:mt-6 mb-0 text-center">
+          <span
+            class="text-[.833rem] font-regular lg:text-[0.75rem] text-black"
+          >
+            Copyright Likelion Bootcamp Frontend 13th All rights reserved.
+          </span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
