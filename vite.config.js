@@ -8,12 +8,16 @@ export default defineConfig({
       input: {
         index: "index.html", // 기본 index.html
         about: "src/pages/about.html",
-        components: "src/pages/components.html",
         login: "src/pages/login.html",
         plan: "src/pages/plan.html",
         signup: "src/pages/sign-up.html",
         main: "src/pages/main.html",
-        passwordreset: "src/pages/password-reset.html",
+        password_reset: "src/pages/password-reset.html",
+        components: "src/pages/components.html",
+        components_login: "src/pages/components/login-page-component",
+        components_main: "src/pages/components/main-page-component",
+        components_plan: "src/pages/components/plan-page-component",
+        components_team: "src/pages/components/team-page-component",
       },
     },
   },
